@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0100)file:///Users/esdrasobas/Downloads/OrderMind%20V1%20-%20KCHC%20Clinical%20Reference%203-30-2026.html -->
-<html lang="en" style="--chrome-h: 245px; scroll-padding-top: 249px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0104)file:///Users/esdrasobas/Downloads/OrderMind%20V1%20-%20KCHC%20Clinical%20Reference%203-31-26%20(1).html -->
+<html lang="en" style="--chrome-h: 182px; scroll-padding-top: 186px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OrderMind V1 — KCHC Clinical Reference</title>
@@ -496,7 +496,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="top-btn active" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
   <button class="top-btn" id="top-btn-am" onclick="switchTop(&#39;am&#39;)">🧫 ID / Antimicrobials</button>
   <button class="top-btn" id="top-btn-iv" onclick="switchTop(&#39;iv&#39;)">🩺 IV / Nutrition</button>
-  <button class="top-btn active" id="top-btn-onc" onclick="switchTop(&#39;onc&#39;)">🧬 Oncology</button>
+  <button class="top-btn" id="top-btn-onc" onclick="switchTop(&#39;onc&#39;)">🧬 Oncology</button>
   <button class="top-btn top-btn-mobile-hide" id="top-btn-pain" onclick="switchTop(&#39;pain&#39;)">💊 Pain &amp; Opioid</button>
   <button class="top-btn top-btn-mobile-hide" id="top-btn-bh" onclick="switchTop(&#39;bh&#39;)">🧠 Behavioral Health</button>
   <div style="position:relative;flex:1;display:flex;min-width:0;">
@@ -552,9 +552,9 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-pain-6" onclick="painGoTo(6,this)">📋 Guidelines</button>
 </nav>
 
-<nav class="section-nav" id="snav-bh" style="display:none;">
+<nav class="section-nav" id="snav-bh" style="display: none;">
   <button class="snav-btn" id="spb-bh-0" onclick="bhGoTo(0,this)">⚡ Agent Selector</button>
-  <button class="snav-btn" id="spb-bh-1" onclick="bhGoTo(1,this)">💉 LAI Comparison</button>
+  <button class="snav-btn" id="spb-bh-1" onclick="bhGoTo(1,this)">💉 LAI Calc &amp; Convert</button>
   <button class="snav-btn" id="spb-bh-2" onclick="bhGoTo(2,this)">🏥 LAI Dispensing</button>
   <button class="snav-btn" id="spb-bh-3" onclick="bhGoTo(3,this)">⚡ QTc Risk</button>
   <button class="snav-btn" id="spb-bh-4" onclick="bhGoTo(4,this)">🧪 TDM &amp; Monitoring</button>
@@ -608,7 +608,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-ped-4" onclick="pedGoTo(4,this)">💨 Levalbuterol</button>
   <button class="snav-btn" id="spb-ped-5" onclick="pedGoTo(5,this)">💉 HIV PEP / EPT</button>
 </nav>
-<nav class="section-nav" id="snav-onc" style="display: flex;">
+<nav class="section-nav" id="snav-onc" style="display: none;">
   <button class="snav-btn" id="spb-onc-0" onclick="oncGoTo(0,this)">⚡ Agent Selector</button>
   <button class="snav-btn" id="spb-onc-1" onclick="oncGoTo(1,this)">📋 Verify Checklist</button>
   <button class="snav-btn" id="spb-onc-2" onclick="oncGoTo(2,this)">💊 Carboplatin</button>
@@ -641,27 +641,27 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 0 — AGENT SELECTOR WIZARD
 ══════════════════════════════════════ -->
-<div class="section active" id="sec-0" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section active" id="sec-0" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Agent Selector</div>
   <div class="sec-sub">Anticoagulation Decision Wizard . KCHC Protocol</div>
   <div class="disc"><span class="disc-icon">!</span><span class="disc-text">Clinical decision support only. All therapy decisions require pharmacist and physician judgment. Refer to KCHC Anticoagulation Policy (May 2025) on Shareplus for full guidance.</span></div>
 
   <div class="wiz-progress" id="wiz-prog">
-    <div class="wiz-dot done" id="wd0"></div>
-    <div class="wiz-dot done" id="wd1"></div>
-    <div class="wiz-dot done" id="wd2"></div>
-    <div class="wiz-dot done" id="wd3"></div>
-    <div class="wiz-dot done" id="wd4"></div>
-    <div class="wiz-dot active" id="wd5"></div>
+    <div class="wiz-dot active" id="wd0"></div>
+    <div class="wiz-dot" id="wd1"></div>
+    <div class="wiz-dot" id="wd2"></div>
+    <div class="wiz-dot" id="wd3"></div>
+    <div class="wiz-dot" id="wd4"></div>
+    <div class="wiz-dot" id="wd5"></div>
   </div>
 
   <!-- STEP 1: INDICATION -->
-  <div class="wizard-step hidden" id="ws0">
+  <div class="wizard-step" id="ws0">
     <div class="wiz-num">Step 1 of 6</div>
     <div class="wiz-q">What is the indication for anticoagulation?</div>
     <div class="wiz-opts">
-      <button class="wiz-btn selected" onclick="pick(0,&#39;vte-tx&#39;,this)">VTE Treatment (DVT / PE)<span class="wiz-sub">Active clot requiring therapeutic anticoagulation</span></button>
+      <button class="wiz-btn" onclick="pick(0,&#39;vte-tx&#39;,this)">VTE Treatment (DVT / PE)<span class="wiz-sub">Active clot requiring therapeutic anticoagulation</span></button>
       <button class="wiz-btn" onclick="pick(0,&#39;vte-px&#39;,this)">VTE Prophylaxis<span class="wiz-sub">Prevention of clot in hospitalized or post-op patient</span></button>
       <button class="wiz-btn" onclick="pick(0,&#39;afib&#39;,this)">Atrial Fibrillation - Stroke Prevention<span class="wiz-sub">Non-valvular or valvular AF</span></button>
       <button class="wiz-btn" onclick="pick(0,&#39;hit&#39;,this)">HIT Suspected / Confirmed<span class="wiz-sub">Heparin-induced thrombocytopenia</span></button>
@@ -669,7 +669,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
       <button class="wiz-btn" onclick="pick(0,&#39;mech-valve&#39;,this)">Mechanical Heart Valve<span class="wiz-sub">Mitral or aortic position prosthesis</span></button>
       <button class="wiz-btn" onclick="pick(0,&#39;postop&#39;,this)">Post-Surgical Prophylaxis<span class="wiz-sub">Hip / knee replacement or general surgery</span></button>
     </div>
-    <div class="wiz-nav"><button class="wiz-next" id="wn0" onclick="nxt(1)">Next -&gt;</button></div>
+    <div class="wiz-nav"><button class="wiz-next" id="wn0" onclick="nxt(1)" disabled="">Next -&gt;</button></div>
   </div>
 
   <!-- STEP 2: RENAL FUNCTION -->
@@ -677,12 +677,12 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="wiz-num">Step 2 of 6</div>
     <div class="wiz-q">What is the patient's renal function?</div>
     <div class="wiz-opts">
-      <button class="wiz-btn selected" onclick="pick(1,&#39;normal&#39;,this)">Normal - CrCl &gt;= 60 mL/min<span class="wiz-sub">No significant dose adjustment needed for most agents</span></button>
+      <button class="wiz-btn" onclick="pick(1,&#39;normal&#39;,this)">Normal - CrCl &gt;= 60 mL/min<span class="wiz-sub">No significant dose adjustment needed for most agents</span></button>
       <button class="wiz-btn" onclick="pick(1,&#39;moderate&#39;,this)">Moderate impairment - CrCl 30-59 mL/min<span class="wiz-sub">Dose reduction may be required</span></button>
       <button class="wiz-btn" onclick="pick(1,&#39;severe&#39;,this)">Severe impairment - CrCl 15-29 mL/min<span class="wiz-sub">Significant restrictions on DOAC and LMWH use</span></button>
       <button class="wiz-btn" onclick="pick(1,&#39;esrd&#39;,this)">ESRD / Hemodialysis - CrCl less than 15 or IHD<span class="wiz-sub">Most DOACs contraindicated</span></button>
     </div>
-    <div class="wiz-nav"><button class="wiz-back" onclick="prv(0)">- Back</button><button class="wiz-next" id="wn1" onclick="nxt(2)">Next -&gt;</button></div>
+    <div class="wiz-nav"><button class="wiz-back" onclick="prv(0)">- Back</button><button class="wiz-next" id="wn1" onclick="nxt(2)" disabled="">Next -&gt;</button></div>
   </div>
 
   <!-- STEP 3: BMI / OBESITY -->
@@ -690,13 +690,13 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="wiz-num">Step 3 of 6</div>
     <div class="wiz-q">What is the patient's BMI or weight category?</div>
     <div class="wiz-opts">
-      <button class="wiz-btn selected" onclick="pick(2,&#39;bmi-normal&#39;,this)">Normal / Underweight - BMI below 30<span class="wiz-sub">Standard weight-based dosing applies for all agents</span></button>
+      <button class="wiz-btn" onclick="pick(2,&#39;bmi-normal&#39;,this)">Normal / Underweight - BMI below 30<span class="wiz-sub">Standard weight-based dosing applies for all agents</span></button>
       <button class="wiz-btn" onclick="pick(2,&#39;bmi-over&#39;,this)">Overweight - BMI 30 to 39<span class="wiz-sub">Enoxaparin prophylaxis: 30 mg Q12h or 40 mg QD per KCHC policy</span></button>
       <button class="wiz-btn" onclick="pick(2,&#39;bmi-obese&#39;,this)">Obese - BMI 40 to 49<span class="wiz-sub">Enoxaparin treatment: consider 0.7 mg/kg Q12h + Anti-Xa. Prophylaxis: 40 mg Q12h</span></button>
       <button class="wiz-btn" onclick="pick(2,&#39;bmi-extreme&#39;,this)">Extreme Obesity - BMI 50 or above<span class="wiz-sub">DOAC data very limited. Parenteral agent with Anti-Xa monitoring preferred</span></button>
       <button class="wiz-btn" onclick="pick(2,&#39;bmi-unknown&#39;,this)">Unknown - Not yet calculated<span class="wiz-sub">Standard dosing assumed - verify BMI and adjust as needed</span></button>
     </div>
-    <div class="wiz-nav"><button class="wiz-back" onclick="prv(1)">- Back</button><button class="wiz-next" id="wn2" onclick="nxt(3)">Next -&gt;</button></div>
+    <div class="wiz-nav"><button class="wiz-back" onclick="prv(1)">- Back</button><button class="wiz-next" id="wn2" onclick="nxt(3)" disabled="">Next -&gt;</button></div>
   </div>
 
   <!-- STEP 4: CONTRAINDICATIONS -->
@@ -704,13 +704,13 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="wiz-num">Step 4 of 6</div>
     <div class="wiz-q">Any active contraindications or high bleed risk?</div>
     <div class="wiz-opts">
-      <button class="wiz-btn selected" onclick="pick(3,&#39;none&#39;,this)">No contraindications<span class="wiz-sub">No active bleeding, no pork/heparin allergy, no HIT history</span></button>
+      <button class="wiz-btn" onclick="pick(3,&#39;none&#39;,this)">No contraindications<span class="wiz-sub">No active bleeding, no pork/heparin allergy, no HIT history</span></button>
       <button class="wiz-btn" onclick="pick(3,&#39;heparin-allergy&#39;,this)">Pork / heparin allergy or HIT history<span class="wiz-sub">Heparin and LMWH must be avoided</span></button>
       <button class="wiz-btn" onclick="pick(3,&#39;active-bleed&#39;,this)">Active bleeding<span class="wiz-sub">Major bleeding - anticoagulation hold required</span></button>
       <button class="wiz-btn" onclick="pick(3,&#39;liver&#39;,this)">Severe hepatic impairment<span class="wiz-sub">DOACs and warfarin may be contraindicated</span></button>
       <button class="wiz-btn" onclick="pick(3,&#39;pregnancy&#39;,this)">Pregnancy<span class="wiz-sub">LMWH preferred - DOACs and warfarin generally contraindicated</span></button>
     </div>
-    <div class="wiz-nav"><button class="wiz-back" onclick="prv(2)">- Back</button><button class="wiz-next" id="wn3" onclick="nxt(4)">Next -&gt;</button></div>
+    <div class="wiz-nav"><button class="wiz-back" onclick="prv(2)">- Back</button><button class="wiz-next" id="wn3" onclick="nxt(4)" disabled="">Next -&gt;</button></div>
   </div>
 
   <!-- STEP 5: CLINICAL SETTING -->
@@ -719,11 +719,11 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="wiz-q">Clinical setting and route preference?</div>
     <div class="wiz-opts">
       <button class="wiz-btn" onclick="pick(4,&#39;inpt-iv&#39;,this)">Inpatient - IV preferred<span class="wiz-sub">ICU or high-acuity, needs IV anticoagulation</span></button>
-      <button class="wiz-btn selected" onclick="pick(4,&#39;inpt-sq&#39;,this)">Inpatient - SQ acceptable<span class="wiz-sub">Floor patient, can receive subcutaneous injections</span></button>
+      <button class="wiz-btn" onclick="pick(4,&#39;inpt-sq&#39;,this)">Inpatient - SQ acceptable<span class="wiz-sub">Floor patient, can receive subcutaneous injections</span></button>
       <button class="wiz-btn" onclick="pick(4,&#39;po&#39;,this)">Oral therapy preferred / discharge planning<span class="wiz-sub">PO DOACs or warfarin appropriate</span></button>
       <button class="wiz-btn" onclick="pick(4,&#39;bridge&#39;,this)">Bridging - IV/SQ then oral transition<span class="wiz-sub">Short-term parenteral then transition to oral</span></button>
     </div>
-    <div class="wiz-nav"><button class="wiz-back" onclick="prv(3)">- Back</button><button class="wiz-next" id="wn4" onclick="nxt(5)">Next -&gt;</button></div>
+    <div class="wiz-nav"><button class="wiz-back" onclick="prv(3)">- Back</button><button class="wiz-next" id="wn4" onclick="nxt(5)" disabled="">Next -&gt;</button></div>
   </div>
 
   <!-- STEP 6: VALVULAR / SPECIAL -->
@@ -731,17 +731,17 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="wiz-num">Step 6 of 6</div>
     <div class="wiz-q">Valvular or special patient status?</div>
     <div class="wiz-opts">
-      <button class="wiz-btn selected" onclick="pick(5,&#39;none&#39;,this)">None / Non-valvular<span class="wiz-sub">Standard patient, no mechanical valves</span></button>
+      <button class="wiz-btn" onclick="pick(5,&#39;none&#39;,this)">None / Non-valvular<span class="wiz-sub">Standard patient, no mechanical valves</span></button>
       <button class="wiz-btn" onclick="pick(5,&#39;bioprosthetic&#39;,this)">Bioprosthetic valve - mitral position<span class="wiz-sub">High risk: goal INR 2.5-3.5</span></button>
       <button class="wiz-btn" onclick="pick(5,&#39;mech-ao&#39;,this)">Mechanical valve - aortic position<span class="wiz-sub">Goal INR 2-3 standard, 2.5-3.5 high risk - warfarin required</span></button>
       <button class="wiz-btn" onclick="pick(5,&#39;mech-mi&#39;,this)">Mechanical valve - mitral position<span class="wiz-sub">Goal INR 2.5-3.5 - warfarin required</span></button>
       <button class="wiz-btn" onclick="pick(5,&#39;trauma&#39;,this)">Trauma patient<span class="wiz-sub">Special VTE prophylaxis protocol applies</span></button>
     </div>
-    <div class="wiz-nav"><button class="wiz-back" onclick="prv(4)">- Back</button><button class="wiz-next" id="wn5" onclick="genRec()">Generate Recommendation -&gt;</button></div>
+    <div class="wiz-nav"><button class="wiz-back" onclick="prv(4)">- Back</button><button class="wiz-next" id="wn5" onclick="genRec()" disabled="">Generate Recommendation -&gt;</button></div>
   </div>
 
   <!-- RECOMMENDATION OUTPUT -->
-  <div class="rec-box" id="rec-out">
+  <div class="rec-box hidden" id="rec-out">
     <div style="font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">KCHC . Anticoagulation Recommendation</div>
     <div style="display:flex;flex-direction:column;gap:0;background:var(--surface);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:12px;">
       <div style="display:flex;gap:0;border-bottom:1px solid var(--border);">
@@ -767,8 +767,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   </div>
 </div>
 
-<div class="section" id="sec-1" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-1" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Warfarin</div>
   <div class="sec-sub">Vitamin K Antagonist · KCHC Protocol</div>
 
@@ -797,6 +797,23 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="info-card">
       <div class="ic-head">Ordering Policy</div>
       <div class="guideline-badge revised">KCHC Anticoagulation Policy · Updated: May 2025</div>
+      <!-- CrCl Quick Calc (compact) -->
+      <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.qc-arrow&#39;).textContent=this.nextElementSibling.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+          <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+          <span class="qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+        </div>
+        <div style="display:none;padding:12px 14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Age</label><input type="number" class="qc-age" placeholder="e.g. 65" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Weight (kg)</label><input type="number" class="qc-wt" placeholder="e.g. 80" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">SCr (mg/dL)</label><input type="number" class="qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Sex</label><select class="qc-sex" onchange="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">-</option><option value="m">Male</option><option value="f">Female</option></select></div>
+          </div>
+          <div class="qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+          <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Source: Cockcroft-Gault</div>
+        </div>
+      </div>
       <div class="guideline-badge">Primary Source: Justin Wilson, PharmD Presentation</div>
       <div class="ic-body">
         <ul>
@@ -1009,8 +1026,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 2 — UFH
 ══════════════════════════════════════ -->
-<div class="section" id="sec-2" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-2" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Unfractionated Heparin (UFH)</div>
   <div class="sec-sub">IV Infusion Protocol · KCHC</div>
   <div class="disc"><span class="disc-icon">⚠</span><span class="disc-text">CBC with platelet count must be checked DAILY while patient is on heparin. Monitor for HIT.</span></div>
@@ -1155,8 +1172,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 3 — ENOXAPARIN
 ══════════════════════════════════════ -->
-<div class="section" id="sec-3" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-3" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Enoxaparin (Lovenox)</div>
   <div class="sec-sub">LMWH · Smart Adult + Pediatric Calculator · KCHC</div>
 
@@ -1544,8 +1561,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 4 — DOACs
 ══════════════════════════════════════ -->
-<div class="section" id="sec-4" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-4" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">DOACs — Factor Xa Inhibitors</div>
   <div class="sec-sub">Apixaban (Eliquis) · Rivaroxaban (Xarelto) · KCHC</div>
 
@@ -1616,8 +1633,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 5 — HIT / ARGATROBAN
 ══════════════════════════════════════ -->
-<div class="section" id="sec-5" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-5" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">HIT — Argatroban Protocol</div>
   <div class="sec-sub">Heparin-Induced Thrombocytopenia · KCHC Adult Protocol</div>
   <div class="disc"><span class="disc-icon">⚠</span><span class="disc-text">Stop ALL heparin immediately — infusion, SQ heparin, enoxaparin. Discontinue aspirin doses &gt;162 mg/day.</span></div>
@@ -1687,8 +1704,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 6 — REVERSAL
 ══════════════════════════════════════ -->
-<div class="section" id="sec-6" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-6" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Reversal Agents</div>
   <div class="sec-sub">KCHC Protocol Reference · Contact clinical pharmacist for life-threatening bleeds</div>
   <div class="disc"><span class="disc-icon">⚠</span><span class="disc-text">For life-threatening bleeds, refer to Attachment A on Shareplus. Contact attending and clinical pharmacist immediately.</span></div>
@@ -1861,8 +1878,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 7 — VERIFICATION CHECKLIST
 ══════════════════════════════════════ -->
-<div class="section" id="sec-7" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-7" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Verification Checklist</div>
   <div class="sec-sub">I-Vent Attestation · KCHC Anticoagulation Order Review</div>
   <div class="disc"><span class="disc-icon">◆</span><span class="disc-text">Complete before verifying any anticoagulant. i-vent attestation required in EPIC — use ANTICOAGULATIONVE SmartText.</span></div>
@@ -1912,8 +1929,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 8 — COMPETENCY ASSESSMENT
 ══════════════════════════════════════ -->
-<div class="section" id="sec-8" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-8" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- INTRO SCREEN -->
   <div id="comp-intro-screen" class="comp-intro">
@@ -3624,7 +3641,7 @@ const SEARCH_INDEX = [
 
   // ── BEHAVIORAL HEALTH ──
   {s:0,  tab:'bh', name:'BH Agent Selector',          keywords:'behavioral health agent selector antipsychotic schizophrenia bipolar depression delirium oud aud olanzapine risperidone quetiapine aripiprazole',  tag:'select'},
-  {s:1,  tab:'bh', name:'LAI Comparison Calculator',  keywords:'lai long acting injectable antipsychotic comparison haloperidol decanoate fluphenazine risperdal consta invega sustenna trinza hafyera abilify maintena aristada uzedy rykindo asimtufii vivitrol due date calculator',  tag:'calc'},
+  {s:1,  tab:'bh', name:'LAI Calculators & Converters',  keywords:'lai long acting injectable antipsychotic comparison haloperidol decanoate fluphenazine risperdal consta invega sustenna trinza hafyera abilify maintena aristada uzedy rykindo asimtufii vivitrol due date calculator converter',  tag:'calc'},
   {s:2,  tab:'bh', name:'LAI Dispensing Workflow',    keywords:'lai dispensing workflow r satellite closed kchc pharmacy invega sustenna abilify maintena risperdal consta aristada',  tag:'protocol'},
   {s:3,  tab:'bh', name:'QTc Risk Assessment',        keywords:'qtc prolongation risk psychotropic medications haloperidol ziprasidone quetiapine thioridazine torsade de pointes tdp assessment',  tag:'calc'},
   {s:4,  tab:'bh', name:'TDM Drug Levels BH',         keywords:'tdm therapeutic drug monitoring lithium valproic acid carbamazepine level target range monitoring bh',  tag:'calc'},
@@ -6097,13 +6114,13 @@ var ORAL_TO_LAI = {
     convert: function(dose){
       var results = [];
       if(dose==='10 mg/day'){
-        results.push({lai:'Abilify Maintena', dose:'400 mg IM', freq:'Q4 weeks', note:'Oral aripiprazole 10–20 mg/day × 14 days with first injection', loading:'No Initio needed'});
+        results.push({lai:'Abilify Maintena', dose:'400 mg IM', freq:'Q4 weeks', note:'Oral aripiprazole 10–20 mg/day × 14 days with first injection. Use Maintena Dose Selector below to check if 300 mg is more appropriate (CYP2D6, drug interactions, prior ADRs).', loading:'No Initio needed'});
         results.push({lai:'Aristada', dose:'441 mg IM', freq:'Q4 weeks', note:'Aristada Initio 675 mg + oral aripiprazole 30 mg same day, OR oral aripiprazole × 21 days', loading:'Aristada Initio 675 mg available'});
       } else if(dose==='15 mg/day'){
-        results.push({lai:'Abilify Maintena', dose:'400 mg IM', freq:'Q4 weeks', note:'Oral aripiprazole 10–20 mg/day × 14 days with first injection'});
+        results.push({lai:'Abilify Maintena', dose:'400 mg IM', freq:'Q4 weeks', note:'Oral aripiprazole 10–20 mg/day × 14 days with first injection. Use Maintena Dose Selector below to check if 300 mg is more appropriate.'});
         results.push({lai:'Aristada', dose:'662 mg IM', freq:'Q6 weeks OR 882 mg Q6–8 wks OR 1064 mg Q8 wks', note:'Aristada Initio 675 mg + oral aripiprazole 30 mg same day, OR oral overlap × 21 days'});
       } else {
-        results.push({lai:'Abilify Maintena', dose:'400 mg IM', freq:'Q4 weeks', note:'Oral aripiprazole 10–20 mg/day × 14 days with first injection'});
+        results.push({lai:'Abilify Maintena', dose:'400 mg IM', freq:'Q4 weeks', note:'Oral aripiprazole 10–20 mg/day × 14 days with first injection. Use Maintena Dose Selector below to check if 300 mg is more appropriate.'});
         results.push({lai:'Aristada', dose:'882 mg IM', freq:'Q4 weeks (or 1064 mg Q8 weeks)', note:'Aristada Initio 675 mg + oral aripiprazole 30 mg same day, OR oral overlap × 21 days'});
         results.push({lai:'Abilify Asimtufii', dose:'960 mg IM (gluteal)', freq:'Q2 months', note:'2 initiation options: (1) 14-day — oral aripiprazole 10–20 mg × 14 days with first injection · (2) 1-day — Maintena 400 mg IM + oral aripiprazole 20 mg on Day 1 only'});
       }
@@ -6226,7 +6243,7 @@ var LAI_TO_ORAL = {
     return [{drug:'Paliperidone (Invega)', dose: map[dose] ? 'Via ' + map[dose] : '—', note:'Convert Hafyera → Sustenna equivalent first, then to oral · Hafyera Q6months requires established Sustenna/Trinza history'}];
   },
   maintena: function(dose){
-    return [{drug:'Aripiprazole (Abilify)', dose: dose==='300 mg' ? '15 mg/day' : '20 mg/day', note:'Oral aripiprazole 10–20 mg/day × 14 days required when initiating Maintena'}];
+    return [{drug:'Aripiprazole (Abilify)', dose: dose==='300 mg' ? '10–15 mg/day' : '20 mg/day', note: dose==='300 mg' ? 'Maintena 300 mg is a reduced dose — used for adverse reactions or CYP2D6/CYP3A4 drug interactions. Oral equivalent 10–15 mg/day.' : 'Oral aripiprazole 10–20 mg/day × 14 days required when initiating or restarting Maintena'}];
   },
   aristada_441:  function(){ return [{drug:'Aripiprazole (Abilify)', dose:'10 mg/day', note:'Aristada Initio 675 mg or oral aripiprazole × 21 days needed at initiation'}]; },
   aristada_662:  function(){ return [{drug:'Aripiprazole (Abilify)', dose:'15 mg/day', note:'Aristada Initio 675 mg or oral aripiprazole × 21 days needed at initiation'}]; },
@@ -6997,7 +7014,7 @@ function calcEPSRisk(){
       setBanner('eps-banner','green','✓ Fluphenazine Decanoate — Within Expected Window',days+' days since last injection. Dosing interval is individualized per patient response (PI: up to Q3–4 weeks, PORT: Q2 weeks). Verify with prescriber.');
     }
   } else {
-    setBanner('eps-banner','blue','Other LAI — Verify with R Pharmacy','For Invega Sustenna, Abilify Maintena, Aristada, Vivitrol, and Risperdal Consta: confer with R Pharmacy staff. Verify last date and dose before dispensing. Use the Missed Dose Calculator in the LAI Comparison tab for specific thresholds.');
+    setBanner('eps-banner','blue','Other LAI — Verify with R Pharmacy','For Invega Sustenna, Abilify Maintena, Aristada, Vivitrol, and Risperdal Consta: confer with R Pharmacy staff. Verify last date and dose before dispensing. Use the Missed Dose Calculator in the LAI Calculators &amp; Converters tab for specific thresholds.');
   }
 }
 // ── QTc RISK SCORER ──
@@ -10065,7 +10082,7 @@ function amGenRec(){
 </div><!-- /cert-overlay -->
 <!-- ══ ANTIMICROBIAL SECTIONS (from Pharmacy AI v3) ══ -->
 
-<div class="section" id="sec-9" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-9" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="9" data-pane="0" onclick="goTo(9,0)">PK — Trough Only</button>
     <button class="mnav-btn" data-section="9" data-pane="1" onclick="goTo(9,1)">PK — Peak+Trough</button>
@@ -10077,12 +10094,32 @@ function amGenRec(){
     <button class="mnav-btn" data-section="9" data-pane="8" onclick="goTo(9,8)">C. diff Treatment</button>
     <button class="mnav-btn" data-section="9" data-pane="9" onclick="goTo(9,9)">C. diff Prophylaxis</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <div class="pane active" id="s9p0">
     <div class="sec-title">PK — Trough Only</div>
     <div class="sec-sub">One-Compartment · Cockcroft-Gault · Matzke Ke · New Dose Simulator</div>
     <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Oct 2020</div>
+    <!-- CrCl Quick Calc -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.amqca-am9&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc — IBW / AdjBW (Cockcroft-Gault)</span>
+        <span class="amqca-am9" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Age</span><input type="number" id="am9-qc-age" placeholder="e.g. 65" oninput="amQCCalcFull(&#39;am9&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;"><span style="font-size:10px;color:var(--sub);">ABW (kg)</span><input type="number" id="am9-qc-wt" placeholder="e.g. 80" oninput="amQCCalcFull(&#39;am9&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Height (cm)</span><input type="number" id="am9-qc-ht" placeholder="e.g. 170" oninput="amQCCalcFull(&#39;am9&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span><input type="number" id="am9-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="amQCCalcFull(&#39;am9&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Sex</span><select id="am9-qc-sex" onchange="amQCCalcFull(&#39;am9&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">Select</option><option value="m">Male</option><option value="f">Female</option></select></div>
+        </div>
+        <div id="am9-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:12px;color:#065f46;font-weight:600;line-height:1.6;"></div>
+        <div id="am9-qc-warn" style="display:none;margin-top:4px;padding:6px 10px;background:rgba(180,83,9,0.07);border-radius:5px;font-size:11px;color:#b45309;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × DosingWt / (72 × SCr)] × 0.85 if female · AdjBW threshold: &gt;130% IBW (KCHC Vancomycin Guideline)</div>
+      </div>
+    </div>
+
     <div class="disc"><div class="disc-icon">⚠</div><div class="disc-text">Population-based PK. For patient-specific PK use Peak+Trough tab. ABW used for vancomycin per KCHC. Use AdjBW if ABW &gt;130% IBW.</div></div>
     <div class="banner" id="t-ptype-banner" style="margin-bottom:14px"></div>
     <div class="fc"><div class="fc-head"><div class="fc-title">Patient + Regimen</div></div>
@@ -10387,17 +10424,17 @@ function amGenRec(){
 
 <!-- SECTION 1: ADULT EMPIRIC -->
 
-<div class="section" id="sec-10" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-10" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
-    <button class="mnav-btn active" data-section="10" data-pane="0" onclick="goTo(10,0)">Sepsis</button>
+    <button class="mnav-btn" data-section="10" data-pane="0" onclick="goTo(10,0)">Sepsis</button>
     <button class="mnav-btn" data-section="10" data-pane="1" onclick="goTo(10,1)">Pneumonia (CAP)</button>
     <button class="mnav-btn" data-section="10" data-pane="2" onclick="goTo(10,2)">UTI</button>
     <button class="mnav-btn" data-section="10" data-pane="3" onclick="goTo(10,3)">SSTI</button>
     <button class="mnav-btn" data-section="10" data-pane="4" onclick="goTo(10,4)">MRSA Protocols</button>
-    <button class="mnav-btn" data-section="10" data-pane="5" onclick="goTo(10,5)">C. Difficile</button>
+    <button class="mnav-btn active" data-section="10" data-pane="5" onclick="goTo(10,5)">C. Difficile</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
-    <div class="pane active" id="s10p0">
+  <div class="main" style="scroll-margin-top: 186px;">
+    <div class="pane" id="s10p0">
       <div class="sec-title">Adult Sepsis — Empiric</div>
       <div class="sec-sub">Initial Selection · Normal Renal Function (CrCl &gt;50 mL/min)</div>
       <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Oct 2020</div>
@@ -10413,7 +10450,6 @@ function amGenRec(){
       </tbody></table>
       <div class="info-box"><div class="info-title">Pip/Tazo + Vancomycin Incompatibility</div><div class="info-text">Piperacillin/tazobactam and Vancomycin are <strong>incompatible via Y-site</strong>. Administer through separate IV lines or flush line completely between infusions. Same incompatibility applies to Cefepime + Vancomycin.</div></div>
       <button class="print-btn" onclick="window.print()">⎙ Print</button>
-    </div>
 
     <!-- VANCOMYCIN TDM INTERPRETER -->
     <div style="margin-top:18px;border-top:2px solid var(--border);padding-top:14px;">
@@ -10443,6 +10479,7 @@ function amGenRec(){
         </div>
       </div>
       <div id="vt-out" style="display:none;margin-top:10px;padding:0 14px 14px;"></div>
+    </div>
     </div>
 
     <div class="pane" id="s10p1">
@@ -10508,7 +10545,7 @@ function amGenRec(){
       <button class="print-btn" onclick="window.print()">⎙ Print</button>
     </div>
 
-    <div class="pane" id="s10p5">
+    <div class="pane active" id="s10p5">
       <div class="sec-title">Clostridioides difficile (CDI)</div>
       <div class="sec-sub">Complete Oral Vancomycin Protocol · Treatment + Recurrence + Prophylaxis</div>
       <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Aug 2020</div>
@@ -10575,7 +10612,7 @@ function amGenRec(){
 
 <!-- SECTION 2: PEDIATRIC -->
 
-<div class="section" id="sec-11" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-11" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="11" data-pane="0" onclick="goTo(11,0)">Pediatric CAP</button>
     <button class="mnav-btn" data-section="11" data-pane="1" onclick="goTo(11,1)">Pediatric SSTI</button>
@@ -10586,7 +10623,7 @@ function amGenRec(){
     <button class="mnav-btn" data-section="11" data-pane="6" onclick="goTo(11,6)">⚡ Status Epilepticus</button>
     <button class="mnav-btn" data-section="11" data-pane="7" onclick="goTo(11,7)">💨 Levalbuterol</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s11p0">
       <div class="sec-title">Pediatric CAP</div>
       <div class="sec-sub">Community-Acquired Pneumonia · Ages 3 Months – 18 Years</div>
@@ -10885,41 +10922,203 @@ function amGenRec(){
 
 <!-- SECTION 3: RENAL DOSING -->
 
-<div class="section" id="sec-12" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-12" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="12" data-pane="0" onclick="goTo(12,0)">Master Renal Table</button>
     <button class="mnav-btn" data-section="12" data-pane="1" onclick="goTo(12,1)">No Adjustment Needed</button>
     <button class="mnav-btn" data-section="12" data-pane="2" onclick="goTo(12,2)">PD Dosing</button>
     <button class="mnav-btn" data-section="12" data-pane="3" onclick="goTo(12,3)">CrCl Calculator</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s12p0">
       <div class="sec-title">Master Renal Dosing Table</div>
       <div class="sec-sub">Adult · IV Doses · ABW Unless Specified · IHD + CRRT</div>
       <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Apr 2021</div>
-      <div class="disc"><div class="disc-icon">⚠</div><div class="disc-text">Use Cockcroft-Gault with IBW (or AdjBW if ABW &gt;130% IBW). All IV doses unless noted. PD generally follows IHD unless specified separately.</div></div>
-      <table class="tbl"><thead><tr><th>Antimicrobial</th><th>Normal Dose</th><th>IHD (Post-Dialysis)</th><th>CRRT</th></tr></thead><tbody>
-        <tr class="highlight"><td>Vancomycin</td><td class="dose">15–20 mg/kg q8–12h</td><td class="dose">7.5–10 mg/kg by level</td><td class="dose">7.5–10 mg/kg q12h</td></tr>
-        <tr><td>Acyclovir (CNS)</td><td class="dose">10 mg/kg q8h</td><td class="dose">5 mg/kg q24h</td><td class="dose">10 mg/kg q12–24h</td></tr>
-        <tr><td>Amikacin</td><td class="dose">15 mg/kg q24h</td><td class="dose">5–7.5 mg/kg post-HD (by level)</td><td class="dose">10 mg/kg load, then 7.5 mg/kg q24–48h</td></tr>
-        <tr><td>Ampicillin (Severe)</td><td class="dose">2g q4h</td><td class="dose">2g q12h</td><td class="dose">2g q6–8h</td></tr>
-        <tr><td>Ampicillin/Sulbactam</td><td class="dose">3g q6h</td><td class="dose">3g q12–24h (PD: 1.5g q12h)</td><td class="dose">3g q8–12h</td></tr>
-        <tr><td>Aztreonam</td><td class="dose">2g q8h</td><td class="dose">500mg q8–12h</td><td class="dose">CVVH: 2g q12h · CVVHD: 2g load, then 1g q8h or 2g q12h</td></tr>
-        <tr><td>Cefazolin</td><td class="dose">2g q8h</td><td class="dose">1g q24h or 2g post-HD (PD: 500mg q12h)</td><td class="dose">2g load, then 1g q8h</td></tr>
-        <tr><td>Cefepime (Severe)</td><td class="dose">2g q8h</td><td class="dose">1g q24h or 2g post-HD</td><td class="dose">2g q8–12h</td></tr>
-        <tr><td>Ceftaroline</td><td class="dose">600mg q12h</td><td class="dose">200mg q12h</td><td class="dose">400–600mg q12h</td></tr>
-        <tr><td>Ceftazidime</td><td class="dose">2g q8h</td><td class="dose">1g q24h</td><td class="dose">2g q8–12h</td></tr>
-        <tr><td>Ceftazidime/Avibactam</td><td class="dose">2.5g q8h</td><td class="dose">0.94g q24h</td><td class="dose">1.25g q8h</td></tr>
-        <tr><td>Ceftolozane/Tazo</td><td class="dose">1.5g q8h</td><td class="dose">750mg ×1, then 150mg q8h</td><td class="dose">1.5g q8h</td></tr>
-        <tr><td>Daptomycin (SSTI)</td><td class="dose">4–6 mg/kg q24h</td><td class="dose">Usual dose q48h</td><td class="dose">4–6 mg/kg q24h</td></tr>
-        <tr><td>Ertapenem</td><td class="dose">1g q24h</td><td class="dose">500mg q24h or 1g post-HD</td><td class="dose">1g q24h</td></tr>
-        <tr><td>Fluconazole</td><td class="dose">6 mg/kg q24h</td><td class="dose">Full dose post-HD only</td><td class="dose">400–1200mg q24h</td></tr>
-        <tr><td>Gentamicin (Systemic)</td><td class="dose">5–7 mg/kg q24h</td><td class="dose">2–3 mg/kg, then 1.5–2 mg/kg post-HD</td><td class="dose">2–3 mg/kg load, then 1.5–2.5 mg/kg q24–48h</td></tr>
-        <tr><td>Levofloxacin</td><td class="dose">750mg q24h</td><td class="dose">750mg ×1, then 500mg q48h</td><td class="dose">750mg ×1, then 500mg q24h</td></tr>
-        <tr><td>Meropenem (Severe)</td><td class="dose">2g q8h</td><td class="dose">500mg q24h or 1g post-HD</td><td class="dose">1g q8h</td></tr>
-        <tr><td>Pip/Tazo</td><td class="dose">3.375g q6h</td><td class="dose">2.25g q8–12h</td><td class="dose">4.5g LD, then 2.25–3.375g q6h</td></tr>
-        <tr><td>TMP/SMX (Severe)</td><td class="dose">5 mg/kg q8h</td><td class="dose">5 mg/kg q24h</td><td class="na">No adjustment</td></tr>
-      </tbody></table>
+    <!-- CrCl Quick Calc -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.amqca-am12&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc — IBW / AdjBW (Cockcroft-Gault)</span>
+        <span class="amqca-am12" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Age</span><input type="number" id="am12-qc-age" placeholder="e.g. 65" oninput="amQCCalcFull(&#39;am12&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;"><span style="font-size:10px;color:var(--sub);">ABW (kg)</span><input type="number" id="am12-qc-wt" placeholder="e.g. 80" oninput="amQCCalcFull(&#39;am12&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Height (cm)</span><input type="number" id="am12-qc-ht" placeholder="e.g. 170" oninput="amQCCalcFull(&#39;am12&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span><input type="number" id="am12-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="amQCCalcFull(&#39;am12&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Sex</span><select id="am12-qc-sex" onchange="amQCCalcFull(&#39;am12&#39;,130)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">Select</option><option value="m">Male</option><option value="f">Female</option></select></div>
+        </div>
+        <div id="am12-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:12px;color:#065f46;font-weight:600;line-height:1.6;"></div>
+        <div id="am12-qc-warn" style="display:none;margin-top:4px;padding:6px 10px;background:rgba(180,83,9,0.07);border-radius:5px;font-size:11px;color:#b45309;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × DosingWt / (72 × SCr)] × 0.85 if female · AdjBW threshold: &gt;130% IBW (KCHC Renal Dosing Guideline)</div>
+      </div>
+    </div>
+
+      <div class="disc"><div class="disc-icon">⚠</div><div class="disc-text">Use Cockcroft-Gault with IBW (or AdjBW if ABW &gt;130% IBW). All IV doses unless noted. PD generally follows IHD unless specified separately. Source: KCHC Antimicrobial Renal Dosing Guideline · P&amp;T Approved 4/20/2021</div></div>
+
+      <!-- Interactive controls -->
+      <div id="rdt-controls" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px;">
+        <div style="display:flex;gap:4px;align-items:center;">
+          <span style="font-family:monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-right:4px;">Renal Status:</span>
+          <button id="rdt-btn-normal" onclick="rdtSetStatus(&#39;normal&#39;)" style="padding:5px 10px;font-family:monospace;font-size:10px;letter-spacing:0.06em;border-radius:4px;cursor:pointer;background:rgba(52,211,153,0.15);border:1px solid var(--teal);color:var(--teal);">✓ Normal (CrCl ≥50)</button>
+          <button id="rdt-btn-reduced" onclick="rdtSetStatus(&#39;reduced&#39;)" style="padding:5px 10px;font-family:monospace;font-size:10px;letter-spacing:0.06em;border-radius:4px;cursor:pointer;background:var(--surface);border:1px solid var(--border);color:var(--muted);">⚠ Reduced (CrCl &lt;50)</button>
+          <button id="rdt-btn-ihd" onclick="rdtSetStatus(&#39;ihd&#39;)" style="padding:5px 10px;font-family:monospace;font-size:10px;letter-spacing:0.06em;border-radius:4px;cursor:pointer;background:var(--surface);border:1px solid var(--border);color:var(--muted);">💉 IHD</button>
+          <button id="rdt-btn-crrt" onclick="rdtSetStatus(&#39;crrt&#39;)" style="padding:5px 10px;font-family:monospace;font-size:10px;letter-spacing:0.06em;border-radius:4px;cursor:pointer;background:var(--surface);border:1px solid var(--border);color:var(--muted);">🔄 CRRT</button>
+        </div>
+        <input id="rdt-search" type="text" placeholder="🔍 Search drug..." oninput="rdtFilter()" style="flex:1;min-width:140px;max-width:220px;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:5px 10px;border-radius:4px;font-size:12px;">
+        <button onclick="rdtReset()" style="padding:5px 10px;font-family:monospace;font-size:10px;border-radius:4px;cursor:pointer;background:none;border:1px solid var(--border);color:var(--sub);">↺ Reset</button>
+      </div>
+      <div id="rdt-crcl-banner" style="display:none;margin-bottom:8px;padding:7px 12px;background:rgba(52,211,153,0.1);border:1px solid var(--teal);border-radius:5px;font-size:11px;font-family:monospace;color:var(--teal);"></div>
+
+      <!-- 5-column table sourced from KCHC Antimicrobial Renal Dosing Guideline P&T 4/20/2021 -->
+      <div style="overflow-x:auto;">
+      <table class="tbl" id="rdt-table" style="min-width:820px;">
+        <thead>
+          <tr>
+            <th style="min-width:140px;">Antimicrobial</th>
+            <th id="rdt-th-normal" style="min-width:140px;transition:background 0.2s;">Normal (CrCl ≥50)</th>
+            <th id="rdt-th-reduced" style="min-width:180px;transition:background 0.2s;">Renal Adjustment (CrCl &lt;50)</th>
+            <th id="rdt-th-ihd" style="min-width:160px;transition:background 0.2s;">IHD (Post-HD)</th>
+            <th id="rdt-th-crrt" style="min-width:140px;transition:background 0.2s;">CRRT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight" data-drug="vancomycin">
+            <td><strong>Vancomycin</strong><br><span style="font-size:10px;color:var(--sub);">Use IBW; AdjBW if ABW &gt;130% IBW</span></td>
+            <td class="dose rdt-normal">15–20 mg/kg q8–12h<br><span style="font-size:10px;">(Refer to Vanco Dosing Guideline)</span></td>
+            <td class="dose rdt-reduced">CrCl 55–79: 15–20 mg/kg q12h<br>CrCl 20–54: 15–20 mg/kg q12–24h<br>CrCl &lt;20 or AKI: 15 mg/kg ×1, redose when level &lt;20 mg/L</td>
+            <td class="dose rdt-ihd">20–25 mg/kg loading dose, then 7.5–10 mg/kg after HD (pre-HD level goal 15–20 mg/L)</td>
+            <td class="dose rdt-crrt">7.5–10 mg/kg q12h (adjust per trough levels)</td>
+          </tr>
+          <tr data-drug="acyclovir">
+            <td><strong>Acyclovir</strong><br><span style="font-size:10px;color:var(--sub);">Use IBW; AdjBW if BMI &gt;40</span></td>
+            <td class="dose rdt-normal">10 mg/kg q8h (CNS/Zoster)<br>5 mg/kg q8h (HSV non-CNS)</td>
+            <td class="dose rdt-reduced">CNS/Zoster: CrCl 25–50: q12h · CrCl 10–24: q24h · CrCl &lt;10: 5 mg/kg q24h<br>HSV: CrCl 25–50: q12h · CrCl 10–24: q24h · CrCl &lt;10: 2.5 mg/kg q24h</td>
+            <td class="dose rdt-ihd">5 mg/kg q24h (CNS)<br>2.5 mg/kg q24h (HSV)</td>
+            <td class="dose rdt-crrt">10 mg/kg q12–24h (CNS)<br>5 mg/kg q12–24h (HSV)</td>
+          </tr>
+          <tr data-drug="amikacin">
+            <td><strong>Amikacin</strong><br><span style="font-size:10px;color:var(--sub);">IBW; AdjBW if ABW &gt;120% IBW</span></td>
+            <td class="dose rdt-normal">15 mg/kg q24h<br><span style="font-size:10px;">(Hartford Nomogram or trough)</span></td>
+            <td class="dose rdt-reduced">CrCl &lt;20 or unstable renal: 7.5 mg/kg; dose by level</td>
+            <td class="dose rdt-ihd">5–7.5 mg/kg after HD; redose when pre-HD &lt;10 mg/L</td>
+            <td class="dose rdt-crrt">10 mg/kg loading dose, then 7.5 mg/kg q24–48h; redose when &lt;10 mg/L</td>
+          </tr>
+          <tr data-drug="ampicillin sulbactam unasyn">
+            <td><strong>Ampicillin/Sulbactam</strong></td>
+            <td class="dose rdt-normal">3g q6h<br><span style="font-size:10px;">(consider q4h for Acinetobacter)</span></td>
+            <td class="dose rdt-reduced">CrCl 15–29: 3g q12h<br>CrCl &lt;15: 3g q24h</td>
+            <td class="dose rdt-ihd">3g q12–24h<br>PD: 1.5g q12h or 3g q24h</td>
+            <td class="dose rdt-crrt">3g q8–12h</td>
+          </tr>
+          <tr data-drug="aztreonam">
+            <td><strong>Aztreonam</strong></td>
+            <td class="dose rdt-normal">2g q8h<br><span style="font-size:10px;">(1g for non-severe)</span></td>
+            <td class="dose rdt-reduced">CrCl 10–30: 1g q8h<br>CrCl &lt;10: 500mg q8h</td>
+            <td class="dose rdt-ihd">500mg q8–12h</td>
+            <td class="dose rdt-crrt">CVVH: 2g q12h<br>CVVHD/CVVHDF: 2g load, then 1g q8h or 2g q12h</td>
+          </tr>
+          <tr data-drug="cefazolin ancef">
+            <td><strong>Cefazolin</strong></td>
+            <td class="dose rdt-normal">2g q8h<br><span style="font-size:10px;">(1g for non-severe)</span></td>
+            <td class="dose rdt-reduced">CrCl 30–49: 1–2g q8–12h<br>CrCl 11–29: 1g q12h (2g for severe)<br>CrCl &lt;11: 500mg–1g q24h</td>
+            <td class="dose rdt-ihd">1g q24h or 2g post-HD<br>PD: 500mg q12h or 1g q24h</td>
+            <td class="dose rdt-crrt">2g load, then 1g q8h or 2g q12h</td>
+          </tr>
+          <tr data-drug="cefepime maxipime">
+            <td><strong>Cefepime</strong></td>
+            <td class="dose rdt-normal">2g q8h (severe/Pseudo/bacteremia)<br>2g q12h (UTI/non-severe)</td>
+            <td class="dose rdt-reduced">Severe: CrCl 30–60: q12h · CrCl 11–29: 2g q24h or 1g q12h · CrCl &lt;11: 1g q24h<br>Non-severe: CrCl 30–60: 1g q12h · CrCl 11–29: 1g q24h · CrCl &lt;11: 500mg q24h</td>
+            <td class="dose rdt-ihd">1g q24h or 2g post-HD</td>
+            <td class="dose rdt-crrt">2g q8–12h</td>
+          </tr>
+          <tr data-drug="ceftaroline teflaro">
+            <td><strong>Ceftaroline</strong></td>
+            <td class="dose rdt-normal">600mg q12h<br><span style="font-size:10px;">(q8h for severe/refractory MRSA)</span></td>
+            <td class="dose rdt-reduced">CrCl 31–50: 400mg q12h<br>CrCl 15–30: 300mg q12h<br>CrCl &lt;15: 200mg q12h</td>
+            <td class="dose rdt-ihd">200mg q12h</td>
+            <td class="dose rdt-crrt">400–600mg q12h</td>
+          </tr>
+          <tr data-drug="ceftazidime fortaz">
+            <td><strong>Ceftazidime</strong></td>
+            <td class="dose rdt-normal">2g q8h</td>
+            <td class="dose rdt-reduced">CrCl 31–50: 2g q12h<br>CrCl 16–30: 2g q24h<br>CrCl &lt;15: 1g q24h</td>
+            <td class="dose rdt-ihd">1g q24h or 1g/1g/2g post-HD</td>
+            <td class="dose rdt-crrt">2g q8–12h</td>
+          </tr>
+          <tr data-drug="ceftazidime avibactam avycaz">
+            <td><strong>Ceftazidime/Avibactam</strong></td>
+            <td class="dose rdt-normal">2.5g q8h</td>
+            <td class="dose rdt-reduced">CrCl 31–50: 1.25g q8h<br>CrCl 16–30: 0.94g q12h<br>CrCl 6–15: 0.94g q24h<br>CrCl ≤5: 0.94g q48h</td>
+            <td class="dose rdt-ihd">0.94g q24h</td>
+            <td class="dose rdt-crrt">1.25g q8h</td>
+          </tr>
+          <tr data-drug="ceftolozane tazobactam zerbaxa">
+            <td><strong>Ceftolozane/Tazobactam</strong></td>
+            <td class="dose rdt-normal">1.5g q8h (standard)<br>3g q8h (MDR Pseudo pneumonia)</td>
+            <td class="dose rdt-reduced">Standard: CrCl 30–50: 750mg q8h · CrCl ≤29: 375mg q8h<br>MDR Pseudo: CrCl 30–50: 1.5g q8h · CrCl ≤29: 750mg q8h</td>
+            <td class="dose rdt-ihd">Standard: 750mg ×1, then 150mg q8h<br>MDR Pseudo: 2.25g ×1, then 450mg q8h</td>
+            <td class="dose rdt-crrt">1.5g q8h</td>
+          </tr>
+          <tr data-drug="daptomycin cubicin">
+            <td><strong>Daptomycin</strong><br><span style="font-size:10px;color:var(--sub);">Consider AdjBW if obese</span></td>
+            <td class="dose rdt-normal">4–6 mg/kg q24h (SSTI)<br>8–10 mg/kg q24h (MRSA bacteremia/endo/osteo)</td>
+            <td class="dose rdt-reduced">CrCl &lt;30: same dose q48h (SSTI)<br>8 mg/kg q48h (MRSA bacteremia)</td>
+            <td class="dose rdt-ihd">Same dose q48h (SSTI)<br>Alt: usual dose post-HD; +50% on 72h interdialytic day</td>
+            <td class="dose rdt-crrt">4–6 mg/kg q24h (SSTI)<br>8 mg/kg q48h (bacteremia)</td>
+          </tr>
+          <tr data-drug="ertapenem invanz">
+            <td><strong>Ertapenem</strong></td>
+            <td class="dose rdt-normal">1g q24h</td>
+            <td class="dose rdt-reduced">CrCl ≤30: 500mg q24h</td>
+            <td class="dose rdt-ihd">500mg q24h or 1g post-HD</td>
+            <td class="dose rdt-crrt">1g q24h</td>
+          </tr>
+          <tr data-drug="fluconazole diflucan">
+            <td><strong>Fluconazole</strong></td>
+            <td class="dose rdt-normal">12 mg/kg ×1, then 6 mg/kg q24h (Candidemia)<br>200mg q24h (OPC/cystitis)</td>
+            <td class="dose rdt-reduced">CrCl ≤50: 50% of maintenance q24h (Candidemia)<br>CrCl ≤50: 100mg q24h (OPC/cystitis)</td>
+            <td class="dose rdt-ihd">Administer maintenance dose on HD days only after dialysis<br>200mg→400mg · 400mg→800mg · 800mg→1200mg q24h</td>
+            <td class="dose rdt-crrt">Usual dose q24h</td>
+          </tr>
+          <tr data-drug="gentamicin garamycin">
+            <td><strong>Gentamicin</strong><br><span style="font-size:10px;color:var(--sub);">IBW; AdjBW if ABW &gt;120% IBW</span></td>
+            <td class="dose rdt-normal">5–7 mg/kg q24h systemic<br>1 mg/kg q8h (gram+ synergy)</td>
+            <td class="dose rdt-reduced">Systemic: CrCl &lt;20 or unstable: 1.5–2 mg/kg; dose by level<br>Synergy: CrCl 40–59: q12h · CrCl 20–39: q24h · CrCl &lt;20: by level</td>
+            <td class="dose rdt-ihd">Systemic: 2–3 mg/kg load, then 1.5–2 mg/kg after HD; redose when pre-HD &lt;3–5 mg/L<br>Synergy: 2–3 mg/kg load, then 1 mg/kg after HD; pre-HD &lt;1 mg/L</td>
+            <td class="dose rdt-crrt">Systemic: 2–3 mg/kg load, then 1.5–2.5 mg/kg q24–48h; &lt;2 mg/L<br>Synergy: 2–3 mg/kg load, then 1 mg/kg q24–48h; &lt;1 mg/L</td>
+          </tr>
+          <tr data-drug="levofloxacin levaquin">
+            <td><strong>Levofloxacin</strong></td>
+            <td class="dose rdt-normal">750mg q24h</td>
+            <td class="dose rdt-reduced">CrCl 20–49: 750mg q48h<br>CrCl &lt;20: 750mg ×1, then 500mg q48h</td>
+            <td class="dose rdt-ihd">750mg ×1, then 500mg q48h</td>
+            <td class="dose rdt-crrt">750mg ×1, then 500mg q24h OR 750mg q48h</td>
+          </tr>
+          <tr data-drug="meropenem merrem">
+            <td><strong>Meropenem</strong></td>
+            <td class="dose rdt-normal">1g q8h (standard)<br>2g q8h (CNS/MDR organisms)</td>
+            <td class="dose rdt-reduced">Standard: CrCl 26–50: 1g q12h · CrCl 10–25: 500mg q12h · CrCl &lt;10: 500mg q24h<br>CNS: CrCl 26–50: 2g q12h · CrCl 10–25: 1g q12h · CrCl &lt;10: 1g q24h</td>
+            <td class="dose rdt-ihd">500mg q24h (standard)<br>1g q24h (CNS/MDR)</td>
+            <td class="dose rdt-crrt">1g q8h</td>
+          </tr>
+          <tr data-drug="piperacillin tazobactam pip tazo zosyn">
+            <td><strong>Pip/Tazobactam</strong></td>
+            <td class="dose rdt-normal">3.375g q6h (standard)<br>4.5g q6h (Pseudomonas)</td>
+            <td class="dose rdt-reduced">Standard: CrCl 20–39: 2.25g q6h · CrCl &lt;20: 2.25g q8h<br>Pseudo: CrCl 20–39: 3.375g q6h · CrCl &lt;20: 2.25g q6h</td>
+            <td class="dose rdt-ihd">2.25g q8h</td>
+            <td class="dose rdt-crrt">4.5g load, then 2.25–3.375g q6h</td>
+          </tr>
+          <tr data-drug="tmp smx trimethoprim sulfamethoxazole bactrim">
+            <td><strong>TMP/SMX</strong><br><span style="font-size:10px;color:var(--sub);">Use AdjBW if obese</span></td>
+            <td class="dose rdt-normal">5 mg/kg q8h IV (PCP/Steno/Burkholderia)<br>1–2 DS PO q12h (UTI/SSTI)</td>
+            <td class="dose rdt-reduced">IV: CrCl 15–30: 5 mg/kg q12h · CrCl &lt;15: 5 mg/kg q24h<br>PO: CrCl 15–30: 50% dose · CrCl &lt;15: 25% dose (caution)</td>
+            <td class="dose rdt-ihd">IV: 5 mg/kg q24h<br>PO: 1 DS ×1, then 1 SS q24h</td>
+            <td class="dose rdt-crrt">IV: No adjustment needed<br>PO: N/A</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
       <button class="print-btn" onclick="window.print()">⎙ Print</button>
     </div>
 
@@ -11067,7 +11266,7 @@ function amGenRec(){
 
 <!-- SECTION 4: ICU PROTOCOLS -->
 
-<div class="section" id="sec-13" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-13" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="13" data-pane="0" onclick="goTo(13,0)">Extended Infusions</button>
     <button class="mnav-btn" data-section="13" data-pane="1" onclick="goTo(13,1)">Surgical Prophylaxis</button>
@@ -11075,7 +11274,7 @@ function amGenRec(){
     <button class="mnav-btn" data-section="13" data-pane="3" onclick="goTo(13,3)">Compatibility</button>
     <button class="mnav-btn" data-section="13" data-pane="4" onclick="goTo(13,4)">Remdesivir</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s13p0">
       <div class="sec-title">Extended Infusion Beta-Lactams</div>
       <div class="sec-sub">ICU Only · Maximizing %T&gt;MIC · KCHC Protocol</div>
@@ -11195,13 +11394,13 @@ function amGenRec(){
 
 <!-- SECTION 5: TDM + MONITORING -->
 
-<div class="section" id="sec-14" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-14" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="14" data-pane="0" onclick="goTo(14,0)">Vancomycin TDM</button>
     <button class="mnav-btn" data-section="14" data-pane="1" onclick="goTo(14,1)">Aminoglycoside TDM</button>
     <button class="mnav-btn" data-section="14" data-pane="2" onclick="goTo(14,2)">Critical Calculations</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s14p0">
       <div class="sec-title">Vancomycin TDM</div>
       <div class="sec-sub">Trough Interpretation · KCHC Protocol</div>
@@ -11258,15 +11457,35 @@ function amGenRec(){
 
 <!-- SECTION 6: AMINOGLYCOSIDE PK -->
 
-<div class="section" id="sec-15" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-15" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="15" data-pane="0" onclick="goTo(15,0)">Aminoglycoside PK</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s15p0">
       <div class="sec-title">Aminoglycoside PK</div>
       <div class="sec-sub">Gentamicin · Tobramycin · Amikacin · Patient-Specific Dosing</div>
       <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Oct 2020</div>
+    <!-- CrCl Quick Calc -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.amqca-am15&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc — IBW / AdjBW (Cockcroft-Gault)</span>
+        <span class="amqca-am15" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Age</span><input type="number" id="am15-qc-age" placeholder="e.g. 65" oninput="amQCCalcFull(&#39;am15&#39;,120)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;"><span style="font-size:10px;color:var(--sub);">ABW (kg)</span><input type="number" id="am15-qc-wt" placeholder="e.g. 80" oninput="amQCCalcFull(&#39;am15&#39;,120)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Height (cm)</span><input type="number" id="am15-qc-ht" placeholder="e.g. 170" oninput="amQCCalcFull(&#39;am15&#39;,120)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span><input type="number" id="am15-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="amQCCalcFull(&#39;am15&#39;,120)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Sex</span><select id="am15-qc-sex" onchange="amQCCalcFull(&#39;am15&#39;,120)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">Select</option><option value="m">Male</option><option value="f">Female</option></select></div>
+        </div>
+        <div id="am15-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:12px;color:#065f46;font-weight:600;line-height:1.6;"></div>
+        <div id="am15-qc-warn" style="display:none;margin-top:4px;padding:6px 10px;background:rgba(180,83,9,0.07);border-radius:5px;font-size:11px;color:#b45309;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × DosingWt / (72 × SCr)] × 0.85 if female · AdjBW threshold: &gt;120% IBW (KCHC Aminoglycoside Guideline)</div>
+      </div>
+    </div>
+
       <div class="disc"><div class="disc-icon">⚠</div><div class="disc-text">Steady-state levels required. Gent/Tobra: peak 5–10, trough &lt;2. Amikacin: peak 20–35, trough &lt;8. AKI: Gent 2 mg/kg initial, Amikacin 7.5 mg/kg initial.</div></div>
       <div class="banner" id="ag-ptype-banner" style="margin-bottom:14px"></div>
       <div class="fc"><div class="fc-head"><div class="fc-title">Measured Levels + Regimen</div></div>
@@ -11310,11 +11529,11 @@ function amGenRec(){
 </div>
 <!-- SECTION 7: ORDER REVIEW ENGINE -->
 
-<div class="section" id="sec-16" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-16" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="16" data-pane="0" onclick="goTo(16,0)">⚡ Smart Order Review</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s16p0">
       <div class="sec-title">Smart Order Review</div>
       <div class="sec-sub">Antibiotic Order Verification · Renal Adjustment · Patient-Specific Verdict</div>
@@ -11488,8 +11707,8 @@ function amGenRec(){
 
 
 <!-- ══ SECTION 17 — ANTIMICROBIAL AGENT SELECTOR WIZARD ══ -->
-<div class="section" id="sec-17" style="scroll-margin-top: 249px;">
-  <div class="main" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-17" style="scroll-margin-top: 186px;">
+  <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Agent Selector</div>
   <div class="sec-sub">Antimicrobial Decision Wizard · KCHC Protocol</div>
   <div class="disc"><span class="disc-icon">⚠</span><span class="disc-text">Clinical decision support only. De-escalate based on culture results. All decisions require pharmacist and physician judgment. Refer to KCHC Antimicrobial Stewardship guidelines.</span></div>
@@ -11601,9 +11820,9 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   SECTION 18 — ID RESTRICTIONS
 ══════════════════════════════════════ -->
-<div class="section" id="sec-18" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-18" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="am-id-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
     <div class="pane active" id="s18p0">
       <div class="sec-title">ID-Restricted Antimicrobials</div>
       <div class="sec-sub">Formulary Restriction Status · KCHC Antimicrobial Stewardship</div>
@@ -11674,13 +11893,13 @@ function amGenRec(){
 </div>
 
 <!-- ══ SECTION 19 — ANTIFUNGALS ══ -->
-<div class="section" id="sec-19" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-19" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="19" data-pane="0" onclick="goTo(19,0)">💊 Prophylaxis</button>
     <button class="mnav-btn" data-section="19" data-pane="1" onclick="goTo(19,1)">🎯 Treatment Selection</button>
     <button class="mnav-btn" data-section="19" data-pane="2" onclick="goTo(19,2)">🔬 Renal Dosing</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
     <!-- PANE 0: PROPHYLAXIS -->
     <div class="pane active" id="s19p0">
@@ -11790,15 +12009,15 @@ function amGenRec(){
 </div>
 
 <!-- ══ SECTION 20 — ANTIVIRALS ══ -->
-<div class="section" id="sec-20" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-20" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
-    <button class="mnav-btn" data-section="20" data-pane="0" onclick="goTo(20,0)">🦠 Remdesivir</button>
-    <button class="mnav-btn active" data-section="20" data-pane="1" onclick="goTo(20,1)">💊 Acyclovir</button>
+    <button class="mnav-btn active" data-section="20" data-pane="0" onclick="goTo(20,0)">🦠 Remdesivir</button>
+    <button class="mnav-btn" data-section="20" data-pane="1" onclick="goTo(20,1)">💊 Acyclovir</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
     <!-- PANE 0: REMDESIVIR INTERACTIVE CHECKER -->
-    <div class="pane" id="s20p0">
+    <div class="pane active" id="s20p0">
       <div class="sec-title">Remdesivir (Veklury®)</div>
       <div class="sec-sub">COVID-19 Treatment Decision Tool · KCHC Sourced Content</div>
       <div class="guideline-badge" style="margin-top:6px;width:fit-content;max-width:100%;white-space:normal;line-height:1.5;background:rgba(146,64,14,0.08);border-color:rgba(146,64,14,0.3);color:#f59e0b;">⚠ COVID-19 / 2022 — Verify Current KCHC Policy on Shareplus before use</div>
@@ -11808,26 +12027,26 @@ function amGenRec(){
       <div class="calc-card" style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
         <div style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Step 1 — Patient O₂ Status</div>
         <div style="display:flex;flex-direction:column;gap:8px;" id="rdv-o2-group">
-          <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 13px; padding: 8px 12px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; transition: background 0.15s;" onclick="rdvSelectO2(this,&#39;asymptomatic&#39;)">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;padding:8px 12px;border-radius:6px;border:1px solid var(--border);transition:background 0.15s;" onclick="rdvSelectO2(this,&#39;asymptomatic&#39;)">
             <input type="radio" name="rdv-o2" value="asymptomatic" style="accent-color:var(--teal);width:16px;height:16px;"> Asymptomatic
           </label>
-          <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 13px; padding: 8px 12px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; transition: background 0.15s;" onclick="rdvSelectO2(this,&#39;no-o2&#39;)">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;padding:8px 12px;border-radius:6px;border:1px solid var(--border);transition:background 0.15s;" onclick="rdvSelectO2(this,&#39;no-o2&#39;)">
             <input type="radio" name="rdv-o2" value="no-o2" style="accent-color:var(--teal);width:16px;height:16px;"> Does <strong style="margin:0 4px;">NOT</strong> require supplemental O₂ · Mild-moderate symptoms
           </label>
-          <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 13px; padding: 8px 12px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; transition: background 0.15s;" onclick="rdvSelectO2(this,&#39;supp-o2&#39;)">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;padding:8px 12px;border-radius:6px;border:1px solid var(--border);transition:background 0.15s;" onclick="rdvSelectO2(this,&#39;supp-o2&#39;)">
             <input type="radio" name="rdv-o2" value="supp-o2" style="accent-color:var(--teal);width:16px;height:16px;"> Requires supplemental O₂
           </label>
-          <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 13px; padding: 8px 12px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; transition: background 0.15s;" onclick="rdvSelectO2(this,&#39;high-flow&#39;)">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;padding:8px 12px;border-radius:6px;border:1px solid var(--border);transition:background 0.15s;" onclick="rdvSelectO2(this,&#39;high-flow&#39;)">
             <input type="radio" name="rdv-o2" value="high-flow" style="accent-color:var(--teal);width:16px;height:16px;"> Requires high-flow O₂ or non-invasive ventilation
           </label>
-          <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 13px; padding: 8px 12px; border-radius: 6px; border-color: var(--teal); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; transition: background 0.15s; background: rgba(52, 211, 153, 0.08);" onclick="rdvSelectO2(this,&#39;mech-vent&#39;)">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;padding:8px 12px;border-radius:6px;border:1px solid var(--border);transition:background 0.15s;" onclick="rdvSelectO2(this,&#39;mech-vent&#39;)">
             <input type="radio" name="rdv-o2" value="mech-vent" style="accent-color:var(--teal);width:16px;height:16px;"> Requires mechanical ventilation or ECMO
           </label>
         </div>
       </div>
 
       <!-- STEP 2: RISK FACTORS (only visible for no-o2) -->
-      <div id="rdv-rf-section" style="display: none; margin-top: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px;">
+      <div id="rdv-rf-section" style="display:none;margin-top:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
         <div style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Step 2 — Risk Factors for Severe Disease</div>
         <div style="font-size:12px;color:var(--sub);margin-bottom:10px;">Check all that apply to the patient</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;" id="rdv-rf-grid">
@@ -11851,12 +12070,12 @@ function amGenRec(){
       </div>
 
       <!-- RESULT -->
-      <div id="rdv-result" style="display: block; margin-top: 16px; border-radius: 10px; padding: 18px; border: 2px solid rgba(153, 27, 27, 0.4); background: rgba(153, 27, 27, 0.06);">
-        <div id="rdv-result-icon" style="font-size:22px;margin-bottom:6px;">🔴</div>
-        <div id="rdv-result-title" style="font-size: 16px; font-weight: 700; margin-bottom: 6px; color: rgb(153, 27, 27);">🔴 &nbsp;Dexamethasone ± Tocilizumab* / Baricitinib* — Remdesivir NOT Primary</div>
-        <div id="rdv-result-body" style="font-size:13px;line-height:1.7;color:var(--text);">Patient requires mechanical ventilation or ECMO. Remdesivir is NOT the primary agent at this level of severity.<br><br>Options per KCHC guidance:<br>• <strong>Dexamethasone</strong><br>• <strong>Dexamethasone + IV Tocilizumab* (if available)</strong><br>• <strong>Dexamethasone + Baricitinib*</strong></div>
-        <div id="rdv-result-dosing" style="margin-top: 10px; padding: 10px 14px; background: rgba(15, 76, 117, 0.1); border-radius: 6px; font-size: 12px; color: var(--clinical); display: none;">💉 <strong>Remdesivir dosing:</strong> 200 mg IV × 1 on day 1, then 100 mg IV daily. Infuse in 250 mL NS over 30 min. Flush with 30 mL NS after infusion.<br><strong>Duration:</strong> 5 days if remdesivir used.</div>
-        <div id="rdv-result-note" style="margin-top:8px;font-size:11px;color:var(--sub);">* Baricitinib and tocilizumab require ID approval at KCHC.</div>
+      <div id="rdv-result" style="display:none;margin-top:16px;border-radius:10px;padding:18px;border:2px solid #065f46;background:rgba(6,95,70,0.08);">
+        <div id="rdv-result-icon" style="font-size:22px;margin-bottom:6px;"></div>
+        <div id="rdv-result-title" style="font-size:16px;font-weight:700;margin-bottom:6px;color:#065f46;"></div>
+        <div id="rdv-result-body" style="font-size:13px;line-height:1.7;color:var(--text);"></div>
+        <div id="rdv-result-dosing" style="margin-top:10px;padding:10px 14px;background:rgba(15,76,117,0.1);border-radius:6px;font-size:12px;color:var(--clinical);display:none;"></div>
+        <div id="rdv-result-note" style="margin-top:8px;font-size:11px;color:var(--sub);"></div>
       </div>
 
       <!-- RESET -->
@@ -11864,10 +12083,28 @@ function amGenRec(){
     </div>
 
     <!-- PANE 1: ACYCLOVIR CALCULATOR -->
-    <div class="pane active" id="s20p1">
+    <div class="pane" id="s20p1">
       <div class="sec-title">Acyclovir</div>
       <div class="sec-sub">Dose Calculator · KCHC Renal Dosing Guideline</div>
       <div class="guideline-badge revised" style="margin-top:6px;width:fit-content;max-width:100%;white-space:normal;line-height:1.5;">KCHC Antimicrobial Renal Dosing Guideline · P&amp;T Approved: 4/20/2021</div>
+    <!-- CrCl Quick Calc -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.amqca-am20&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+        <span class="amqca-am20" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Age</span><input type="number" id="am20-qc-age" placeholder="e.g. 65" oninput="amQCCalc(&#39;am20&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;"><span style="font-size:10px;color:var(--sub);">Weight (kg)</span><input type="number" id="am20-qc-wt" placeholder="e.g. 80" oninput="amQCCalc(&#39;am20&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span><input type="number" id="am20-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="amQCCalc(&#39;am20&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;"><span style="font-size:10px;color:var(--sub);">Sex</span><select id="am20-qc-sex" onchange="amQCCalc(&#39;am20&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">Select</option><option value="m">Male</option><option value="f">Female</option></select></div>
+        </div>
+        <div id="am20-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Cockcroft-Gault</div>
+      </div>
+    </div>
+
 
       <div class="calc-card" style="margin-top:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
         <div style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Patient Parameters</div>
@@ -11912,9 +12149,9 @@ function amGenRec(){
       </div>
 
       <!-- ACYCLOVIR RESULT -->
-      <div id="acv-result" style="display: block; margin-top: 14px; border-radius: 10px; padding: 18px; border: 2px solid rgb(6, 95, 70); background: rgba(6, 95, 70, 0.08);">
-        <div id="acv-result-title" style="font-size:15px;font-weight:700;margin-bottom:8px;color:#065f46;">✅ Acyclovir — HSV non-CNS</div>
-        <div id="acv-result-body" style="font-size:13px;line-height:1.8;color:var(--text);"><strong>Dosing weight:</strong> IBW (65.9 kg) — ABW &gt; IBW, use IBW<br><strong>Calculated dose:</strong> 330 mg IV q12–24h &nbsp;<span style="font-size:11px;color:var(--sub);">(≈ 350 mg practical)</span><br><strong>Dose/kg used:</strong> 5 mg/kg × 65.9 kg<br><strong>Route:</strong> IV · Infuse over 1 hour · Administer with adequate hydration</div>
+      <div id="acv-result" style="display:none;margin-top:14px;border-radius:10px;padding:18px;border:2px solid #065f46;background:rgba(6,95,70,0.08);">
+        <div id="acv-result-title" style="font-size:15px;font-weight:700;margin-bottom:8px;color:#065f46;"></div>
+        <div id="acv-result-body" style="font-size:13px;line-height:1.8;color:var(--text);"></div>
         <div id="acv-weight-note" style="margin-top:8px;padding:8px 12px;background:rgba(146,64,14,0.07);border-radius:6px;font-size:12px;color:#92400e;display:none;"></div>
         <div style="margin-top:8px;font-size:11px;color:var(--sub);">Source: KCHC Antimicrobial Renal Dosing Guideline · P&amp;T Approved 4/20/2021</div>
       </div>
@@ -11924,13 +12161,13 @@ function amGenRec(){
 </div>
 
 <!-- ══ SECTION 21 — STI / EPT ══ -->
-<div class="section" id="sec-21" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-21" style="scroll-margin-top: 186px;">
   <div class="mod-nav">
     <button class="mnav-btn active" data-section="21" data-pane="0" onclick="goTo(21,0)">📋 Overview</button>
     <button class="mnav-btn" data-section="21" data-pane="1" onclick="goTo(21,1)">⚙ Workflow</button>
     <button class="mnav-btn" data-section="21" data-pane="2" onclick="goTo(21,2)">🚫 Exclusions</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
     <!-- PANE 0: OVERVIEW -->
     <div class="pane active" id="s21p0">
@@ -12011,7 +12248,7 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   PAIN & OPIOID MANAGEMENT TAB
 ══════════════════════════════════════ -->
-<div class="section" id="sec-pain" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-pain" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="pain-modnav" style="display:none;">
     <button class="mnav-btn active" data-pain="0" onclick="painGoTo(0,this)">⚡ Agent Selector</button>
     <button class="mnav-btn" data-pain="1" onclick="painGoTo(1,this)">💊 Opioid Dosing</button>
@@ -12022,10 +12259,10 @@ function amGenRec(){
     <button class="mnav-btn" data-pain="6" onclick="painGoTo(6,this)">📋 Policy &amp; Stewardship</button>
     <button class="mnav-btn" data-pain="7" onclick="painGoTo(7,this)">📏 Pain Scales</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ PAIN PANE 0 — AGENT SELECTOR ══ -->
-  <div class="pain-pane" id="pp0" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp0" style="scroll-margin-top: 186px;">
     <div class="sec-title">Pain Agent Selector</div>
     <div class="sec-sub">Clinical Decision Wizard · KCHC Opioid Dosing Guideline · Jan 28, 2021</div>
     <div class="disc"><span class="disc-icon">!</span><span class="disc-text">Clinical decision support only. All therapy decisions require pharmacist and physician judgment. Refer to KCHC Opioid Dosing Guidelines on Shareplus for full guidance.</span></div>
@@ -12107,7 +12344,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ PAIN PANE 1 — OPIOID DOSING ══ -->
-  <div class="pain-pane" id="pp1" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp1" style="scroll-margin-top: 186px;">
     <div class="sec-title">Opioid Dosing</div>
     <div class="sec-sub">Opioid Naive &amp; Tolerant · KCHC Opioid Dosing Guideline · Jan 28, 2021</div>
     <div class="guideline-badge revised">KCHC Opioid Dosing Guideline · Effective: Jan 28, 2021</div>
@@ -12174,7 +12411,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ PAIN PANE 2 — EQUIANALGESIC CONVERTER ══ -->
-  <div class="pain-pane" id="pp2" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp2" style="scroll-margin-top: 186px;">
     <div class="sec-title">Equianalgesic Converter</div>
     <div class="sec-sub">Opioid Conversion Calculator · KCHC Opioid Dosing Guideline · Jan 28, 2021</div>
     <div class="guideline-badge revised">KCHC Opioid Dosing Guideline · Effective: Jan 28, 2021</div>
@@ -12302,7 +12539,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ PAIN PANE 3 — FENTANYL PATCH ══ -->
-  <div class="pain-pane" id="pp3" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp3" style="scroll-margin-top: 186px;">
     <div class="sec-title">Transdermal Fentanyl Patch</div>
     <div class="sec-sub">KCHC Transdermal FentaNYL Patch Protocol · Effective: Jul 1, 2022</div>
     <div class="guideline-badge revised">KCHC Transdermal FentaNYL Patch Protocol · P&amp;T Approved: June 2022</div>
@@ -12378,7 +12615,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ PAIN PANE 4 — METHADONE OUD ══ -->
-  <div class="pain-pane" id="pp4" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp4" style="scroll-margin-top: 186px;">
     <div class="sec-title">Methadone — OUD / Withdrawal</div>
     <div class="sec-sub">KCHC Methadone for Inpatient/ED/CPEP Use · Effective: January 2025</div>
     <div class="guideline-badge revised">KCHC Methadone Policy · Date Effective: January 2025 · Final Approval: March 17, 2025</div>
@@ -12498,7 +12735,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ PAIN PANE 5 — ICU PAIN/SEDATION ══ -->
-  <div class="pain-pane" id="pp5" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp5" style="scroll-margin-top: 186px;">
     <div class="sec-title">ICU Pain, Sedation &amp; Delirium</div>
     <div class="sec-sub">KCHC ICU Clinical Forum · Referenced 2018 Guidelines</div>
     <div class="guideline-badge">KCHC ICU Clinical Forum · Referenced: Crit Care Med 2018;46(9):e825-e873</div>
@@ -12564,7 +12801,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ PAIN PANE 6 — POLICY & STEWARDSHIP ══ -->
-  <div class="pain-pane" id="pp6" style="scroll-margin-top: 249px;">
+  <div class="pain-pane" id="pp6" style="scroll-margin-top: 186px;">
     <div class="sec-title">Policy &amp; Opioid Stewardship</div>
     <div class="sec-sub">KCHC Hospital-Wide · Inpatient · ED · Outpatient</div>
     <!-- TYLENOL IV / OFIRMEV -->
@@ -12686,10 +12923,10 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   BEHAVIORAL HEALTH & LAI TAB
 ══════════════════════════════════════ -->
-<div class="section" id="sec-bh" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-bh" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="bh-modnav" style="display:none;">
-    <button class="mnav-btn active" data-bh="0" onclick="bhGoTo(0,this)">⚡ Agent Selector</button>
-    <button class="mnav-btn" data-bh="1" onclick="bhGoTo(1,this)">💉 LAI Comparison</button>
+    <button class="mnav-btn" data-bh="0" onclick="bhGoTo(0,this)">⚡ Agent Selector</button>
+    <button class="mnav-btn" data-bh="1" onclick="bhGoTo(1,this)">💉 LAI Calc &amp; Convert</button>
     <button class="mnav-btn" data-bh="2" onclick="bhGoTo(2,this)">🏥 LAI Dispensing</button>
     <button class="mnav-btn" data-bh="3" onclick="bhGoTo(3,this)">⚡ QTc Risk</button>
     <button class="mnav-btn" data-bh="4" onclick="bhGoTo(4,this)">🧪 TDM &amp; Monitoring</button>
@@ -12697,12 +12934,45 @@ function amGenRec(){
     <button class="mnav-btn" data-bh="6" onclick="bhGoTo(6,this)">⚠ LAI Safety</button>
     <button class="mnav-btn" data-bh="7" onclick="bhGoTo(7,this)">💉 OUD Injectables</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ BH PANE 0 — AGENT SELECTOR ══ -->
-  <div class="bh-pane" id="bp0" style="scroll-margin-top: 249px;">
+  <div class="bh-pane active" id="bp0" style="scroll-margin-top: 186px;">
     <div class="sec-title">BH Agent Selector</div>
     <div class="sec-sub">Antipsychotic Decision Wizard · KCHC Behavioral Health · Jan 2022 · Jun 2017</div>
+    <!-- CrCl Quick Calc (compact) -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.bh-qc-arrow&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+        <span class="bh-qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Age</span>
+            <input type="number" id="bp0-qc-age" placeholder="e.g. 45" oninput="bhQCCalc(&#39;bp0&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;">
+            <span style="font-size:10px;color:var(--sub);">Weight (kg)</span>
+            <input type="number" id="bp0-qc-wt" placeholder="e.g. 80" oninput="bhQCCalc(&#39;bp0&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span>
+            <input type="number" id="bp0-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="bhQCCalc(&#39;bp0&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Sex</span>
+            <select id="bp0-qc-sex" onchange="bhQCCalc(&#39;bp0&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;">
+              <option value="">Select</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+          </div>
+        </div>
+        <div id="bp0-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Cockcroft-Gault</div>
+      </div>
+    </div>
     <div class="disc"><span class="disc-icon">!</span><span class="disc-text">Clinical decision support only. All prescribing decisions require psychiatrist judgment. Refer to KCHC BH Guidelines and H+H Schizophrenia Treatment Guidelines for full guidance.</span></div>
 
     <div class="fc">
@@ -12783,11 +13053,56 @@ function amGenRec(){
 
   <!-- ══ BH PANE 1 — LAI COMPARISON ══ -->
   <!-- ══ BH PANE 1 — LAI COMPARISON ══ -->
-  <div class="bh-pane" id="bp1" style="scroll-margin-top: 249px;">
-    <div class="sec-title">LAI Comparison, Calculators &amp; Due Dates</div>
+  <div class="bh-pane" id="bp1" style="scroll-margin-top: 186px;">
+    <div class="sec-title">LAI Calculators &amp; Converters</div>
     <div class="sec-sub">KCHC Formulary · Long Acting Injectable Antipsychotics &amp; Naltrexone · January 2022</div>
     <div class="guideline-badge revised">Kings County BH Pharmacy Department · Updated: January 2022</div>
 
+    <!-- CrCl Quick Calc always visible above sub-tabs -->
+    <!-- CrCl Quick Calc (compact) -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.bh-qc-arrow&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+        <span class="bh-qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Age</span>
+            <input type="number" id="bp1-qc-age" placeholder="e.g. 45" oninput="bhQCCalc(&#39;bp1&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;">
+            <span style="font-size:10px;color:var(--sub);">Weight (kg)</span>
+            <input type="number" id="bp1-qc-wt" placeholder="e.g. 80" oninput="bhQCCalc(&#39;bp1&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span>
+            <input type="number" id="bp1-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="bhQCCalc(&#39;bp1&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Sex</span>
+            <select id="bp1-qc-sex" onchange="bhQCCalc(&#39;bp1&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;">
+              <option value="">Select</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+          </div>
+        </div>
+        <div id="bp1-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Cockcroft-Gault</div>
+      </div>
+    </div>
+
+    <!-- ── BP1 SUB-TAB NAV ── -->
+    <div style="display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:16px;overflow-x:auto;flex-wrap:nowrap;">
+      <button class="bp1-stab active" data-pane="bp1s0" onclick="bp1SubTab(this,&#39;bp1s0&#39;)" style="font-family:monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 14px;background:none;border:none;border-bottom:3px solid var(--teal);color:var(--teal);cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;">📅 Due Dates &amp; Missed Doses</button>
+      <button class="bp1-stab" data-pane="bp1s1" onclick="bp1SubTab(this,&#39;bp1s1&#39;)" style="font-family:monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 14px;background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;">💉 Sustenna Initiation</button>
+      <button class="bp1-stab" data-pane="bp1s2" onclick="bp1SubTab(this,&#39;bp1s2&#39;)" style="font-family:monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 14px;background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;">💊 Maintena Selector</button>
+      <button class="bp1-stab" data-pane="bp1s3" onclick="bp1SubTab(this,&#39;bp1s3&#39;)" style="font-family:monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 14px;background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;">🔄 Oral to LAI</button>
+    </div>
+
+    <!-- ── SUB-PANE 0: DUE DATES & MISSED DOSES ── -->
+    <div class="bp1-spane" id="bp1s0" style="display:block;">
     <!-- ── CALCULATOR 1: DUE DATE + TIMELINE ── -->
     <div class="fc">
       <div class="fc-head"><span class="fc-title">📅 LAI Due Date Calculator</span><span class="fc-note">Auto-calculates next dose + early dose alert</span></div>
@@ -12898,76 +13213,10 @@ function amGenRec(){
       <div class="missed-detail" id="md-action-detail"></div>
     </div>
 
-    <!-- ── CALCULATOR 3: ARISTADA ORAL CONVERTER ── -->
-        <!-- ── UNIVERSAL ORAL ↔ LAI CONVERTER ── -->
-    <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:20px 0 6px;">🔄 Universal Oral ↔ LAI Converter</div>
-    <div class="guideline-badge revised">FDA Prescribing Information · Respective Package Inserts · Anna Daglyan, PharmD, BCPP 2022 · KCHC BH Pharmacy</div>
-    <div class="disc"><div class="disc-icon">!</div><div class="disc-text">Equivalences are approximate. Clinical judgment required for all conversions. Individual patient response, tolerability, and renal function must be considered before switching. Verify with prescriber before any LAI initiation or conversion.</div></div>
-
-    <div class="fc" style="margin-bottom:10px;">
-      <div class="fc-head"><span class="fc-title">Conversion Direction</span></div>
-      <div style="display:flex;gap:8px;padding:10px 14px;">
-        <button id="conv-dir-oral" onclick="setConvDir(&#39;oral&#39;)" style="flex:1;padding:10px;border-radius:6px;border:2px solid var(--clinical);background:var(--clinical);color:white;font-family:monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">ORAL → LAI</button>
-        <button id="conv-dir-lai" onclick="setConvDir(&#39;lai&#39;)" style="flex:1;padding:10px;border-radius:6px;border:2px solid var(--border);background:var(--surface);color:var(--text);font-family:monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">LAI → ORAL</button>
-      </div>
     </div>
 
-    <!-- ORAL → LAI panel -->
-    <div id="conv-oral-panel" class="fc" style="margin-bottom:10px;">
-      <div class="fc-head"><span class="fc-title">Oral → LAI</span><span class="fc-note">Select oral drug + dose</span></div>
-      <div class="fg" style="padding:10px 14px;">
-        <div class="field"><label>Oral Antipsychotic</label>
-          <select id="conv-o-drug" onchange="updateOralDoses()">
-            <option value="">Select drug</option>
-            <option value="aripiprazole">Aripiprazole (Abilify)</option>
-            <option value="risperidone">Risperidone (Risperdal)</option>
-            <option value="paliperidone">Paliperidone (Invega)</option>
-            <option value="haloperidol">Haloperidol (Haldol)</option>
-            <option value="fluphenazine">Fluphenazine (Prolixin)</option>
-          </select>
-        </div>
-        <div class="field"><label>Daily Oral Dose</label>
-          <select id="conv-o-dose" onchange="runConversion()">
-            <option value="">Select dose</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <!-- LAI → ORAL panel -->
-    <div id="conv-lai-panel" class="fc" style="display:none;margin-bottom:10px;">
-      <div class="fc-head"><span class="fc-title">LAI → Oral</span><span class="fc-note">Select LAI agent + dose</span></div>
-      <div class="fg" style="padding:10px 14px;">
-        <div class="field"><label>LAI Agent</label>
-          <select id="conv-l-drug" onchange="updateLAIDoses()">
-            <option value="">Select LAI</option>
-            <option value="haldol_dec">Haloperidol Decanoate (Haldol Dec)</option>
-            <option value="fluphen_dec">Fluphenazine Decanoate (Prolixin Dec)</option>
-            <option value="consta">Risperdal Consta</option>
-            <option value="sustenna">Invega Sustenna</option>
-            <option value="trinza">Invega Trinza</option>
-            <option value="hafyera">Invega Hafyera</option>
-            <option value="maintena">Abilify Maintena</option>
-            <option value="aristada_441">Aristada 441 mg</option>
-            <option value="aristada_662">Aristada 662 mg</option>
-            <option value="aristada_882">Aristada 882 mg</option>
-            <option value="aristada_1064">Aristada 1064 mg</option>
-            <option value="asimtufii">Abilify Asimtufii (IM gluteal Q2mo)</option>
-            <option value="uzedy_mo">Uzedy Monthly</option>
-            <option value="uzedy_2mo">Uzedy Q2 Months</option>
-            <option value="rykindo">Rykindo (Q2 weeks)</option>
-          </select>
-        </div>
-        <div class="field"><label>LAI Dose</label>
-          <select id="conv-l-dose" onchange="runConversion()">
-            <option value="">Select dose</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div id="conv-universal-out" style="display:none;margin-bottom:10px;"></div>
-
+    <!-- ── SUB-PANE 1: SUSTENNA INITIATION ── -->
+    <div class="bp1-spane" id="bp1s1" style="display:none;">
     <!-- ── CALCULATOR 4: INVEGA SUSTENNA INITIATION ── -->
     <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:20px 0 6px;">💉 Invega Sustenna Initiation Calculator</div>
     <div class="guideline-badge revised">Invega Sustenna Package Insert · KCHC LAI Dispensing Memo March 2025</div>
@@ -13112,9 +13361,154 @@ function amGenRec(){
     </div>
 
   </div>
+    </div>
 
-  <!-- ══ BH PANE 2 — LAI DISPENSING ══ -->
-  <div class="bh-pane" id="bp2" style="scroll-margin-top: 249px;">
+    <!-- ── SUB-PANE 2: MAINTENA DOSE SELECTOR ── -->
+    <div class="bp1-spane" id="bp1s2" style="display:none;">
+    <!-- ── MAINTENA DOSE SELECTOR WIZARD ── -->
+    <div class="info-card" style="margin-bottom:14px;border-color:rgba(99,102,241,0.4);">
+      <div class="ic-head" style="background:rgba(99,102,241,0.12);color:#6366f1;">💊 Abilify Maintena — Dose Selector (400 mg vs 300 mg vs Avoid)</div>
+      <div class="ic-body">
+        <div style="font-size:12px;color:var(--sub);margin-bottom:10px;">Source: Abilify Maintena FDA PI · Otsuka · Answer all questions to get recommendation</div>
+
+        <!-- Q1 -->
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;font-weight:600;margin-bottom:6px;">1. Has the patient had adverse reactions to aripiprazole before?</div>
+          <div style="display:flex;gap:8px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q1" value="yes" onchange="maintCalc()" style="accent-color:#6366f1;"> Yes</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q1" value="no" onchange="maintCalc()" style="accent-color:#6366f1;"> No / Unknown</label>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px;">2. Is the patient a known CYP2D6 poor metabolizer?</div>
+          <div style="font-size:11px;color:var(--sub);margin-bottom:6px;">~8% Caucasians, 3-8% Black/African American cannot metabolize CYP2D6 substrates</div>
+          <div style="display:flex;gap:8px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q2" value="yes" onchange="maintCalc()" style="accent-color:#6366f1;"> Yes</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q2" value="no" onchange="maintCalc()" style="accent-color:#6366f1;"> No / Unknown</label>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px;">3. On a strong CYP2D6 inhibitor for &gt;14 days?</div>
+          <div style="font-size:11px;color:var(--sub);margin-bottom:6px;">Fluoxetine, paroxetine, bupropion, quinidine</div>
+          <div style="display:flex;gap:8px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q3" value="yes" onchange="maintCalc()" style="accent-color:#6366f1;"> Yes</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q3" value="no" onchange="maintCalc()" style="accent-color:#6366f1;"> No</label>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px;">4. On a strong CYP3A4 inhibitor for &gt;14 days?</div>
+          <div style="font-size:11px;color:var(--sub);margin-bottom:6px;">Ketoconazole, itraconazole, clarithromycin, ritonavir</div>
+          <div style="display:flex;gap:8px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q4" value="yes" onchange="maintCalc()" style="accent-color:#6366f1;"> Yes</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q4" value="no" onchange="maintCalc()" style="accent-color:#6366f1;"> No</label>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px;">5. On a CYP3A4 inducer for &gt;14 days?</div>
+          <div style="font-size:11px;color:var(--sub);margin-bottom:6px;">Carbamazepine, rifampin, phenytoin, St. John's Wort</div>
+          <div style="display:flex;gap:8px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q5" value="yes" onchange="maintCalc()" style="accent-color:#6366f1;"> Yes</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 12px;border:1px solid var(--border);border-radius:5px;flex:1;"><input type="radio" name="maint-q5" value="no" onchange="maintCalc()" style="accent-color:#6366f1;"> No</label>
+          </div>
+        </div>
+
+        <!-- RESULT -->
+        <div id="maint-result" style="display:none;margin-top:12px;padding:14px 16px;border-radius:8px;border:2px solid #065f46;background:rgba(6,95,70,0.08);">
+          <div id="maint-result-title" style="font-size:15px;font-weight:700;margin-bottom:6px;"></div>
+          <div id="maint-result-body" style="font-size:12px;line-height:1.8;color:var(--text);"></div>
+          <div style="margin-top:8px;font-size:10px;color:var(--sub);">Source: Abilify Maintena FDA Prescribing Information · Otsuka America Pharmaceutical</div>
+        </div>
+
+        <button onclick="maintReset()" style="margin-top:10px;background:none;border:1px solid var(--border);color:var(--sub);padding:5px 12px;border-radius:5px;cursor:pointer;font-size:11px;font-family:monospace;">↺ Reset</button>
+      </div>
+    </div>
+
+        </div>
+
+    <!-- ── SUB-PANE 3: ORAL TO LAI CONVERTERS ── -->
+    <div class="bp1-spane" id="bp1s3" style="display:none;">
+    <!-- ── CALCULATOR 3: ARISTADA ORAL CONVERTER ── -->
+        <!-- ── UNIVERSAL ORAL ↔ LAI CONVERTER ── -->
+    <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:20px 0 6px;">🔄 Universal Oral ↔ LAI Converter</div>
+    <div class="guideline-badge revised">FDA Prescribing Information · Respective Package Inserts · Anna Daglyan, PharmD, BCPP 2022 · KCHC BH Pharmacy</div>
+    <div class="disc"><div class="disc-icon">!</div><div class="disc-text">Equivalences are approximate. Clinical judgment required for all conversions. Individual patient response, tolerability, and renal function must be considered before switching. Verify with prescriber before any LAI initiation or conversion.</div></div>
+
+    <div class="fc" style="margin-bottom:10px;">
+      <div class="fc-head"><span class="fc-title">Conversion Direction</span></div>
+      <div style="display:flex;gap:8px;padding:10px 14px;">
+        <button id="conv-dir-oral" onclick="setConvDir(&#39;oral&#39;)" style="flex:1;padding:10px;border-radius:6px;border:2px solid var(--clinical);background:var(--clinical);color:white;font-family:monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">ORAL → LAI</button>
+        <button id="conv-dir-lai" onclick="setConvDir(&#39;lai&#39;)" style="flex:1;padding:10px;border-radius:6px;border:2px solid var(--border);background:var(--surface);color:var(--text);font-family:monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">LAI → ORAL</button>
+      </div>
+    </div>
+
+    <!-- ORAL → LAI panel -->
+    <div id="conv-oral-panel" class="fc" style="margin-bottom:10px;">
+      <div class="fc-head"><span class="fc-title">Oral → LAI</span><span class="fc-note">Select oral drug + dose</span></div>
+      <div class="fg" style="padding:10px 14px;">
+        <div class="field"><label>Oral Antipsychotic</label>
+          <select id="conv-o-drug" onchange="updateOralDoses()">
+            <option value="">Select drug</option>
+            <option value="aripiprazole">Aripiprazole (Abilify)</option>
+            <option value="risperidone">Risperidone (Risperdal)</option>
+            <option value="paliperidone">Paliperidone (Invega)</option>
+            <option value="haloperidol">Haloperidol (Haldol)</option>
+            <option value="fluphenazine">Fluphenazine (Prolixin)</option>
+          </select>
+        </div>
+        <div class="field"><label>Daily Oral Dose</label>
+          <select id="conv-o-dose" onchange="runConversion()">
+            <option value="">Select dose</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAI → ORAL panel -->
+    <div id="conv-lai-panel" class="fc" style="display:none;margin-bottom:10px;">
+      <div class="fc-head"><span class="fc-title">LAI → Oral</span><span class="fc-note">Select LAI agent + dose</span></div>
+      <div class="fg" style="padding:10px 14px;">
+        <div class="field"><label>LAI Agent</label>
+          <select id="conv-l-drug" onchange="updateLAIDoses()">
+            <option value="">Select LAI</option>
+            <option value="haldol_dec">Haloperidol Decanoate (Haldol Dec)</option>
+            <option value="fluphen_dec">Fluphenazine Decanoate (Prolixin Dec)</option>
+            <option value="consta">Risperdal Consta</option>
+            <option value="sustenna">Invega Sustenna</option>
+            <option value="trinza">Invega Trinza</option>
+            <option value="hafyera">Invega Hafyera</option>
+            <option value="maintena">Abilify Maintena</option>
+            <option value="aristada_441">Aristada 441 mg</option>
+            <option value="aristada_662">Aristada 662 mg</option>
+            <option value="aristada_882">Aristada 882 mg</option>
+            <option value="aristada_1064">Aristada 1064 mg</option>
+            <option value="asimtufii">Abilify Asimtufii (IM gluteal Q2mo)</option>
+            <option value="uzedy_mo">Uzedy Monthly</option>
+            <option value="uzedy_2mo">Uzedy Q2 Months</option>
+            <option value="rykindo">Rykindo (Q2 weeks)</option>
+          </select>
+        </div>
+        <div class="field"><label>LAI Dose</label>
+          <select id="conv-l-dose" onchange="runConversion()">
+            <option value="">Select dose</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="conv-universal-out" style="display:none;margin-bottom:10px;"></div>
+
+    </div>
+
+
+  <div class="bh-pane" id="bp2" style="scroll-margin-top: 186px;">
     <div class="sec-title">LAI Dispensing Workflow</div>
     <div class="sec-sub">When R Satellite is Closed · KCHC Pharmacy Services</div>
     <div class="guideline-badge revised">Amanda S. Ata, PharmD, MPH, BCPP, BCACP · Asst. Director of Pharmacy, BH · March 26, 2025</div>
@@ -13294,10 +13688,43 @@ function amGenRec(){
     </div>
   </div>
 
-  <div class="bh-pane" id="bp3" style="scroll-margin-top: 249px;">
+  <div class="bh-pane" id="bp3" style="scroll-margin-top: 186px;">
     <div class="sec-title">QTc Risk Assessment</div>
     <div class="sec-sub">QTc Prolongation &amp; Psychotropic Medications · February 2021</div>
     <div class="guideline-badge revised">Amanda Eloma, PharmD, BCPP · KCHC · February 2021 · Adapted from APA Schizophrenia Guidelines 2020</div>
+    <!-- CrCl Quick Calc (compact) -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.bh-qc-arrow&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+        <span class="bh-qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Age</span>
+            <input type="number" id="bp3-qc-age" placeholder="e.g. 45" oninput="bhQCCalc(&#39;bp3&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;">
+            <span style="font-size:10px;color:var(--sub);">Weight (kg)</span>
+            <input type="number" id="bp3-qc-wt" placeholder="e.g. 80" oninput="bhQCCalc(&#39;bp3&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span>
+            <input type="number" id="bp3-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="bhQCCalc(&#39;bp3&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Sex</span>
+            <select id="bp3-qc-sex" onchange="bhQCCalc(&#39;bp3&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;">
+              <option value="">Select</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+          </div>
+        </div>
+        <div id="bp3-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Cockcroft-Gault</div>
+      </div>
+    </div>
 
     <div class="fc">
       <div class="fc-head"><span class="fc-title">QTc Risk Scorer</span></div>
@@ -13389,10 +13816,43 @@ function amGenRec(){
   </div>
 
   <!-- ══ BH PANE 4 — TDM & MONITORING ══ -->
-  <div class="bh-pane" id="bp4" style="scroll-margin-top: 249px;">
+  <div class="bh-pane" id="bp4" style="scroll-margin-top: 186px;">
     <div class="sec-title">TDM &amp; Drug Level Monitoring</div>
     <div class="sec-sub">Lithium · Valproic Acid · Carbamazepine · KCHC BH Guidelines · June 2017</div>
     <div class="guideline-badge">KCHC BH Departmental Manual · Date Effective: June 2017 · ⚠ Update pending</div>
+    <!-- CrCl Quick Calc (compact) -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.bh-qc-arrow&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+        <span class="bh-qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Age</span>
+            <input type="number" id="bp4-qc-age" placeholder="e.g. 45" oninput="bhQCCalc(&#39;bp4&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;">
+            <span style="font-size:10px;color:var(--sub);">Weight (kg)</span>
+            <input type="number" id="bp4-qc-wt" placeholder="e.g. 80" oninput="bhQCCalc(&#39;bp4&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span>
+            <input type="number" id="bp4-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="bhQCCalc(&#39;bp4&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Sex</span>
+            <select id="bp4-qc-sex" onchange="bhQCCalc(&#39;bp4&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;">
+              <option value="">Select</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+          </div>
+        </div>
+        <div id="bp4-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Cockcroft-Gault</div>
+      </div>
+    </div>
 
     <div class="fc">
       <div class="fc-head"><span class="fc-title">Lithium Level Interpreter</span></div>
@@ -13493,10 +13953,43 @@ function amGenRec(){
   </div>
 
   <!-- ══ BH PANE 5 — PSYCHOTROPIC GUIDELINES ══ -->
-  <div class="bh-pane" id="bp5" style="scroll-margin-top: 249px;">
+  <div class="bh-pane" id="bp5" style="scroll-margin-top: 186px;">
     <div class="sec-title">Psychotropic Guidelines</div>
     <div class="sec-sub">KCHC BH Departmental Manual · June 2017</div>
     <div class="guideline-badge">KCHC BH Departmental Manual · Date Effective: June 2017 · ⚠ Update pending — use current version when available</div>
+    <!-- CrCl Quick Calc (compact) -->
+    <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+      <div onclick="var p=this.nextElementSibling;p.style.display=p.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.bh-qc-arrow&#39;).textContent=p.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+        <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+        <span class="bh-qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+      </div>
+      <div style="display:none;padding:12px 14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Age</span>
+            <input type="number" id="bp5-qc-age" placeholder="e.g. 45" oninput="bhQCCalc(&#39;bp5&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;">
+            <span style="font-size:10px;color:var(--sub);">Weight (kg)</span>
+            <input type="number" id="bp5-qc-wt" placeholder="e.g. 80" oninput="bhQCCalc(&#39;bp5&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span>
+            <input type="number" id="bp5-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="bhQCCalc(&#39;bp5&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+            <span style="font-size:10px;color:var(--sub);">Sex</span>
+            <select id="bp5-qc-sex" onchange="bhQCCalc(&#39;bp5&#39;)" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;">
+              <option value="">Select</option>
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+          </div>
+        </div>
+        <div id="bp5-qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+        <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Cockcroft-Gault</div>
+      </div>
+    </div>
 
     <div class="fc">
       <div class="fc-head"><span class="fc-title">Metabolic Monitoring Tracker</span><span class="fc-note">Atypical antipsychotics — KCHC BH Jun 2017</span></div>
@@ -13610,7 +14103,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ BH PANE 6 — LAI SAFETY ══ -->
-  <div class="bh-pane" id="bp6" style="scroll-margin-top: 249px;">
+  <div class="bh-pane" id="bp6" style="scroll-margin-top: 186px;">
     <div class="sec-title">LAI Safety &amp; EPIC Workflow</div>
     <div class="sec-sub">Medication Errors — BH Long Acting Injectables · July 29, 2020</div>
     <div class="guideline-badge">Amanda Eloma, PharmD, BCPP · KCHC Clinical Forum · July 29, 2020</div>
@@ -13663,7 +14156,7 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   IV / NUTRITION TAB
 ══════════════════════════════════════ -->
-<div class="section" id="sec-iv" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-iv" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="iv-modnav" style="display:none;">
     <button class="mnav-btn active" data-iv="0" onclick="ivGoTo(0,this)">💧 IV Fluid Conservation</button>
     <button class="mnav-btn" data-iv="1" onclick="ivGoTo(1,this)">💉 IVPB → IVP Conversion</button>
@@ -13675,10 +14168,10 @@ function amGenRec(){
     <button class="mnav-btn" data-iv="7" onclick="ivGoTo(4,this)">📊 PN Dosing / ASPEN</button>
     <button class="mnav-btn" data-iv="8" onclick="ivGoTo(3,this)">⚗️ Sterile Compounding</button>
   </div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ IV PANE 0 — IV FLUID CONSERVATION ══ -->
-  <div class="iv-pane" id="ivp0" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp0" style="scroll-margin-top: 186px;">
     <div class="sec-title">IV Fluid Conservation</div>
     <div class="sec-sub">National Shortage · NYC H+H Enterprise · Effective October 17, 2024</div>
     <div class="guideline-badge revised">IV Fluid Conservation Memo · NYC Health + Hospitals · Effective: October 17, 2024</div>
@@ -13728,7 +14221,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ IV PANE 1 — IVPB TO IVP ══ -->
-  <div class="iv-pane" id="ivp1" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp1" style="scroll-margin-top: 186px;">
     <div class="sec-title">IV Push Reference</div>
     <div class="sec-sub">IVPB → IVP Conversion · IVP Guardrails · IVP Policy · NYC H+H Enterprise</div>
     <div class="sec-title">IVPB → IV Push Conversion</div>
@@ -13935,7 +14428,7 @@ function amGenRec(){
     </div>
   </div>
 
-  <div class="iv-pane" id="ivp2" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp2" style="scroll-margin-top: 186px;">
     <div class="sec-title">IV → PO Conversion</div>
     <div class="sec-sub">Enterprise Intravenous to Oral Conversion Guideline · October 2024</div>
     <div class="guideline-badge revised">NYC H+H Enterprise · Effective: July 2024 · Last Review: October 2024</div>
@@ -14047,7 +14540,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ IV PANE 3 — IVP GUARDRAILS ══ -->
-  <div class="iv-pane" id="ivp3" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp3" style="scroll-margin-top: 186px;">
     <div class="sec-title">Enteral Nutrition (EN)</div>
     <div class="sec-sub">Administration and Hydration Guidelines · December 2022</div>
     <div class="guideline-badge revised">NYC H+H / Kings County · Food and Nutrition Services · Date Effective: December 2020 · Last Reviewed: December 2022</div>
@@ -14104,7 +14597,7 @@ function amGenRec(){
   
 
   <!-- ══ IV PANE 8 — STERILE COMPOUNDING CALCULATOR ══ -->
-  <div class="iv-pane" id="ivp4" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp4" style="scroll-margin-top: 186px;">
     <div class="sec-title">IV Admixture / Sterile Compounding</div>
     <div class="sec-sub">Stock Solution Calculator · Max Concentration Checker · Compounding Recipe Generator</div>
     <div class="guideline-badge revised">KCHC Pharmacy · Sterile Compounding Reference</div>
@@ -14217,7 +14710,7 @@ function amGenRec(){
   </div>
 
   <!-- IVP9 — IV BAG COMPOUNDER -->
-  <div class="iv-pane" id="ivp5" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp5" style="scroll-margin-top: 186px;">
     <div class="sec-title">IV Bag Compounder</div>
     <div class="sec-sub">Alligation · Electrolyte Additives · Drug Additives · Precipitation Check · Final Recipe</div>
     <div class="guideline-badge revised">KCHC Pharmacy · D12.5% Admixture Recipe · Institutional Document · FDA Safety Alert: Ca/Phos Precipitation · April 1994 · USP 797 · Effective November 2023</div>
@@ -14307,7 +14800,7 @@ function amGenRec(){
   </div>
 
   <!-- IVP10 — PN ORDER BUILDER -->
-  <div class="iv-pane" id="ivp6" style="scroll-margin-top: 249px;">
+  <div class="iv-pane" id="ivp6" style="scroll-margin-top: 186px;">
     <div class="sec-title">PN Order Builder + Verifier</div>
     <div class="sec-sub">TPN / PPN · Lab-Driven Formula · Refeeding Screen · Safety Check · CAPS-Ready Output</div>
     <div class="guideline-badge revised">KCHC PN Guidelines · Effective December 2020 · Reviewed 12/22 · ASPEN PN Safety Consensus · JPEN 2014 · ASPEN Dosing 1-Sheet · 2020 · ASPEN Compatibility &amp; Stability · Nutr Clin Pract 2024 · FDA Ca/Phos Alert · April 1994</div>
@@ -14486,12 +14979,12 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   SECTION TOX — ANTIDOTES & TOXICOLOGY
 ══════════════════════════════════════ -->
-<div class="section" id="sec-tox" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-tox" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="tox-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ TOX PANE 0 — AGENT LOOKUP ══ -->
-  <div class="tox-pane active" id="tp0" style="scroll-margin-top: 249px;">
+  <div class="tox-pane active" id="tp0" style="scroll-margin-top: 186px;">
     <div class="sec-title">Antidotes &amp; Toxicology</div>
     <div class="sec-sub">Common Antidotes and Reversals · Kings County Hospital · July 2022</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Internal Medicine · Updated July 2022</div>
@@ -14596,7 +15089,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 1 — ACETAMINOPHEN ══ -->
-  <div class="tox-pane" id="tp1" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp1" style="scroll-margin-top: 186px;">
     <div class="sec-title">Acetaminophen (Tylenol) Overdose</div>
     <div class="sec-sub">N-Acetylcysteine Protocol · KCHC · July 2022</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · July 2022</div>
@@ -14645,7 +15138,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 2 — BB / CCB ══ -->
-  <div class="tox-pane" id="tp2" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp2" style="scroll-margin-top: 186px;">
     <div class="sec-title">Beta-Blocker &amp; Calcium Channel Blocker Overdose</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Antidotes &amp; Reversals · July 2022</div>
     <div class="sec-sub">KCHC · July 2022 · Rebecca Chu, PharmD, BCPS</div>
@@ -14664,7 +15157,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 3 — OPIOIDS ══ -->
-  <div class="tox-pane" id="tp3" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp3" style="scroll-margin-top: 186px;">
     <div class="sec-title">Opioid Overdose &amp; Naloxone Dosing</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Antidotes &amp; Reversals · July 2022</div>
     <div class="sec-sub">KCHC · July 2022 · Rebecca Chu, PharmD, BCPS</div>
@@ -14701,7 +15194,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 4 — BENZOS ══ -->
-  <div class="tox-pane" id="tp4" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp4" style="scroll-margin-top: 186px;">
     <div class="sec-title">Benzodiazepine Overdose &amp; Flumazenil</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Antidotes &amp; Reversals · July 2022</div>
     <div class="sec-sub">KCHC · July 2022 · Rebecca Chu, PharmD, BCPS</div>
@@ -14724,7 +15217,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 5 — DIGOXIN ══ -->
-  <div class="tox-pane" id="tp5" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp5" style="scroll-margin-top: 186px;">
     <div class="sec-title">Digoxin Toxicity &amp; DigiFAB Dosing</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Antidotes &amp; Reversals · July 2022</div>
     <div class="sec-sub">KCHC · July 2022 · Rebecca Chu, PharmD, BCPS</div>
@@ -14766,7 +15259,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 6 — ANTICOAGULANTS ══ -->
-  <div class="tox-pane" id="tp6" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp6" style="scroll-margin-top: 186px;">
     <div class="sec-title">Anticoagulant Reversal</div>
     <div class="sec-sub">Warfarin · UFH · LMWH · KCHC · July 2022</div>
     <div class="guideline-badge revised">2018 ASH Guidelines · 2012 ACCP Guidelines · Rebecca Chu, PharmD, BCPS · July 2022</div>
@@ -14819,7 +15312,7 @@ function amGenRec(){
   </div>
 
   <!-- ══ TOX PANE 7 — OTHER TOXINS ══ -->
-  <div class="tox-pane" id="tp7" style="scroll-margin-top: 249px;">
+  <div class="tox-pane" id="tp7" style="scroll-margin-top: 186px;">
     <div class="sec-title">Other Toxins — Protocols</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Antidotes &amp; Reversals · July 2022</div>
     <div class="sec-sub">Serotonin Syndrome · Anticholinergic · Cyanide · Toxic Alcohols · KCHC July 2022</div>
@@ -14888,9 +15381,9 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   SECTION GER — GERIATRICS & DEPRESCRIBING
 ══════════════════════════════════════ -->
-<div class="section" id="sec-ger" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-ger" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="ger-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ GER PANE 0 — AGENT SELECTOR ══ -->
   <div class="ger-pane active" id="gp0">
@@ -15807,6 +16300,322 @@ function acvCalc() {
   }
 }
 
+// ══ BP1 SUB-TAB SWITCHER ══════════════════════════════════════════════
+function bp1SubTab(btn, paneId) {
+  // Update tab button styles
+  document.querySelectorAll('.bp1-stab').forEach(function(b) {
+    b.style.borderBottomColor = 'transparent';
+    b.style.color = 'var(--muted)';
+    b.classList.remove('active');
+  });
+  btn.style.borderBottomColor = 'var(--teal)';
+  btn.style.color = 'var(--teal)';
+  btn.classList.add('active');
+  // Show correct sub-pane
+  document.querySelectorAll('.bp1-spane').forEach(function(p) {
+    p.style.display = 'none';
+  });
+  var pane = document.getElementById(paneId);
+  if(pane) pane.style.display = 'block';
+}
+
+// ══ ABILIFY MAINTENA DOSE SELECTOR ═══════════════════════════════════
+function maintCalc() {
+  var q1 = document.querySelector('input[name="maint-q1"]:checked');
+  var q2 = document.querySelector('input[name="maint-q2"]:checked');
+  var q3 = document.querySelector('input[name="maint-q3"]:checked');
+  var q4 = document.querySelector('input[name="maint-q4"]:checked');
+  var q5 = document.querySelector('input[name="maint-q5"]:checked');
+  var resEl  = document.getElementById('maint-result');
+  var titleEl = document.getElementById('maint-result-title');
+  var bodyEl  = document.getElementById('maint-result-body');
+  if(!q1||!q2||!q3||!q4||!q5) { resEl.style.display='none'; return; }
+  var adr   = q1.value==='yes';
+  var pm    = q2.value==='yes';
+  var cyp2d6= q3.value==='yes';
+  var cyp3a4= q4.value==='yes';
+  var inducer=q5.value==='yes';
+
+  var title, body, border, bg, color;
+
+  if(inducer) {
+    title = '⛔ AVOID Abilify Maintena';
+    body  = 'Patient is on a CYP3A4 inducer (e.g. carbamazepine, rifampin, phenytoin, St. John\'s Wort) for >14 days. Blood levels of aripiprazole will drop below effective levels. Abilify Maintena should NOT be used while on CYP3A4 inducers.<br><br><strong>Action:</strong> Consider alternative LAI or discontinue the inducer before initiating Maintena.';
+    border='rgba(153,27,27,0.5)'; bg='rgba(153,27,27,0.06)'; color='#991b1b';
+  } else if(pm && cyp3a4) {
+    title = '⚠ Abilify Maintena — 200 mg IM Q monthly';
+    body  = 'Patient is a CYP2D6 poor metabolizer AND is on a CYP3A4 inhibitor. Both factors together significantly increase aripiprazole exposure.<br><br><strong>Dose: 200 mg IM Q monthly</strong><br>Note: 200 mg dose is obtained by using the 300 mg or 400 mg strength vial — there is no 200 mg vial.<br><br><strong>Overlap:</strong> Oral aripiprazole 10–20 mg/day × 14 days with first injection.';
+    border='#b45309'; bg='rgba(180,83,9,0.07)'; color='#b45309';
+  } else if(cyp2d6 && cyp3a4) {
+    title = '⚠ Abilify Maintena — 200 mg IM Q monthly';
+    body  = 'Patient is on BOTH a CYP2D6 inhibitor AND a CYP3A4 inhibitor simultaneously for >14 days. Both factors together significantly increase aripiprazole exposure.<br><br><strong>Dose: 200 mg IM Q monthly</strong><br>Note: 200 mg dose is obtained by using the 300 mg or 400 mg strength vial.<br><br><strong>Overlap:</strong> Oral aripiprazole 10–20 mg/day × 14 days with first injection.';
+    border='#b45309'; bg='rgba(180,83,9,0.07)'; color='#b45309';
+  } else if(pm || cyp2d6 || cyp3a4 || adr) {
+    title = '⚠ Abilify Maintena — 300 mg IM Q monthly';
+    var reasons = [];
+    if(adr)    reasons.push('prior adverse reactions to aripiprazole');
+    if(pm)     reasons.push('known CYP2D6 poor metabolizer');
+    if(cyp2d6) reasons.push('strong CYP2D6 inhibitor use >14 days');
+    if(cyp3a4) reasons.push('strong CYP3A4 inhibitor use >14 days');
+    body = 'Dose reduction to 300 mg indicated due to: <strong>' + reasons.join(', ') + '</strong>.<br><br><strong>Dose: 300 mg IM Q monthly</strong> (no sooner than 26 days after previous injection)<br><strong>Overlap:</strong> Oral aripiprazole 10–20 mg/day × 14 days with first injection.<br><strong>Reverse conversion:</strong> Approximately equivalent to oral aripiprazole 10–15 mg/day.';
+    border='#b45309'; bg='rgba(180,83,9,0.07)'; color='#b45309';
+  } else {
+    title = '✅ Abilify Maintena — 400 mg IM Q monthly';
+    body  = 'No dose-reduction factors identified. Standard starting and maintenance dose applies.<br><br><strong>Dose: 400 mg IM Q monthly</strong> (no sooner than 26 days after previous injection)<br><strong>Overlap:</strong> Oral aripiprazole 10–20 mg/day × 14 days with first injection. If patient is already stable on a different oral antipsychotic and known to tolerate aripiprazole, continue that antipsychotic × 14 days instead.<br><strong>Reverse conversion:</strong> Approximately equivalent to oral aripiprazole 20 mg/day.<br><br>If adverse reactions develop on 400 mg, reduce to 300 mg.';
+    border='#065f46'; bg='rgba(6,95,70,0.08)'; color='#065f46';
+  }
+
+  resEl.style.display='block';
+  resEl.style.borderColor=border;
+  resEl.style.background=bg;
+  titleEl.style.color=color;
+  titleEl.innerHTML=title;
+  bodyEl.innerHTML=body;
+}
+
+function maintReset() {
+  ['maint-q1','maint-q2','maint-q3','maint-q4','maint-q5'].forEach(function(n){
+    var els = document.querySelectorAll('input[name="'+n+'"]');
+    els.forEach(function(el){ el.checked=false; });
+  });
+  document.getElementById('maint-result').style.display='none';
+}
+
+// ══ RENAL DOSING TABLE — INTERACTIVE CONTROLS ════════════════════════
+var rdtCurrentStatus = 'normal';
+
+function rdtSetStatus(status) {
+  rdtCurrentStatus = status;
+  // Update button styles
+  var btns = {
+    normal:  document.getElementById('rdt-btn-normal'),
+    reduced: document.getElementById('rdt-btn-reduced'),
+    ihd:     document.getElementById('rdt-btn-ihd'),
+    crrt:    document.getElementById('rdt-btn-crrt')
+  };
+  var colors = { normal: 'var(--teal)', reduced: '#b45309', ihd: '#1d4ed8', crrt: '#7c3aed' };
+  Object.keys(btns).forEach(function(k) {
+    if(!btns[k]) return;
+    if(k === status) {
+      btns[k].style.background = 'rgba(52,211,153,0.12)';
+      btns[k].style.borderColor = colors[status] || 'var(--teal)';
+      btns[k].style.color = colors[status] || 'var(--teal)';
+    } else {
+      btns[k].style.background = 'var(--surface)';
+      btns[k].style.borderColor = 'var(--border)';
+      btns[k].style.color = 'var(--muted)';
+    }
+  });
+  // Highlight table header
+  var ths = { normal: 'rdt-th-normal', reduced: 'rdt-th-reduced', ihd: 'rdt-th-ihd', crrt: 'rdt-th-crrt' };
+  var hlColors = { normal: 'rgba(52,211,153,0.12)', reduced: 'rgba(180,83,9,0.1)', ihd: 'rgba(29,78,216,0.1)', crrt: 'rgba(124,58,237,0.1)' };
+  Object.keys(ths).forEach(function(k) {
+    var el = document.getElementById(ths[k]);
+    if(!el) return;
+    el.style.background = (k === status) ? (hlColors[status] || '') : '';
+    el.style.fontWeight = (k === status) ? '700' : '';
+    el.style.color = (k === status) ? (colors[status] || '') : '';
+  });
+  // Highlight cells in selected column
+  var allCells = document.querySelectorAll('.rdt-normal,.rdt-reduced,.rdt-ihd,.rdt-crrt');
+  allCells.forEach(function(c) {
+    c.style.background = '';
+    c.style.fontWeight = '';
+  });
+  var activeCells = document.querySelectorAll('.rdt-' + status);
+  activeCells.forEach(function(c) {
+    c.style.background = hlColors[status] || '';
+    c.style.fontWeight = '600';
+  });
+}
+
+function rdtFilter() {
+  var q = (document.getElementById('rdt-search').value || '').toLowerCase().trim();
+  var rows = document.querySelectorAll('#rdt-table tbody tr');
+  rows.forEach(function(r) {
+    var drug = (r.getAttribute('data-drug') || '').toLowerCase();
+    var name = (r.querySelector('td') ? r.querySelector('td').textContent : '').toLowerCase();
+    r.style.display = (!q || drug.indexOf(q) > -1 || name.indexOf(q) > -1) ? '' : 'none';
+  });
+}
+
+function rdtReset() {
+  var search = document.getElementById('rdt-search');
+  if(search) search.value = '';
+  rdtFilter();
+  rdtSetStatus('normal');
+  var banner = document.getElementById('rdt-crcl-banner');
+  if(banner) banner.style.display = 'none';
+}
+
+// Called by amQCCalcFull when CrCl result fires -- auto-selects column
+function rdtAutoSelect(crcl) {
+  var banner = document.getElementById('rdt-crcl-banner');
+  if(!banner) return;
+  if(crcl >= 50) {
+    rdtSetStatus('normal');
+    banner.style.display = 'block';
+    banner.textContent = '✅ CrCl ' + crcl.toFixed(1) + ' mL/min → Normal renal function (CrCl ≥50). Normal dose column highlighted.';
+    banner.style.color = 'var(--teal)';
+    banner.style.borderColor = 'var(--teal)';
+    banner.style.background = 'rgba(52,211,153,0.08)';
+  } else {
+    rdtSetStatus('reduced');
+    banner.style.display = 'block';
+    banner.textContent = '⚠ CrCl ' + crcl.toFixed(1) + ' mL/min → Renal adjustment required. Check Renal Adjustment column. If on IHD select IHD button. If on CRRT select CRRT button.';
+    banner.style.color = '#b45309';
+    banner.style.borderColor = '#b45309';
+    banner.style.background = 'rgba(180,83,9,0.06)';
+  }
+}
+
+// ══ ID/ANTIMICROBIALS CrCl QUICK CALC (full — with IBW/AdjBW) ════════
+function amQCCalcFull(wid, threshPct) {
+  var age  = parseFloat(document.getElementById(wid+'-qc-age').value);
+  var abw  = parseFloat(document.getElementById(wid+'-qc-wt').value);
+  var ht   = parseFloat(document.getElementById(wid+'-qc-ht').value);
+  var scr  = parseFloat(document.getElementById(wid+'-qc-scr').value);
+  var sex  = document.getElementById(wid+'-qc-sex').value;
+  var resEl  = document.getElementById(wid+'-qc-result');
+  var warnEl = document.getElementById(wid+'-qc-warn');
+  if(!resEl) return;
+  if(isNaN(age)||isNaN(abw)||isNaN(scr)||scr<=0||!sex) {
+    resEl.style.display='none';
+    if(warnEl) warnEl.style.display='none';
+    return;
+  }
+  // IBW calculation (Devine formula)
+  var ibw = null;
+  var dosingWt = abw;
+  var wtLabel = 'ABW';
+  var warnText = '';
+  if(!isNaN(ht) && ht > 0) {
+    var htIn = ht / 2.54;
+    var htOver5ft = Math.max(0, htIn - 60);
+    ibw = sex === 'm' ? (50 + 2.3 * htOver5ft) : (45.5 + 2.3 * htOver5ft);
+    ibw = Math.round(ibw * 10) / 10;
+    var pctOfIBW = (abw / ibw) * 100;
+    if(abw <= ibw) {
+      dosingWt = abw;
+      wtLabel = 'ABW (' + abw.toFixed(1) + ' kg) — ABW ≤ IBW, use ABW';
+    } else if(pctOfIBW > threshPct) {
+      var adjbw = ibw + 0.4 * (abw - ibw);
+      adjbw = Math.round(adjbw * 10) / 10;
+      dosingWt = adjbw;
+      wtLabel = 'AdjBW (' + adjbw.toFixed(1) + ' kg) — ABW >' + threshPct + '% IBW, use AdjBW';
+      warnText = '⚠ ABW (' + abw.toFixed(1) + ' kg) is ' + pctOfIBW.toFixed(0) + '% of IBW (' + ibw.toFixed(1) + ' kg). AdjBW = IBW + 0.4 × (ABW - IBW) = ' + adjbw.toFixed(1) + ' kg used for CrCl. KCHC threshold: >' + threshPct + '% IBW.';
+    } else {
+      dosingWt = ibw;
+      wtLabel = 'IBW (' + ibw.toFixed(1) + ' kg) — ABW > IBW, use IBW';
+    }
+  }
+  var scrAdj = Math.max(scr, 0.7);
+  var crcl = ((140 - age) * dosingWt) / (72 * scrAdj);
+  if(sex === 'f') crcl *= 0.85;
+  crcl = Math.round(crcl * 10) / 10;
+  var ckd = crcl >= 90 ? 'Normal' : crcl >= 60 ? 'Mild impairment' : crcl >= 30 ? 'Moderate impairment' : crcl >= 15 ? 'Severe impairment' : 'Kidney failure';
+  resEl.style.display = 'block';
+  resEl.innerHTML = 'CrCl = ' + crcl.toFixed(1) + ' mL/min (' + ckd + ')<br>' +
+    'Dosing weight: ' + wtLabel + (ibw ? ' | IBW = ' + ibw.toFixed(1) + ' kg' : '');
+  if(warnEl) {
+    if(warnText) { warnEl.style.display='block'; warnEl.textContent=warnText; }
+    else { warnEl.style.display='none'; }
+  }
+  // If this is the Renal Dosing tab widget, auto-select the table column
+  if(wid === 'am12') { rdtAutoSelect(crcl); }
+}
+
+function amQCCalc(wid) {
+  var age = parseFloat(document.getElementById(wid+'-qc-age').value);
+  var wt  = parseFloat(document.getElementById(wid+'-qc-wt').value);
+  var scr = parseFloat(document.getElementById(wid+'-qc-scr').value);
+  var sex = document.getElementById(wid+'-qc-sex').value;
+  var resEl = document.getElementById(wid+'-qc-result');
+  if(!resEl) return;
+  if(isNaN(age)||isNaN(wt)||isNaN(scr)||scr<=0||!sex) { resEl.style.display='none'; return; }
+  var scrAdj = Math.max(scr, 0.7);
+  var crcl = ((140 - age) * wt) / (72 * scrAdj);
+  if(sex === 'f') crcl *= 0.85;
+  crcl = Math.round(crcl * 10) / 10;
+  var label = '';
+  if(crcl >= 90)      label = ' — Normal';
+  else if(crcl >= 60) label = ' — Mild impairment';
+  else if(crcl >= 30) label = ' — Moderate impairment';
+  else if(crcl >= 15) label = ' — Severe impairment';
+  else                label = ' — Kidney failure';
+  resEl.style.display = 'block';
+  resEl.textContent = 'CrCl = ' + crcl.toFixed(1) + ' mL/min' + label;
+}
+
+// ══ BEHAVIORAL HEALTH CrCl QUICK CALC ════════════════════════════════
+function bhQCCalc(wid) {
+  var age = parseFloat(document.getElementById(wid+'-qc-age').value);
+  var wt  = parseFloat(document.getElementById(wid+'-qc-wt').value);
+  var scr = parseFloat(document.getElementById(wid+'-qc-scr').value);
+  var sex = document.getElementById(wid+'-qc-sex').value;
+  var resEl = document.getElementById(wid+'-qc-result');
+  if(!resEl) return;
+  if(isNaN(age)||isNaN(wt)||isNaN(scr)||scr<=0||!sex) { resEl.style.display='none'; return; }
+  var scrAdj = Math.max(scr, 0.7);
+  var crcl = ((140 - age) * wt) / (72 * scrAdj);
+  if(sex === 'f') crcl *= 0.85;
+  crcl = Math.round(crcl * 10) / 10;
+  var label = '';
+  if(crcl >= 90) label = ' — Normal';
+  else if(crcl >= 60) label = ' — Mild impairment';
+  else if(crcl >= 30) label = ' — Moderate impairment';
+  else if(crcl >= 15) label = ' — Severe impairment';
+  else label = ' — Kidney failure';
+  resEl.style.display = 'block';
+  resEl.textContent = 'CrCl = ' + crcl.toFixed(1) + ' mL/min' + label;
+}
+
+// ══ ONCOLOGY CrCl QUICK CALC ══════════════════════════════════════════
+function oncQCCalc(el) {
+  // Find the parent widget and get sibling inputs
+  var widget = el.closest('div[style*="display:none"]') || el.closest('div').parentElement;
+  var container = el.closest('div').parentElement;
+  var age = parseFloat(container.querySelector('.qc-age').value);
+  var wt  = parseFloat(container.querySelector('.qc-wt').value);
+  var scr = parseFloat(container.querySelector('.qc-scr').value);
+  var sex = container.querySelector('.qc-sex').value;
+  var resEl = container.querySelector('.qc-result');
+  if(!resEl) return;
+  if(isNaN(age)||isNaN(wt)||isNaN(scr)||scr<=0||!sex) { resEl.style.display='none'; return; }
+  var scrAdj = Math.max(scr, 0.7);
+  var crcl = ((140 - age) * wt) / (72 * scrAdj);
+  if(sex === 'f') crcl *= 0.85;
+  crcl = Math.round(crcl * 10) / 10;
+  resEl.style.display = 'block';
+  resEl.textContent = 'CrCl = ' + crcl.toFixed(1) + ' mL/min';
+}
+
+function carboPrecalcCrCl() {
+  var age = parseFloat(document.getElementById('carbo-qc-age').value);
+  var wt  = parseFloat(document.getElementById('carbo-qc-wt').value);
+  var scr = parseFloat(document.getElementById('carbo-qc-scr').value);
+  var sex = document.getElementById('carbo-qc-sex').value;
+  var resEl = document.getElementById('carbo-qc-result');
+  var crclIn = document.getElementById('carbo-crcl');
+  if(isNaN(age)||isNaN(wt)||isNaN(scr)||scr<=0||!sex) {
+    resEl.style.display = 'none';
+    return;
+  }
+  var scrAdj = Math.max(scr, 0.7);
+  var crcl = ((140 - age) * wt) / (72 * scrAdj);
+  if(sex === 'f') crcl *= 0.85;
+  // Cap at 125 per NCI 2010
+  var crclCapped = Math.min(crcl, 125);
+  crclCapped = Math.round(crclCapped * 10) / 10;
+  resEl.style.display = 'block';
+  resEl.innerHTML = 'CrCl = ' + crcl.toFixed(1) + ' mL/min' + (crcl > 125 ? ' <span style="color:#b45309;">(capped to 125 per NCI 2010)</span>' : '') + ' — auto-filled below';
+  // Auto-fill the Calvert CrCl field and trigger calculation
+  if(crclIn) {
+    crclIn.value = crclCapped.toFixed(1);
+    calcCarboplatin();
+  }
+}
+
 function cgShowError(msg) {
   var banner = document.getElementById('cg-banner');
   if(banner) {
@@ -15823,9 +16632,9 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION SAF — MEDICATION SAFETY
 ══════════════════════════════════════ -->
-<div class="section" id="sec-saf" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-saf" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="saf-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ SP0 — OVERVIEW ══ -->
   <div class="saf-pane active" id="sp0">
@@ -16221,9 +17030,9 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION PED — PEDIATRICS
 ══════════════════════════════════════ -->
-<div class="section" id="sec-ped" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-ped" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="ped-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- PP0 — AGENT SELECTOR -->
   <div class="ped-pane active" id="pped0">
@@ -16704,9 +17513,9 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION ONC — ONCOLOGY
 ══════════════════════════════════════ -->
-<div class="section" id="sec-onc" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-onc" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="onc-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- OP0 — AGENT SELECTOR -->
   <div class="onc-pane" id="op0">
@@ -16890,6 +17699,23 @@ function toggleCGHeightMode() {}
     <div class="sec-title">Order Verification Tool</div>
     <div class="sec-sub">Interactive Pre-Dispensing Checklist · Regimen-Specific · Go / Hold / Flag</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
+      <!-- CrCl Quick Calc (compact) -->
+      <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.qc-arrow&#39;).textContent=this.nextElementSibling.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+          <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+          <span class="qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+        </div>
+        <div style="display:none;padding:12px 14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Age</label><input type="number" class="qc-age" placeholder="e.g. 65" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Weight (kg)</label><input type="number" class="qc-wt" placeholder="e.g. 80" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">SCr (mg/dL)</label><input type="number" class="qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Sex</label><select class="qc-sex" onchange="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">-</option><option value="m">Male</option><option value="f">Female</option></select></div>
+          </div>
+          <div class="qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+          <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Source: Cockcroft-Gault</div>
+        </div>
+      </div>
 
     <div class="disc"><div class="disc-icon">!</div><div class="disc-text">Complete every section before verifying. Two independent pharmacist calculations required for all chemo at KCHC (JC MM Standard). If any item is flagged, escalate before proceeding.</div></div>
 
@@ -17015,6 +17841,29 @@ function toggleCGHeightMode() {}
             <option value="7">AUC 7 — Per protocol</option>
           </select>
         </div>
+
+        <div class="field">
+          <label>CrCl Quick Calc — auto-fills CrCl field below</label>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;">
+            <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+              <span style="font-size:10px;color:var(--sub);">Age</span>
+              <input type="number" id="carbo-qc-age" placeholder="e.g. 65" oninput="carboPrecalcCrCl()" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px;">
+              <span style="font-size:10px;color:var(--sub);">Weight (kg)</span>
+              <input type="number" id="carbo-qc-wt" placeholder="e.g. 80" oninput="carboPrecalcCrCl()" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+              <span style="font-size:10px;color:var(--sub);">SCr (mg/dL)</span>
+              <input type="number" id="carbo-qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="carboPrecalcCrCl()" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:70px;">
+              <span style="font-size:10px;color:var(--sub);">Sex</span>
+              <select id="carbo-qc-sex" onchange="carboPrecalcCrCl()" style="width:100%;background:var(--bg);border:1px solid rgba(52,211,153,0.4);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">Select</option><option value="m">Male</option><option value="f">Female</option></select>
+            </div>
+          </div>
+          <div id="carbo-qc-result" style="display:none;font-size:12px;color:#065f46;font-weight:600;padding:6px 10px;background:rgba(6,95,70,0.08);border-radius:5px;margin-bottom:4px;"></div>
+        </div>
         <div class="field">
           <label>CrCl (mL/min) — Cockcroft-Gault</label>
           <input type="number" id="carbo-crcl" placeholder="e.g. 85" min="1" max="200" step="1" oninput="calcCarboplatin()">
@@ -17050,20 +17899,37 @@ function toggleCGHeightMode() {}
   </div>
 
   <!-- OP3 — DOSE LIMITS -->
-  <div class="onc-pane active" id="op3">
+  <div class="onc-pane" id="op3">
     <div class="sec-title">Critical Dose Limits</div>
     <div class="sec-sub">Caps · Pump Rates · Special Protocols</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
+      <!-- CrCl Quick Calc (compact) -->
+      <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.qc-arrow&#39;).textContent=this.nextElementSibling.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+          <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+          <span class="qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+        </div>
+        <div style="display:none;padding:12px 14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Age</label><input type="number" class="qc-age" placeholder="e.g. 65" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Weight (kg)</label><input type="number" class="qc-wt" placeholder="e.g. 80" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">SCr (mg/dL)</label><input type="number" class="qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Sex</label><select class="qc-sex" onchange="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">-</option><option value="m">Male</option><option value="f">Female</option></select></div>
+          </div>
+          <div class="qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+          <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Source: Cockcroft-Gault</div>
+        </div>
+      </div>
 
     <!-- SECTION PILL NAV -->
     <div style="display:flex;gap:8px;margin:14px 0 10px;flex-wrap:wrap;">
-      <button class="onc-dl-btn active" id="onc-dl-btn-caps" onclick="oncDLSwitch(&#39;caps&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--sub); font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">💊 Dose Caps</button>
-      <button class="onc-dl-btn" id="onc-dl-btn-fu" onclick="oncDLSwitch(&#39;fu&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--sub); font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">🧪 5-FU Pump</button>
-      <button class="onc-dl-btn" id="onc-dl-btn-bev" onclick="oncDLSwitch(&#39;bev&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--clinical); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--clinical); color: white; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">💧 Bevacizumab</button>
+      <button class="onc-dl-btn active" id="onc-dl-btn-caps" onclick="oncDLSwitch(&#39;caps&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--clinical);background:var(--clinical);color:white;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">💊 Dose Caps</button>
+      <button class="onc-dl-btn" id="onc-dl-btn-fu" onclick="oncDLSwitch(&#39;fu&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--sub);font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">🧪 5-FU Pump</button>
+      <button class="onc-dl-btn" id="onc-dl-btn-bev" onclick="oncDLSwitch(&#39;bev&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--sub);font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">💧 Bevacizumab</button>
     </div>
 
     <!-- DOSE CAPS SECTION -->
-    <div id="onc-dl-caps" style="display: none;">
+    <div id="onc-dl-caps">
       <div style="display:flex;flex-direction:column;gap:8px;">
 
         <!-- Cisplatin -->
@@ -17164,24 +18030,24 @@ function toggleCGHeightMode() {}
     </div>
 
     <!-- 5-FU PUMP SECTION -->
-    <div id="onc-dl-fu" style="display: none;">
+    <div id="onc-dl-fu" style="display:none;">
       <div class="disc"><div class="disc-icon">!</div><div class="disc-text"><strong>Do NOT change the rate — change the volume and hours.</strong> 5-FU pumps run at fixed rates only. Source: Sarah Kamal PharmD / KCHC Life Infusions.</div></div>
 
       <div style="font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sub);margin:12px 0 8px;">Select duration</div>
       <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;">
-        <button onclick="oncFUSelect(&#39;2day&#39;,this)" class="onc-fu-btn" style="flex: 1 1 0%; min-width: 90px; padding: 10px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 7px; background: var(--surface); color: var(--ink); font-size: 13px; cursor: pointer; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace;">2-Day</button>
-        <button onclick="oncFUSelect(&#39;4day&#39;,this)" class="onc-fu-btn" style="flex: 1 1 0%; min-width: 90px; padding: 10px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 7px; background: var(--surface); color: var(--ink); font-size: 13px; cursor: pointer; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace;">4-Day</button>
-        <button onclick="oncFUSelect(&#39;30hr&#39;,this)" class="onc-fu-btn" style="flex: 1 1 0%; min-width: 90px; padding: 10px; border-color: var(--clinical); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 7px; background: var(--clinical-pale); color: var(--clinical); font-size: 13px; cursor: pointer; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace;">30-Hour</button>
+        <button onclick="oncFUSelect(&#39;2day&#39;,this)" class="onc-fu-btn" style="flex:1;min-width:90px;padding:10px;border:2px solid var(--border);border-radius:7px;background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;">2-Day</button>
+        <button onclick="oncFUSelect(&#39;4day&#39;,this)" class="onc-fu-btn" style="flex:1;min-width:90px;padding:10px;border:2px solid var(--border);border-radius:7px;background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;">4-Day</button>
+        <button onclick="oncFUSelect(&#39;30hr&#39;,this)" class="onc-fu-btn" style="flex:1;min-width:90px;padding:10px;border:2px solid var(--border);border-radius:7px;background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;">30-Hour</button>
       </div>
 
-      <div id="onc-fu-result" style="display: block;">
-        <div class="res-card show">
-          <div class="res-head" style="background:var(--clinical);"><span class="rh-title">5-FU Pump Parameters</span><span class="rh-stamp" id="onc-fu-label">30-Hour</span></div>
+      <div id="onc-fu-result" style="display:none;">
+        <div class="res-card">
+          <div class="res-head" style="background:var(--clinical);"><span class="rh-title">5-FU Pump Parameters</span><span class="rh-stamp" id="onc-fu-label"></span></div>
           <div class="res-body">
-            <div class="rb-row" style="background:var(--red-bg);"><span class="rb-label" style="color:var(--red);">⛔ Rate</span><span class="rb-val" style="color:var(--red);font-size:18px;font-weight:700;" id="onc-fu-rate">4 mL/hr</span></div>
-            <div class="rb-row"><span class="rb-label">Volume</span><span class="rb-val" id="onc-fu-vol">120 mL</span></div>
-            <div class="rb-row"><span class="rb-label">Duration</span><span class="rb-val" id="onc-fu-dur">30 hours</span></div>
-            <div class="rb-row"><span class="rb-label">Notes</span><span class="rb-val" id="onc-fu-note">Per protocol — confirm with treatment plan</span></div>
+            <div class="rb-row" style="background:var(--red-bg);"><span class="rb-label" style="color:var(--red);">⛔ Rate</span><span class="rb-val" style="color:var(--red);font-size:18px;font-weight:700;" id="onc-fu-rate">—</span></div>
+            <div class="rb-row"><span class="rb-label">Volume</span><span class="rb-val" id="onc-fu-vol">—</span></div>
+            <div class="rb-row"><span class="rb-label">Duration</span><span class="rb-val" id="onc-fu-dur">—</span></div>
+            <div class="rb-row"><span class="rb-label">Notes</span><span class="rb-val" id="onc-fu-note">—</span></div>
             <div class="rb-row" style="background:var(--amber-bg);"><span class="rb-label" style="color:var(--amber);">Rule</span><span class="rb-val" style="color:var(--amber);">Do NOT change the rate — adjust volume and hours only</span></div>
           </div>
         </div>
@@ -17189,20 +18055,20 @@ function toggleCGHeightMode() {}
     </div>
 
     <!-- BEVACIZUMAB SECTION -->
-    <div id="onc-dl-bev" style="display: block;">
+    <div id="onc-dl-bev" style="display:none;">
       <div style="font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sub);margin:0 0 8px;">Which infusion?</div>
       <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;">
-        <button onclick="oncBevSelect(&#39;1&#39;,this)" class="onc-bev-btn" style="flex: 1 1 0%; min-width: 90px; padding: 10px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 7px; background: var(--surface); color: var(--ink); font-size: 13px; cursor: pointer; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace;">1st Dose</button>
-        <button onclick="oncBevSelect(&#39;2&#39;,this)" class="onc-bev-btn" style="flex: 1 1 0%; min-width: 90px; padding: 10px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 7px; background: var(--surface); color: var(--ink); font-size: 13px; cursor: pointer; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace;">2nd Dose</button>
-        <button onclick="oncBevSelect(&#39;3&#39;,this)" class="onc-bev-btn" style="flex: 1 1 0%; min-width: 90px; padding: 10px; border-color: var(--clinical); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 7px; background: var(--clinical-pale); color: var(--clinical); font-size: 13px; cursor: pointer; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace;">3rd Dose +</button>
+        <button onclick="oncBevSelect(&#39;1&#39;,this)" class="onc-bev-btn" style="flex:1;min-width:90px;padding:10px;border:2px solid var(--border);border-radius:7px;background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;">1st Dose</button>
+        <button onclick="oncBevSelect(&#39;2&#39;,this)" class="onc-bev-btn" style="flex:1;min-width:90px;padding:10px;border:2px solid var(--border);border-radius:7px;background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;">2nd Dose</button>
+        <button onclick="oncBevSelect(&#39;3&#39;,this)" class="onc-bev-btn" style="flex:1;min-width:90px;padding:10px;border:2px solid var(--border);border-radius:7px;background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;">3rd Dose +</button>
       </div>
 
-      <div id="onc-bev-result" style="display: block;">
-        <div class="res-card show">
-          <div class="res-head" style="background:var(--clinical);"><span class="rh-title">Bevacizumab Infusion Rate</span><span class="rh-stamp" id="onc-bev-label">3rd Dose +</span></div>
+      <div id="onc-bev-result" style="display:none;">
+        <div class="res-card">
+          <div class="res-head" style="background:var(--clinical);"><span class="rh-title">Bevacizumab Infusion Rate</span><span class="rh-stamp" id="onc-bev-label"></span></div>
           <div class="res-body">
-            <div class="rb-row" style="background:var(--green-bg);"><span class="rb-label" style="color:var(--green);">⏱ Infuse Over</span><span class="rb-val" style="color:var(--green);font-size:18px;font-weight:700;" id="onc-bev-rate">30 minutes</span></div>
-            <div class="rb-row"><span class="rb-label">Condition</span><span class="rb-val" id="onc-bev-cond">Only if 2nd infusion was well tolerated — maintain 30 min for all subsequent doses</span></div>
+            <div class="rb-row" style="background:var(--green-bg);"><span class="rb-label" style="color:var(--green);">⏱ Infuse Over</span><span class="rb-val" style="color:var(--green);font-size:18px;font-weight:700;" id="onc-bev-rate">—</span></div>
+            <div class="rb-row"><span class="rb-label">Condition</span><span class="rb-val" id="onc-bev-cond">—</span></div>
           </div>
         </div>
       </div>
@@ -17414,6 +18280,23 @@ function toggleCGHeightMode() {}
     <div class="sec-title">Bone Modifying Agents</div>
     <div class="sec-sub">Zometa · Xgeva · Prolia · Reclast · Calcium Monitoring</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
+      <!-- CrCl Quick Calc (compact) -->
+      <div style="margin-bottom:14px;border:1px solid rgba(52,211,153,0.3);border-radius:8px;overflow:hidden;">
+        <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===&#39;none&#39;?&#39;block&#39;:&#39;none&#39;;this.querySelector(&#39;.qc-arrow&#39;).textContent=this.nextElementSibling.style.display===&#39;none&#39;?&#39;▼&#39;:&#39;▲&#39;;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:rgba(52,211,153,0.08);cursor:pointer;">
+          <span style="font-family:monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);">🧮 CrCl Quick Calc (Cockcroft-Gault)</span>
+          <span class="qc-arrow" style="font-size:11px;color:var(--teal);">▼</span>
+        </div>
+        <div style="display:none;padding:12px 14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Age</label><input type="number" class="qc-age" placeholder="e.g. 65" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Weight (kg)</label><input type="number" class="qc-wt" placeholder="e.g. 80" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">SCr (mg/dL)</label><input type="number" class="qc-scr" placeholder="e.g. 1.0" step="0.01" oninput="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;box-sizing:border-box;"></div>
+            <div><label style="font-size:10px;color:var(--sub);display:block;margin-bottom:3px;">Sex</label><select class="qc-sex" onchange="oncQCCalc(this)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:5px;font-size:12px;"><option value="">-</option><option value="m">Male</option><option value="f">Female</option></select></div>
+          </div>
+          <div class="qc-result" style="display:none;padding:8px 12px;background:rgba(6,95,70,0.08);border:1px solid #065f46;border-radius:6px;font-size:13px;color:#065f46;font-weight:600;"></div>
+          <div style="font-size:10px;color:var(--sub);margin-top:6px;">CrCl = [(140-Age) × Weight / (72 × SCr)] × 0.85 if female · Source: Cockcroft-Gault</div>
+        </div>
+      </div>
 
     <div style="font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sub);margin:10px 0 8px;">Select agent</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
@@ -17460,7 +18343,7 @@ function toggleCGHeightMode() {}
   </div>
 
   <!-- OP8 — LIGHT SENSITIVE / FILTERED -->
-  <div class="onc-pane" id="op8">
+  <div class="onc-pane active" id="op8">
     <div class="sec-title">Light Sensitive &amp; Filtered Medications</div>
     <div class="sec-sub">Administration Requirements</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
@@ -17705,9 +18588,9 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION DM — DIABETES
 ══════════════════════════════════════ -->
-<div class="section" id="sec-dm" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-dm" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="dm-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- DM0 — AGENT SELECTOR -->
   <div class="dm-pane active" id="dm0">
@@ -18139,9 +19022,9 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION OB — OB/GYN
 ══════════════════════════════════════ -->
-<div class="section" id="sec-ob" style="scroll-margin-top: 249px;">
+<div class="section" id="sec-ob" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="ob-modnav" style="display:none;"></div>
-  <div class="main" style="scroll-margin-top: 249px;">
+  <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- OB0 — AGENT SELECTOR -->
   <div class="ob-pane active" id="ob0">
@@ -18522,7 +19405,7 @@ function toggleCGHeightMode() {}
 
 
 
-  <div class="bh-pane" id="bp7" style="scroll-margin-top: 249px;">
+  <div class="bh-pane" id="bp7" style="scroll-margin-top: 186px;">
     <div class="sec-title">OUD Long-Acting Injectables</div>
     <div class="sec-sub">Sublocade · Brixadi · Vivitrol — Comparison &amp; Protocol</div>
     <div class="guideline-badge revised">Source: FDA Prescribing Information · Sublocade (Indivior, 2017) · Brixadi (Braeburn, 2023) · External source — no KCHC document · Flag for P&amp;T review</div>
