@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0085)file:///Users/esdrasobas/Downloads/OrderMind_V1_-_KCHC_Clinical_Reference%20(10).html -->
+<!-- saved from url=(0085)file:///Users/esdrasobas/Downloads/OrderMind_V1_-_KCHC_Clinical_Reference%20(11).html -->
 <html lang="en" style="--chrome-h: 182px; scroll-padding-top: 186px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -775,14 +775,14 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 </div>
 
 <nav class="top-nav">
-  <button class="top-btn" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
+  <button class="top-btn active" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
   <button class="top-btn" id="top-btn-am" onclick="switchTop(&#39;am&#39;)">🧫 ID / Antimicrobials</button>
   <button class="top-btn" id="top-btn-iv" onclick="switchTop(&#39;iv&#39;)">🩺 IV / Nutrition</button>
   <button class="top-btn" id="top-btn-onc" onclick="switchTop(&#39;onc&#39;)">🧬 Oncology</button>
   <button class="top-btn top-btn-mobile-hide" id="top-btn-pain" onclick="switchTop(&#39;pain&#39;)">💊 Pain &amp; Opioid</button>
   <button class="top-btn top-btn-mobile-hide" id="top-btn-bh" onclick="switchTop(&#39;bh&#39;)">🧠 Behavioral Health</button>
   <div style="position:relative;flex:1;display:flex;min-width:0;">
-    <button class="more-btn" id="more-menu-btn" onclick="toggleMoreMenu()" style="border-bottom-color: rgb(125, 211, 252); color: rgb(125, 211, 252);">🤰 OB/GYN ▾</button>
+    <button class="more-btn" id="more-menu-btn" onclick="toggleMoreMenu()">☰ More</button>
     <div class="more-dropdown" id="more-dropdown">
       <button class="more-item more-item-mobile-only" id="top-btn-pain-m" onclick="switchTop(&#39;pain&#39;);closeMoreMenu()">💊 Pain &amp; Opioid</button>
       <button class="more-item more-item-mobile-only" id="top-btn-bh-m" onclick="switchTop(&#39;bh&#39;);closeMoreMenu()">🧠 Behavioral Health</button>
@@ -791,13 +791,13 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
       <button class="more-item" id="top-btn-saf" onclick="switchTop(&#39;saf&#39;);closeMoreMenu()">🛡️ Med Safety</button>
       <button class="more-item" id="top-btn-ped" onclick="switchTop(&#39;ped&#39;);closeMoreMenu()">🧒 Pediatrics</button>
       <button class="more-item" id="top-btn-dm" onclick="switchTop(&#39;dm&#39;)">🩸 Diabetes</button>
-      <button class="more-item active" id="top-btn-ob" onclick="switchTop(&#39;ob&#39;)">🤰 OB/GYN</button>
+      <button class="more-item" id="top-btn-ob" onclick="switchTop(&#39;ob&#39;)">🤰 OB/GYN</button>
     </div>
   </div>
 </nav>
 
-<nav class="section-nav" id="snav-ac" style="display: none;">
-  <button class="snav-btn" onclick="goTo(0)">⚡ Agent Selector</button>
+<nav class="section-nav" id="snav-ac" style="display: flex;">
+  <button class="snav-btn active" onclick="goTo(0)">⚡ Agent Selector</button>
   <button class="snav-btn" onclick="goTo(1)">Warfarin</button>
   <button class="snav-btn" onclick="goTo(2)">Heparin (UFH)</button>
   <button class="snav-btn" onclick="goTo(3)">Enoxaparin</button>
@@ -835,7 +835,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-pain-6" onclick="painGoTo(6,this)">📋 Guidelines</button>
 </nav>
 
-<nav class="section-nav" id="snav-bh" style="display: none;">
+<nav class="section-nav" id="snav-bh" style="display:none;">
   <button class="snav-btn" id="spb-bh-0" onclick="bhGoTo(0,this)">⚡ Agent Selector</button>
   <button class="snav-btn" id="spb-bh-1" onclick="bhGoTo(1,this)">💉 LAI Calc &amp; Convert</button>
   <button class="snav-btn" id="spb-bh-2" onclick="bhGoTo(2,this)">🏥 LAI Dispensing</button>
@@ -856,7 +856,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-iv-6" onclick="ivGoTo(6,this)">🏥 PN Builder</button>
 </nav>
 
-<nav class="section-nav" id="snav-tox" style="display: none;">
+<nav class="section-nav" id="snav-tox" style="display:none;">
   <button class="snav-btn" id="spb-tox-0" onclick="toxGoTo(0,this)">⚡ Agent Lookup</button>
   <button class="snav-btn" id="spb-tox-1" onclick="toxGoTo(1,this)">💊 Acetaminophen</button>
   <button class="snav-btn" id="spb-tox-2" onclick="toxGoTo(2,this)">🫀 BB / CCB</button>
@@ -911,8 +911,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-dm-5" onclick="dmGoTo(5,this)">📊 T2DM Pharmacology</button>
   <button class="snav-btn" id="spb-dm-6" onclick="dmGoTo(6,this)">📋 Monitoring &amp; EPIC</button>
 </nav>
-<nav class="section-nav" id="snav-ob" style="display: flex;">
-  <button class="snav-btn active" id="spb-ob-0" onclick="obGoTo(0,this)">⚡ Agent Selector</button>
+<nav class="section-nav" id="snav-ob" style="display:none;">
+  <button class="snav-btn" id="spb-ob-0" onclick="obGoTo(0,this)">⚡ Agent Selector</button>
   <button class="snav-btn" id="spb-ob-1" onclick="obGoTo(1,this)">📏 Bishop Score</button>
   <button class="snav-btn" id="spb-ob-2" onclick="obGoTo(2,this)">💊 Induction Protocol</button>
   <button class="snav-btn" id="spb-ob-3" onclick="obGoTo(3,this)">🩸 OB Hemorrhage</button>
@@ -926,7 +926,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 0 — AGENT SELECTOR WIZARD
 ══════════════════════════════════════ -->
-<div class="section" id="sec-0" style="scroll-margin-top: 186px;">
+<div class="section active" id="sec-0" style="scroll-margin-top: 186px;">
   <div class="main" style="scroll-margin-top: 186px;">
   <div class="sec-title">Agent Selector</div>
   <div class="sec-sub">Anticoagulation Decision Wizard . KCHC Protocol</div>
@@ -13712,7 +13712,7 @@ function amGenRec(){
 ══════════════════════════════════════ -->
 <div class="section" id="sec-bh" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="bh-modnav" style="display:none;">
-    <button class="mnav-btn" data-bh="0" onclick="bhGoTo(0,this)">⚡ Agent Selector</button>
+    <button class="mnav-btn active" data-bh="0" onclick="bhGoTo(0,this)">⚡ Agent Selector</button>
     <button class="mnav-btn" data-bh="1" onclick="bhGoTo(1,this)">💉 LAI Calc &amp; Convert</button>
     <button class="mnav-btn" data-bh="2" onclick="bhGoTo(2,this)">🏥 LAI Dispensing</button>
     <button class="mnav-btn" data-bh="3" onclick="bhGoTo(3,this)">⚡ QTc Risk</button>
@@ -13724,7 +13724,7 @@ function amGenRec(){
   <div class="main" style="scroll-margin-top: 186px;">
 
   <!-- ══ BH PANE 0 — AGENT SELECTOR ══ -->
-  <div class="bh-pane" id="bp0" style="scroll-margin-top: 186px;">
+  <div class="bh-pane active" id="bp0" style="scroll-margin-top: 186px;">
     <div class="sec-title">BH Agent Selector</div>
     <div class="sec-sub">Antipsychotic Decision Wizard · KCHC Behavioral Health · Jan 2022 · Jun 2017</div>
     <!-- CrCl Quick Calc (compact) -->
@@ -14938,7 +14938,7 @@ function amGenRec(){
   </div>
 
   </div><!-- /main -->
-  <div class="bh-pane active" id="bp7" style="scroll-margin-top: 186px;">
+  <div class="bh-pane" id="bp7" style="scroll-margin-top: 186px;">
     <div class="sec-title">OUD Injectables — Sublocade (XR-BUP)</div>
     <div class="sec-sub">Extended Release Buprenorphine · KCHC BH Policy June 2023 · KCHC Dispensing Memo Nov 2022</div>
     <div class="guideline-badge">Source: KCHC Extended Release Buprenorphine (Sublocade®): Process and Procedure for Use · BHS Policy · Effective: June 2023 · Authors: Jennifer Mark MD, Amanda Eloma PharmD BCPP, Annahit Daglyan PharmD BCPP · Approved: Zoraya Pod RPh MPA, Director Pharmacy Services</div>
@@ -20518,7 +20518,7 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION OB — OB/GYN
 ══════════════════════════════════════ -->
-<div class="section active" id="sec-ob" style="scroll-margin-top: 186px;">
+<div class="section" id="sec-ob" style="scroll-margin-top: 186px;">
   <div class="mod-nav" id="ob-modnav" style="display:none;"></div>
   <div class="main" style="scroll-margin-top: 186px;">
 
@@ -20950,43 +20950,43 @@ function toggleCGHeightMode() {}
       <input class="csb-input" id="csb-cm" type="number" min="100" max="220" placeholder="e.g. 170" oninput="csb_calc()" style="width:100%;">
       <span style="color:rgba(255,255,255,0.3);font-size:11px;white-space:nowrap;">cm</span>
     </div>
-    <div class="csb-unit-hint" id="csb-ht-hint">= 177.8 cm</div>
+    <div class="csb-unit-hint" id="csb-ht-hint"></div>
 
     <!-- Weight with toggle -->
     <label class="csb-label">Actual Body Weight</label>
     <div class="csb-toggle-group">
-      <button class="csb-utbtn" id="csb-wt-lbs-btn" onclick="csb_wt_unit(&#39;lbs&#39;)">lbs</button>
-      <button class="csb-utbtn active" id="csb-wt-kg-btn" onclick="csb_wt_unit(&#39;kg&#39;)">kg</button>
+      <button class="csb-utbtn active" id="csb-wt-lbs-btn" onclick="csb_wt_unit(&#39;lbs&#39;)">lbs</button>
+      <button class="csb-utbtn" id="csb-wt-kg-btn" onclick="csb_wt_unit(&#39;kg&#39;)">kg</button>
     </div>
     <div class="csb-input-row">
       <input class="csb-input" id="csb-wt" type="number" min="1" max="700" placeholder="e.g. 185" oninput="csb_calc()" style="width:100%;">
-      <span class="csb-unit-label" id="csb-wt-unit-label" style="color:rgba(255,255,255,0.3);font-size:11px;white-space:nowrap;">kg</span>
+      <span class="csb-unit-label" id="csb-wt-unit-label" style="color:rgba(255,255,255,0.3);font-size:11px;white-space:nowrap;">lbs</span>
     </div>
-    <div class="csb-unit-hint" id="csb-wt-hint">= 440.9 lbs</div>
+    <div class="csb-unit-hint" id="csb-wt-hint"></div>
 
     <label class="csb-label">Serum Creatinine (mg/dL)</label>
     <input class="csb-input" id="csb-scr" type="number" min="0.1" max="20" step="0.01" placeholder="e.g. 1.2" oninput="csb_calc()" style="width:100%;">
 
     <!-- Results -->
-    <div id="csb-results" class="csb-results show">
+    <div id="csb-results" class="csb-results">
       <div class="csb-divider"></div>
 
       <!-- Weight summary rows -->
       <div class="csb-info-row">
         <span class="csb-rlabel">IBW</span>
-        <span class="csb-rval" id="csb-r-ibw">73.0 kg</span>
+        <span class="csb-rval" id="csb-r-ibw">--</span>
       </div>
       <div class="csb-info-row">
         <span class="csb-rlabel">AdjBW</span>
-        <span class="csb-rval active-wt" id="csb-r-adjbw">123.8 kg</span>
+        <span class="csb-rval" id="csb-r-adjbw">--</span>
       </div>
       <div class="csb-info-row">
         <span class="csb-rlabel">ABW</span>
-        <span class="csb-rval" id="csb-r-abw">200.0 kg</span>
+        <span class="csb-rval" id="csb-r-abw">--</span>
       </div>
       <div class="csb-info-row">
         <span class="csb-rlabel">BMI</span>
-        <span class="csb-rval" id="csb-r-bmi">63.3</span>
+        <span class="csb-rval" id="csb-r-bmi">--</span>
       </div>
 
       <div class="csb-divider"></div>
@@ -20996,25 +20996,25 @@ function toggleCGHeightMode() {}
       <div class="csb-cols">
         <div class="csb-col-card conservative" id="csb-card-ibw">
           <div class="csb-col-lbl">IBW</div>
-          <div class="csb-col-num" id="csb-crcl-ibw">63.4</div>
+          <div class="csb-col-num" id="csb-crcl-ibw">--</div>
           <div class="csb-col-unit">mL/min</div>
           <div class="csb-col-note">Conservative</div>
         </div>
-        <div class="csb-col-card recommended" id="csb-card-adjbw">
+        <div class="csb-col-card" id="csb-card-adjbw">
           <div class="csb-col-lbl">AdjBW</div>
-          <div class="csb-col-num" id="csb-crcl-adjbw">107.5</div>
+          <div class="csb-col-num" id="csb-crcl-adjbw">--</div>
           <div class="csb-col-unit">mL/min</div>
-          <div class="csb-col-note" id="csb-adjbw-note">&gt;130% IBW</div>
+          <div class="csb-col-note" id="csb-adjbw-note">--</div>
         </div>
-        <div class="csb-col-card overest" id="csb-card-abw">
+        <div class="csb-col-card" id="csb-card-abw">
           <div class="csb-col-lbl">ABW</div>
-          <div class="csb-col-num" id="csb-crcl-abw">173.6</div>
+          <div class="csb-col-num" id="csb-crcl-abw">--</div>
           <div class="csb-col-unit">mL/min</div>
           <div class="csb-col-note">Overestimates<br>in obesity</div>
         </div>
       </div>
 
-      <div class="csb-wt-note" id="csb-wt-note">ABW 274% of IBW (&gt;130%) — KCHC: use AdjBW for CrCl</div>
+      <div class="csb-wt-note" id="csb-wt-note"></div>
       <button class="csb-clear" onclick="csb_clear()">✕ Clear</button>
     </div>
   </div>
