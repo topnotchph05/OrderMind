@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0085)file:///Users/esdrasobas/Downloads/OrderMind_V1_-_KCHC_Clinical_Reference%20(18).html -->
+<!-- saved from url=(0103)file:///Users/esdrasobas/Downloads/OrderMind%20%C2%B7%20KCHC%20Clinical%20Reference%204-3-2026%202.html -->
 <html lang="en" style="--chrome-h: 189px; scroll-padding-top: 193px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -766,7 +766,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   </div>
   <button class="qa-btn crcl-pill" onclick="switchTop(&#39;am&#39;);goTo(12,3);">🧮 CrCl</button>
   <button class="qa-btn qa-pill" onclick="openQA()">⚡ Quick Access</button>
-  <div class="search-results" id="search-results" style="top: 252.5px;"></div>
+  <div class="search-results" id="search-results"></div>
 </div>
 
 <div class="qa-overlay" id="qa-overlay" onclick="closeQA()"></div>
@@ -781,7 +781,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 </div>
 
 <nav class="top-nav">
-  <button class="top-btn" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
+  <button class="top-btn active" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
   <button class="top-btn" id="top-btn-am" onclick="switchTop(&#39;am&#39;)">🧫 ID / Antimicrobials</button>
   <button class="top-btn" id="top-btn-iv" onclick="switchTop(&#39;iv&#39;)">🩺 IV / Nutrition</button>
   <button class="top-btn" id="top-btn-onc" onclick="switchTop(&#39;onc&#39;)">🧬 Oncology</button>
@@ -792,14 +792,14 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="top-btn top-btn-desktop-hide" id="top-btn-saf" onclick="switchTop(&#39;saf&#39;)">🛡️ Med Safety</button>
   <button class="top-btn top-btn-desktop-hide" id="top-btn-ped" onclick="switchTop(&#39;ped&#39;)">🧒 Pediatrics</button>
   <button class="top-btn top-btn-desktop-hide" id="top-btn-dm" onclick="switchTop(&#39;dm&#39;)">🩸 Diabetes</button>
-  <button class="top-btn top-btn-desktop-hide active" id="top-btn-ob" onclick="switchTop(&#39;ob&#39;)">🤰 OB/GYN</button>
+  <button class="top-btn top-btn-desktop-hide" id="top-btn-ob" onclick="switchTop(&#39;ob&#39;)">🤰 OB/GYN</button>
   <div style="position:relative;display:none;" id="more-menu-wrap">
     <button class="more-btn" id="more-menu-btn" onclick="toggleMoreMenu()">☰ More</button>
   </div>
 </nav>
 
-<nav class="section-nav" id="snav-ac" style="display: none;">
-  <button class="snav-btn" onclick="goTo(0)">⚡ Agent Selector</button>
+<nav class="section-nav" id="snav-ac" style="display: flex;">
+  <button class="snav-btn active" onclick="goTo(0)">⚡ Agent Selector</button>
   <button class="snav-btn" onclick="goTo(1)">Warfarin</button>
   <button class="snav-btn" onclick="goTo(2)">Heparin (UFH)</button>
   <button class="snav-btn" onclick="goTo(3)">Enoxaparin</button>
@@ -917,19 +917,19 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-dm-5" onclick="dmGoTo(5,this)">📊 T2DM Pharmacology</button>
   <button class="snav-btn" id="spb-dm-6" onclick="dmGoTo(6,this)">📋 Monitoring &amp; EPIC</button>
 </nav>
-<nav class="section-nav" id="snav-ob" style="display: flex;">
+<nav class="section-nav" id="snav-ob" style="display: none;">
   <button class="snav-btn" id="spb-ob-0" onclick="obGoTo(0,this)">⚡ Agent Selector</button>
   <button class="snav-btn" id="spb-ob-1" onclick="obGoTo(1,this)">📏 Bishop Score</button>
   <button class="snav-btn" id="spb-ob-2" onclick="obGoTo(2,this)">💊 Induction Protocol</button>
   <button class="snav-btn" id="spb-ob-3" onclick="obGoTo(3,this)">🩸 OB Hemorrhage</button>
-  <button class="snav-btn active" id="spb-ob-4" onclick="obGoTo(4,this)">💉 IV Iron L&amp;D</button>
+  <button class="snav-btn" id="spb-ob-4" onclick="obGoTo(4,this)">💉 IV Iron L&amp;D</button>
 </nav>
 </div><!-- /.sticky-chrome -->
 
 <!-- More menu dropdown — fixed at body level to escape sticky-chrome overflow clipping -->
 <div id="more-dropdown" style="display:none;position:fixed;top:0;left:8px;right:8px;z-index:9999;background:#ffffff;border:1px solid #94a3b8;border-radius:0 0 10px 10px;box-shadow:0 8px 32px rgba(0,0,0,0.25);max-height:80vh;overflow-y:auto;">
   <div style="padding:10px 16px 4px;font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:0.05em;text-transform:uppercase;">All Tabs</div>
-  <button class="more-item" id="top-btn-ac-m" onclick="switchTop(&#39;ac&#39;);closeMoreMenu()">💉 Anticoagulation</button>
+  <button class="more-item active" id="top-btn-ac-m" onclick="switchTop(&#39;ac&#39;);closeMoreMenu()">💉 Anticoagulation</button>
   <button class="more-item" id="top-btn-am-m" onclick="switchTop(&#39;am&#39;);closeMoreMenu()">🧫 ID / Antimicrobials</button>
   <button class="more-item" id="top-btn-iv-m" onclick="switchTop(&#39;iv&#39;);closeMoreMenu()">🩺 IV / Nutrition</button>
   <button class="more-item" id="top-btn-onc-m" onclick="switchTop(&#39;onc&#39;);closeMoreMenu()">🧬 Oncology</button>
@@ -941,7 +941,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="more-item" id="top-btn-saf-m" onclick="switchTop(&#39;saf&#39;);closeMoreMenu()">🛡️ Med Safety</button>
   <button class="more-item" id="top-btn-ped-m" onclick="switchTop(&#39;ped&#39;);closeMoreMenu()">🧒 Pediatrics</button>
   <button class="more-item" id="top-btn-dm-m" onclick="switchTop(&#39;dm&#39;);closeMoreMenu()">🩸 Diabetes</button>
-  <button class="more-item active" id="top-btn-ob-m" onclick="switchTop(&#39;ob&#39;);closeMoreMenu()">🤰 OB/GYN</button>
+  <button class="more-item" id="top-btn-ob-m" onclick="switchTop(&#39;ob&#39;);closeMoreMenu()">🤰 OB/GYN</button>
   <div style="padding:10px 16px;border-top:1px solid #f1f5f9;text-align:right;">
     <button onclick="closeMoreMenu()" style="font-size:13px;color:#64748b;background:none;border:none;cursor:pointer;font-family:-apple-system,sans-serif;padding:4px 8px;">✕ Close</button>
   </div>
@@ -953,7 +953,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 0 — AGENT SELECTOR WIZARD
 ══════════════════════════════════════ -->
-<div class="section" id="sec-0" style="scroll-margin-top: 193px;">
+<div class="section active" id="sec-0" style="scroll-margin-top: 193px;">
   <div class="main" style="scroll-margin-top: 193px;">
   <div class="sec-title">Agent Selector</div>
   <div class="sec-sub">Anticoagulation Decision Wizard . KCHC Protocol</div>
@@ -7027,6 +7027,116 @@ function calcSustennaInit() {
 // BEHAVIORAL HEALTH TAB — NAVIGATION & CALCULATORS
 // ══════════════════════════════════════
 
+// ══ DUAL LAI INTERACTIVE CHECKER ══
+var _dcType = '';
+
+function dcSetType(type) {
+  _dcType = type;
+  var btnI = document.getElementById('dc-btn-initial');
+  var btnC = document.getElementById('dc-btn-continuing');
+  var secA = document.getElementById('dc-secA');
+  var secB = document.getElementById('dc-secB');
+  var secC = document.getElementById('dc-secC');
+  var result = document.getElementById('dc-result');
+  var reset = document.getElementById('dc-reset-wrap');
+
+  btnI.style.background = type === 'initial' ? 'var(--clinical)' : 'var(--surface)';
+  btnI.style.color = type === 'initial' ? 'white' : 'var(--text)';
+  btnI.style.borderColor = type === 'initial' ? 'var(--clinical)' : 'var(--border)';
+  btnC.style.background = type === 'continuing' ? 'var(--clinical)' : 'var(--surface)';
+  btnC.style.color = type === 'continuing' ? 'white' : 'var(--text)';
+  btnC.style.borderColor = type === 'continuing' ? 'var(--clinical)' : 'var(--border)';
+
+  secA.style.display = 'block';
+  secB.style.display = type === 'initial' ? 'block' : 'none';
+  secC.style.display = type === 'continuing' ? 'block' : 'none';
+  result.style.display = 'none';
+  reset.style.display = 'block';
+
+  // Clear checkboxes for hidden section
+  if (type === 'initial') {
+    ['dc-c1','dc-c2','dc-c2a'].forEach(function(id){ var el = document.getElementById(id); if(el) el.checked = false; });
+  } else {
+    ['dc-b1','dc-b2','dc-b3','dc-b4','dc-b5','dc-b6','dc-b6a'].forEach(function(id){ var el = document.getElementById(id); if(el) el.checked = false; });
+  }
+  dcEval();
+}
+
+function dcEval() {
+  if (!_dcType) return;
+  var result = document.getElementById('dc-result');
+
+  var a1 = document.getElementById('dc-a1').checked;
+  var a2 = document.getElementById('dc-a2').checked;
+  var a3 = document.getElementById('dc-a3').checked;
+  var secAMet = a1 || a2 || a3;
+
+  var secBCMet = false;
+  var missing = [];
+
+  if (_dcType === 'initial') {
+    var checks = [
+      { id: 'dc-b1', label: 'B1: Failed 3 antipsychotic trials' },
+      { id: 'dc-b2', label: 'B2: Trialed on 2 LAIs as monotherapy' },
+      { id: 'dc-b3', label: 'B3: Failed or ineligible for clozapine' },
+      { id: 'dc-b4', label: 'B4: High risk for re-hospitalization' },
+      { id: 'dc-b5', label: 'B5: Previously on same two antipsychotics concurrently' },
+      { id: 'dc-b6', label: 'B6: Stabilized on oral combination during current admission' },
+      { id: 'dc-b6a', label: 'B6a: EKG, AIMS, and CMP labs documented' }
+    ];
+    missing = checks.filter(function(c){ return !document.getElementById(c.id).checked; }).map(function(c){ return c.label; });
+    secBCMet = missing.length === 0;
+  } else {
+    var checks = [
+      { id: 'dc-c1', label: 'C1: Previously stabilized on similar dual LAI in past admission' },
+      { id: 'dc-c2', label: 'C2: Stabilized on oral combination during current admission' },
+      { id: 'dc-c2a', label: 'C2a: EKG, AIMS, and CMP labs documented' }
+    ];
+    missing = checks.filter(function(c){ return !document.getElementById(c.id).checked; }).map(function(c){ return c.label; });
+    secBCMet = missing.length === 0;
+  }
+
+  // Only show result once Section A has at least one checked
+  var aChecked = a1 || a2 || a3;
+  var bOrCChecked = _dcType === 'initial'
+    ? ['dc-b1','dc-b2','dc-b3','dc-b4','dc-b5','dc-b6','dc-b6a'].some(function(id){ return document.getElementById(id).checked; })
+    : ['dc-c1','dc-c2','dc-c2a'].some(function(id){ return document.getElementById(id).checked; });
+
+  if (!aChecked && !bOrCChecked) { result.style.display = 'none'; return; }
+
+  result.style.display = 'block';
+
+  if (secAMet && secBCMet) {
+    result.style.background = '#f0fdf4';
+    result.style.border = '1px solid #86efac';
+    result.style.color = '#166534';
+    result.innerHTML = '\u2705 Criteria Met -- Dual LAI request may proceed to pharmacy approval.<br><span style="font-size:12px;font-weight:400;">All required criteria satisfied. Ensure documentation is complete before pharmacy sign-off.</span>';
+  } else {
+    var msgs = [];
+    if (!secAMet) msgs.push('Section A: at least ONE criterion must be checked');
+    missing.forEach(function(m){ msgs.push(m + ' -- not checked'); });
+    result.style.background = '#fef2f2';
+    result.style.border = '1px solid #fca5a5';
+    result.style.color = '#991b1b';
+    result.innerHTML = '\u274C Criteria Not Met -- Cannot approve at this time.<br><span style="font-size:12px;font-weight:400;">' + msgs.join('<br>') + '</span>';
+  }
+}
+
+function dcReset() {
+  _dcType = '';
+  ['dc-a1','dc-a2','dc-a3','dc-b1','dc-b2','dc-b3','dc-b4','dc-b5','dc-b6','dc-b6a','dc-c1','dc-c2','dc-c2a'].forEach(function(id){
+    var el = document.getElementById(id); if(el) el.checked = false;
+  });
+  ['dc-secA','dc-secB','dc-secC','dc-result','dc-reset-wrap'].forEach(function(id){
+    var el = document.getElementById(id); if(el) el.style.display = 'none';
+  });
+  var btnI = document.getElementById('dc-btn-initial');
+  var btnC = document.getElementById('dc-btn-continuing');
+  if(btnI){ btnI.style.background='var(--surface)'; btnI.style.color='var(--text)'; btnI.style.borderColor='var(--border)'; }
+  if(btnC){ btnC.style.background='var(--surface)'; btnC.style.color='var(--text)'; btnC.style.borderColor='var(--border)'; }
+}
+// ══ END DUAL LAI CHECKER ══
+
 function copyDualLAIForm(){
   var txt = "DUAL LONG-ACTING ANTIPSYCHOTIC UTILIZATION REQUEST\n"
     + "KCHC Behavioral Health Pharmacy · Per HBIPS-based internal policy\n"
@@ -7815,6 +7925,168 @@ function calcMetabolic(){
 
 
 // ══════════════════════════════════════
+// ══ OB HEMORRHAGE INTERACTIVE CHECKLIST ══
+var _obhStage = '';
+var _obhData = {
+  s1: {
+    color: '#b45309',
+    label: '⚠ Stage 1 Hemorrhage — Actions',
+    actions: [
+      'Call Hemorrhage Code → activate Hemorrhage Code Team',
+      'Activate Massive Transfusion Protocol → first round of blood within 5–10 min',
+      'Give TXA 1g in 100 mL NS over 10 min (if not already given)',
+      'Ensure second large-bore IV (16g minimum). Strongly consider 14g or Cordis.',
+      'Consider moving patient to available OR',
+      'Start Hemorrhage Checklist with time documentation',
+      'Draw stat labs: CBC, Fibrinogen, PT/PTT, CMP, Blood gas'
+    ],
+    labs: ['CBC','Fibrinogen','PT','PTT','CMP','Blood gas']
+  },
+  s2: {
+    color: '#9a3412',
+    label: '🔴 Stage 2 Hemorrhage — Vaginal Deliveries ONLY · EBL <1,500 mL',
+    actions: [
+      'Place arterial line',
+      'Start second round of blood via Belmont rapid transfusion (1:1 or 1:1.5 ratio)',
+      'Continue quantifying blood loss at 10-minute intervals',
+      'Consider Bakri balloon if appropriate',
+      'Give antibiotic prophylaxis',
+      'Protect airway — consider intubation',
+      'Surgical management: uterine curettage, placental bed suture, uterine artery ligation, B-Lynch suture, hysterectomy'
+    ],
+    labs: ['CBC','Fibrinogen','PT','PTT','CMP','Blood gas']
+  },
+  s3: {
+    color: '#7f1d1d',
+    label: '🚨 Stage 3 Hemorrhage — EBL >1,500 mL',
+    actions: [
+      'Start second round of blood via Belmont (1:1 or 1:1.5 ratio)',
+      'Continue quantifying blood loss at 10-minute intervals',
+      'Give antibiotic prophylaxis',
+      'Protect airway — consider intubation',
+      'Surgical management as per Stage 2',
+      'Continue subsequent MTP rounds — call Blood Bank to stop MTP when hemorrhage stops',
+      'Obtain Critical Care bed',
+      'Notify family',
+      'Continue 10-minute team huddles'
+    ],
+    labs: ['CBC','Fibrinogen','PT','PTT','CMP','Blood gas']
+  },
+  post: {
+    color: '#166534',
+    label: '✅ Post-Hemorrhage Management',
+    actions: [
+      'Transfer to monitored setting: PACU or ICU',
+      'Debrief with entire team using H+H Standard Debriefing tool',
+      'Attending-to-Attending SBAR (OB, Anesthesia, Critical Care) upon ICU transfer',
+      'Complete all documentation',
+      'Submit occurrence report'
+    ],
+    labs: ['CBC','Fibrinogen','PT','PTT','CMP','Blood gas']
+  }
+};
+
+function obhSetStage(stage) {
+  _obhStage = stage;
+  var d = _obhData[stage];
+  if (!d) return;
+
+  // Highlight selected button
+  ['s1','s2','s3','post'].forEach(function(s) {
+    var btn = document.getElementById('obh-' + s);
+    if (!btn) return;
+    if (s === stage) {
+      btn.style.background = d.color;
+      btn.style.color = 'white';
+      btn.style.borderColor = d.color;
+    } else {
+      btn.style.background = 'var(--surface)';
+      btn.style.color = 'var(--text)';
+      btn.style.borderColor = 'var(--border)';
+    }
+  });
+
+  // Build actions checklist
+  var actionsDiv = document.getElementById('obh-actions');
+  var actionsTitle = document.getElementById('obh-actions-title');
+  var actionsList = document.getElementById('obh-actions-list');
+  actionsTitle.textContent = d.label;
+  actionsTitle.style.color = d.color;
+  actionsList.innerHTML = '';
+  d.actions.forEach(function(action, i) {
+    var id = 'obh-a-' + stage + '-' + i;
+    var row = document.createElement('label');
+    row.style.cssText = 'display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:8px 10px;border:1px solid var(--border);border-radius:6px;background:var(--bg);';
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.id = id;
+    cb.style.cssText = 'margin-top:1px;flex-shrink:0;width:16px;height:16px;accent-color:' + d.color + ';';
+    cb.addEventListener('change', obhUpdateProgress);
+    var span = document.createElement('span');
+    span.textContent = action;
+    row.appendChild(cb);
+    row.appendChild(span);
+    actionsList.appendChild(row);
+  });
+  actionsDiv.style.display = 'block';
+
+  // Build stat labs
+  var labsDiv = document.getElementById('obh-labs');
+  var labsList = document.getElementById('obh-labs-list');
+  labsList.innerHTML = '';
+  d.labs.forEach(function(lab, i) {
+    var id = 'obh-l-' + stage + '-' + i;
+    var wrap = document.createElement('label');
+    wrap.style.cssText = 'display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--bg);';
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.id = id;
+    cb.style.cssText = 'width:14px;height:14px;accent-color:#1d4ed8;';
+    cb.addEventListener('change', obhUpdateProgress);
+    var span = document.createElement('span');
+    span.textContent = lab;
+    wrap.appendChild(cb);
+    wrap.appendChild(span);
+    labsList.appendChild(wrap);
+  });
+  labsDiv.style.display = 'block';
+
+  document.getElementById('obh-progress-wrap').style.display = 'block';
+  document.getElementById('obh-reset-wrap').style.display = 'block';
+  obhUpdateProgress();
+}
+
+function obhUpdateProgress() {
+  if (!_obhStage) return;
+  var d = _obhData[_obhStage];
+  var total = d.actions.length + d.labs.length;
+  var checked = document.querySelectorAll('#obh-actions-list input:checked').length
+              + document.querySelectorAll('#obh-labs-list input:checked').length;
+  var pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+  var bar = document.getElementById('obh-progress-bar');
+  var label = document.getElementById('obh-progress-label');
+  bar.style.width = pct + '%';
+  bar.style.background = pct === 100 ? '#16a34a' : pct >= 50 ? '#d97706' : '#dc2626';
+  label.textContent = checked + ' of ' + total + ' items completed (' + pct + '%)';
+}
+
+function obhReset() {
+  _obhStage = '';
+  ['s1','s2','s3','post'].forEach(function(s) {
+    var btn = document.getElementById('obh-' + s);
+    if (btn) { btn.style.background = 'var(--surface)'; btn.style.color = 'var(--text)'; btn.style.borderColor = 'var(--border)'; }
+  });
+  ['obh-actions','obh-labs','obh-progress-wrap','obh-reset-wrap'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+  document.getElementById('obh-actions-list').innerHTML = '';
+  document.getElementById('obh-labs-list').innerHTML = '';
+  var bar = document.getElementById('obh-progress-bar');
+  if (bar) bar.style.width = '0%';
+}
+// ══ END OB HEMORRHAGE CHECKLIST ══
+
 // OB/GYN TAB — NAVIGATION + CALCULATORS
 // ══════════════════════════════════════
 
@@ -9926,6 +10198,192 @@ function clearACB() {
 // ANTIDOTES & TOXICOLOGY — NAVIGATION
 // ══════════════════════════════════════
 
+// ══ ANTIDOTE DOSE CALCULATOR ══
+function adcRender() {
+  var sel = document.getElementById('adc-select').value;
+  var inp = document.getElementById('adc-inputs');
+  var res = document.getElementById('adc-result');
+  var fix = document.getElementById('adc-fixed');
+  inp.style.display = 'none'; inp.innerHTML = '';
+  res.style.display = 'none'; res.innerHTML = '';
+  fix.style.display = 'none'; fix.innerHTML = '';
+  if (!sel) return;
+
+  var weightCalcs = ['apap','bb_ccb','fomep','digifab','lcarnitine','bicarb','ufh_rev','lmwh_rev'];
+  if (weightCalcs.indexOf(sel) !== -1) {
+    inp.style.display = 'block';
+    var html = '<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;">';
+    html += '<div><label style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Patient Weight (kg)</label>';
+    html += '<input type="number" id="adc-wt" min="1" max="300" placeholder="e.g. 70" oninput="adcCalc(this.dataset.sel)" data-sel="'+sel+'" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;width:120px;"></div>';
+
+    if (sel === 'digifab') {
+      html += '<div><label style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Serum Digoxin Level (ng/mL) — optional</label>';
+      html += '<input type="number" id="adc-diglvl" min="0" max="50" step="0.1" placeholder="e.g. 3.5" oninput="adcCalc()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;width:160px;"></div>';
+    }
+    if (sel === 'ufh_rev') {
+      html += '<div><label style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">UFH Total Units Given</label>';
+      html += '<input type="number" id="adc-ufh-units" min="0" max="100000" placeholder="e.g. 5000" oninput="adcCalc()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;width:140px;"></div>';
+      html += '<div><label style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Minutes Since Last Dose</label>';
+      html += '<input type="number" id="adc-ufh-min" min="0" max="300" placeholder="e.g. 30" oninput="adcCalc()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;width:140px;"></div>';
+    }
+    if (sel === 'lmwh_rev') {
+      html += '<div><label style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Enoxaparin Dose Given (mg)</label>';
+      html += '<input type="number" id="adc-lmwh-mg" min="0" max="300" placeholder="e.g. 80" oninput="adcCalc()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;width:160px;"></div>';
+      html += '<div><label style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Hours Since Last Dose</label>';
+      html += '<input type="number" id="adc-lmwh-hr" min="0" max="48" step="0.5" placeholder="e.g. 4" oninput="adcCalc()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;width:140px;"></div>';
+    }
+    html += '</div>';
+    inp.innerHTML = html;
+  } else {
+    adcFixed(sel);
+  }
+}
+
+function adcCalc() {
+  var sel = document.getElementById('adc-select') ? document.getElementById('adc-select').value : '';
+  var wt = parseFloat(document.getElementById('adc-wt') ? document.getElementById('adc-wt').value : 0);
+  var res = document.getElementById('adc-result');
+  res.style.display = 'none'; res.innerHTML = '';
+  if (!wt || wt <= 0) return;
+
+  var html = '<div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:14px 16px;font-size:13px;line-height:2;">';
+  html += '<div style="font-family:Impact,sans-serif;font-size:15px;letter-spacing:0.04em;color:var(--clinical);margin-bottom:8px;">Calculated Doses -- ' + wt + ' kg patient</div>';
+
+  if (sel === 'apap') {
+    var d1 = Math.round(wt * 150); var d2 = Math.round(wt * 50); var d3 = Math.round(wt * 100);
+    var po_load = Math.round(wt * 140); var po_maint = Math.round(wt * 70);
+    html += '<strong>IV NAC (Acetadote) -- 3-Bag Protocol:</strong><br>';
+    html += 'Bag 1: <strong>' + d1 + ' mg</strong> IV over 1 hour (150 mg/kg)<br>';
+    html += 'Bag 2: <strong>' + d2 + ' mg</strong> IV over 4 hours (50 mg/kg)<br>';
+    html += 'Bag 3: <strong>' + d3 + ' mg</strong> IV over 16 hours (100 mg/kg)<br>';
+    html += '<span style="color:var(--sub);font-size:11px;">Total duration: 21 hours</span><br><br>';
+    html += '<strong>PO NAC (Mucomyst) -- if IV unavailable:</strong><br>';
+    html += 'Loading dose: <strong>' + po_load + ' mg</strong> (140 mg/kg)<br>';
+    html += 'Maintenance: <strong>' + po_maint + ' mg</strong> Q4h x 17 doses (70 mg/kg/dose)<br>';
+    html += '<span style="color:var(--sub);font-size:11px;">Dilute to 5% solution to reduce nausea</span>';
+
+  } else if (sel === 'bb_ccb') {
+    var ins_bolus = (wt * 1).toFixed(0); var ins_low = (wt * 0.5).toFixed(0);
+    var cacl_low = Math.round(wt * 20); var cacl_high = Math.min(2000, cacl_low);
+    var dex_g = (wt * 0.5).toFixed(0);
+    html += '<strong>High-Dose Insulin + Dextrose:</strong><br>';
+    html += 'Bolus: Regular insulin <strong>' + ins_low + ' -- ' + ins_bolus + ' units IV</strong> (0.5--1 unit/kg) + D50 25g<br>';
+    html += 'Infusion: <strong>' + ins_low + ' -- ' + ins_bolus + ' units/hr</strong> + Dextrose 0.5 g/kg/hr (<strong>' + dex_g + ' g/hr</strong>)<br>';
+    html += '<span style="color:var(--amber);font-size:11px;">Check BG Q30 min. Replace K+ if &lt;2.5. Monitor Mg2+.</span><br><br>';
+    html += '<strong>Parenteral Calcium (CCB only):</strong><br>';
+    html += 'CaCl2 10%: <strong>' + cacl_low + ' mg</strong> (20 mg/kg) over 5--10 min · Max 2g<br>';
+    html += 'Ca gluconate 10%: <strong>' + Math.round(wt * 60) + ' mg</strong> (60 mg/kg) over 5--10 min · Max 6g<br>';
+    html += '<span style="color:var(--sub);font-size:11px;">CaCl2 = 3x elemental Ca vs gluconate. Prefer central line for CaCl2.</span><br><br>';
+    html += '<strong>Glucagon:</strong> 3--5 mg IV over 1--2 min. Infusion: 2--5 mg/hr (fixed dose, not weight-based)';
+
+  } else if (sel === 'fomep') {
+    var d_load = Math.round(wt * 15); var d_maint = Math.round(wt * 10); var d_late = Math.round(wt * 15);
+    html += '<strong>Fomepizole (Antizol):</strong><br>';
+    html += 'Loading dose: <strong>' + d_load + ' mg IV</strong> (15 mg/kg) over 30 min<br>';
+    html += 'Maintenance doses 1--4: <strong>' + d_maint + ' mg IV</strong> (10 mg/kg) Q12h x 4 doses<br>';
+    html += 'Maintenance doses 5+: <strong>' + d_late + ' mg IV</strong> (15 mg/kg) Q12h until level &lt;20 mg/dL<br>';
+    html += '<span style="color:var(--amber);font-size:11px;">On HD: redose ' + d_load + ' mg every 4 hours during dialysis session.</span><br><br>';
+    html += '<strong>Adjuncts (fixed dose):</strong><br>';
+    html += 'Ethylene glycol: Thiamine 100 mg IV Q6h + B6 100 mg IV Q6h<br>';
+    html += 'Methanol: Folinic acid 1--2 mg/kg (up to 50 mg) IV Q4--6h + Folic acid 50 mg IV Q4--6h';
+
+  } else if (sel === 'digifab') {
+    var lvl = parseFloat(document.getElementById('adc-diglvl') ? document.getElementById('adc-diglvl').value : 0);
+    if (lvl && wt) {
+      var vials = Math.ceil((lvl * wt) / 100);
+      html += '<strong>Level-Based DigiFAB Dosing:</strong><br>';
+      html += 'Formula: (Serum level ng/mL x Weight kg) / 100<br>';
+      html += 'Calculated: (' + lvl + ' x ' + wt + ') / 100 = <strong>' + vials + ' vials</strong><br>';
+      html += '<span style="color:var(--sub);font-size:11px;">Each vial binds ~0.5 mg digoxin. Round up to nearest whole vial.</span>';
+    } else {
+      html += '<strong>Empiric Dosing (level unavailable):</strong><br>';
+      html += 'Acute ingestion: <strong>10 vials IV</strong> -- may repeat x10 if no response<br>';
+      html += 'Chronic toxicity: <strong>1--2 vials IV</strong> -- repeat PRN<br>';
+      html += '<span style="color:var(--amber);font-size:11px;">Enter digoxin level above for level-based calculation.</span><br>';
+      html += '<span style="color:var(--sub);font-size:11px;">Digoxin assays unreliable for ~7 days post-FAB. Monitor K+.</span>';
+    }
+
+  } else if (sel === 'lcarnitine') {
+    var bolus = Math.min(3000, Math.round(wt * 100));
+    var maint = Math.round(wt * 50);
+    var maint_alt = Math.round(wt * 15);
+    html += '<strong>L-Carnitine (Valproic Acid Toxicity):</strong><br>';
+    html += 'Bolus: <strong>' + bolus + ' mg IV</strong> (100 mg/kg · max 3g) over 30 min<br>';
+    html += 'Maintenance option A: <strong>' + maint + ' mg IV</strong> Q8h (50 mg/kg/dose)<br>';
+    html += 'Maintenance option B: <strong>' + maint_alt + ' mg IV</strong> Q4--6h (15 mg/kg/dose)<br>';
+    html += '<span style="color:var(--sub);font-size:11px;">Continue until clinical improvement. Especially indicated with hyperammonemia or hepatotoxicity.</span>';
+
+  } else if (sel === 'bicarb') {
+    var bolus_meq_low = Math.round(wt * 1); var bolus_meq_high = Math.round(wt * 2);
+    html += '<strong>Sodium Bicarbonate (Salicylate -- Urine Alkalinization):</strong><br>';
+    html += 'Bolus: <strong>' + bolus_meq_low + ' -- ' + bolus_meq_high + ' mEq IV</strong> (1--2 mEq/kg)<br>';
+    html += 'Infusion: 100--150 mEq NaHCO3 in 1L D5W -- titrate to urine pH &gt;7.5<br>';
+    html += '<span style="color:var(--amber);font-size:11px;">Goal urine pH &gt;7.5. Continue until salicylate level &lt;30 mg/dL. Watch for hypokalemia -- replace K+ or alkalinization will fail.</span>';
+
+  } else if (sel === 'ufh_rev') {
+    var units = parseFloat(document.getElementById('adc-ufh-units') ? document.getElementById('adc-ufh-units').value : 0);
+    var mins = parseFloat(document.getElementById('adc-ufh-min') ? document.getElementById('adc-ufh-min').value : 0);
+    if (units) {
+      var ratio = 1;
+      if (mins >= 30 && mins < 60) ratio = 0.625;
+      else if (mins >= 60 && mins < 120) ratio = 0.5;
+      else if (mins >= 120) ratio = 0.3125;
+      var proto = Math.min(50, Math.round((units / 100) * ratio));
+      var ratioLabel = mins < 30 ? '1 mg/100 units' : mins < 60 ? '0.5--0.75 mg/100 units' : mins < 120 ? '0.5 mg/100 units' : '0.25--0.375 mg/100 units';
+      html += '<strong>Protamine Sulfate -- UFH Reversal:</strong><br>';
+      html += 'UFH given: ' + units + ' units · Time elapsed: ' + (mins||'?') + ' min<br>';
+      html += 'Ratio used: ' + ratioLabel + '<br>';
+      html += 'Dose: <strong>' + proto + ' mg IV</strong> (max 50 mg)<br>';
+      html += '<span style="color:var(--sub);font-size:11px;">Give slowly over 10 min. Check aPTT 15 min after. Max rate 5 mg/min.</span>';
+    } else {
+      html += 'Enter UFH units given above to calculate protamine dose.';
+    }
+
+  } else if (sel === 'lmwh_rev') {
+    var lmwh_mg = parseFloat(document.getElementById('adc-lmwh-mg') ? document.getElementById('adc-lmwh-mg').value : 0);
+    var lmwh_hr = parseFloat(document.getElementById('adc-lmwh-hr') ? document.getElementById('adc-lmwh-hr').value : 0);
+    if (lmwh_mg) {
+      var lratio = lmwh_hr < 8 ? 1 : lmwh_hr < 12 ? 0.5 : 0;
+      var lprotamine = Math.min(50, Math.round(lmwh_mg * lratio));
+      var lratioLabel = lmwh_hr < 8 ? '1 mg per 1 mg enoxaparin' : lmwh_hr < 12 ? '0.5 mg per 1 mg enoxaparin' : 'May not be required (&gt;12h)';
+      html += '<strong>Protamine Sulfate -- LMWH (Enoxaparin) Reversal:</strong><br>';
+      html += 'Enoxaparin given: ' + lmwh_mg + ' mg · Time elapsed: ' + (lmwh_hr||'?') + ' hours<br>';
+      html += 'Ratio: ' + lratioLabel + '<br>';
+      if (lratio > 0) {
+        html += 'Dose: <strong>' + lprotamine + ' mg IV</strong> (max 50 mg)<br>';
+      } else {
+        html += '<span style="color:var(--amber);">Dose may not be required at &gt;12 hours post-injection.</span><br>';
+      }
+      html += '<span style="color:var(--amber);font-size:11px;">Does NOT fully neutralize anti-Xa. If patient not actively bleeding, consider withholding.</span>';
+    } else {
+      html += 'Enter enoxaparin dose and time elapsed above to calculate protamine dose.';
+    }
+  }
+
+  html += '</div>';
+  res.innerHTML = html;
+  res.style.display = 'block';
+}
+
+function adcFixed(sel) {
+  var fix = document.getElementById('adc-fixed');
+  var data = {
+    cyanide: { title:'Cyanide -- Hydroxocobalamin (Cyanokit)', color:'#7c3aed', body:'<strong>Hydroxocobalamin (preferred):</strong> 5g IV x 1 over 15 min. May repeat x1 if needed.<br><span style="color:var(--sub);font-size:11px;">Safe with concurrent CO poisoning. ADEs: hypertension, red discoloration of skin/urine/mucous membranes.</span><br><br><strong>Alternative (NO concurrent CO poisoning):</strong><br>Sodium nitrate 300 mg IV (10 mL of 3%) at 2.5--5 mL/min<br>Sodium thiosulfate 12.5g IV over 10--30 min' },
+    opioid: { title:'Opioids -- Naloxone (Narcan)', color:'var(--clinical)', body:'<strong>Adult IV/IM:</strong> 0.04--2 mg IV, repeat Q2--3 min until adequate respirations<br><strong>Infusion:</strong> 2/3 of effective bolus dose per hour (range 0.25--6.25 mg/hr)<br><strong>Peds:</strong> 0.01 mg/kg IV/IM/SC Q2--3 min · Max 2 mg/dose<br><span style="color:var(--amber);font-size:11px;">Duration 30--90 min -- shorter than most opioids. Opioid-dependent: start 0.04 mg to avoid precipitated withdrawal. Monitor minimum 4--6h after last dose.</span>' },
+    benzo: { title:'Benzodiazepines -- Flumazenil (Romazicon)', color:'var(--red)', body:'<span style="color:var(--red);font-weight:600;">CONTRAINDICATED in chronic benzo users, polypharmacy OD, TCA co-ingestion, seizure disorder.</span><br><br><strong>Dose (benzo-naive single-agent OD only):</strong> 0.2 mg IV -- additional 0.2--1 mg IV Q1 min until awake · Max 3--5 mg<br><span style="color:var(--amber);font-size:11px;">Duration 1--2 hours only. Re-sedation common. Most benzo ODs: supportive care only.</span>' },
+    serotonin: { title:'Serotonin Syndrome -- Cyproheptadine (Periactin)', color:'#065f46', body:'<strong>Loading dose:</strong> 12 mg PO<br><strong>Maintenance:</strong> 2 mg Q2h until response<br><strong>Scheduled:</strong> 4--8 mg Q6h · Max 32 mg/day<br><span style="color:var(--sub);font-size:11px;">Remove all serotonergic agents first. Benzos for agitation. Cyproheptadine for mild-moderate cases only -- severe cases may need ICU + sedation.</span>' },
+    anticholinergic: { title:'Anticholinergics -- Physostigmine', color:'#92400e', body:'"Blind as a bat, dry as a bone, red as a beet, hot as a hare, mad as a hatter"<br><br><strong>Physostigmine:</strong> 0.5--2 mg IV Q10--30 min until response<br><span style="color:var(--red);font-size:11px;">Do NOT infuse faster than 1 mg/min. Monitor for cholinergic rebound. Contraindicated in TCA co-ingestion, asthma, GI/GU obstruction, bradycardia.</span>' },
+    sulfonylurea: { title:'Sulfonylureas -- D50 + Octreotide', color:'var(--clinical)', body:'<strong>D50W:</strong> 50 mL IV (25g) -- repeat PRN for symptomatic hypoglycemia<br><strong>Octreotide (key agent):</strong> 50--100 mcg SQ Q6h -- suppresses insulin secretion, prevents rebound<br><span style="color:var(--amber);font-size:11px;">Monitor BG Q1--2h. Continue octreotide for 24h minimum. Do NOT rely on glucose alone -- prevents rebound but does not treat underlying hyperinsulinemia.</span>' }
+  };
+  if (!data[sel]) return;
+  var d = data[sel];
+  fix.innerHTML = '<div style="background:#f8fafc;border:1.5px solid '+d.color+';border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.9;">'
+    + '<div style="font-family:Impact,sans-serif;font-size:15px;letter-spacing:0.04em;color:'+d.color+';margin-bottom:8px;">'+d.title+'</div>'
+    + d.body + '</div>';
+  fix.style.display = 'block';
+}
+// ══ END ANTIDOTE DOSE CALCULATOR ══
+
 function toxGoTo(n, btn) {
   document.querySelectorAll('.tox-pane').forEach(function(p){ p.classList.remove('active'); });
   document.querySelectorAll('#snav-tox .snav-btn').forEach(function(b){ b.classList.remove('active'); });
@@ -11366,17 +11824,17 @@ function amGenRec(){
 
 <div class="section" id="sec-11" style="scroll-margin-top: 193px;">
   <div class="mod-nav">
-    <button class="mnav-btn" data-section="11" data-pane="0" onclick="goTo(11,0)">Pediatric CAP</button>
+    <button class="mnav-btn active" data-section="11" data-pane="0" onclick="goTo(11,0)">Pediatric CAP</button>
     <button class="mnav-btn" data-section="11" data-pane="1" onclick="goTo(11,1)">Pediatric SSTI</button>
     <button class="mnav-btn" data-section="11" data-pane="2" onclick="goTo(11,2)">Pediatric UTI</button>
     <button class="mnav-btn" data-section="11" data-pane="3" onclick="goTo(11,3)">HIV PEP</button>
     <button class="mnav-btn" data-section="11" data-pane="4" onclick="goTo(11,4)">EPT / STI</button>
-    <button class="mnav-btn active" data-section="11" data-pane="5" onclick="goTo(11,5)">💊 Antimicrobial Dosing</button>
+    <button class="mnav-btn" data-section="11" data-pane="5" onclick="goTo(11,5)">💊 Antimicrobial Dosing</button>
     <button class="mnav-btn" data-section="11" data-pane="6" onclick="goTo(11,6)">⚡ Status Epilepticus</button>
     <button class="mnav-btn" data-section="11" data-pane="7" onclick="goTo(11,7)">💨 Levalbuterol</button>
   </div>
   <div class="main" style="scroll-margin-top: 193px;">
-    <div class="pane" id="s11p0">
+    <div class="pane active" id="s11p0">
       <div class="sec-title">Pediatric CAP</div>
       <div class="sec-sub">Community-Acquired Pneumonia · Ages 3 Months – 18 Years</div>
       <div class="guideline-badge revised">KCHC Pediatric Antimicrobial Dosing Guideline · June 2023 · P&amp;T Approved April 2023</div>
@@ -11454,7 +11912,7 @@ function amGenRec(){
     </div>
 
     <!-- PANE 5: ANTIMICROBIAL DOSING 2023 -->
-    <div class="pane active" id="s11p5">
+    <div class="pane" id="s11p5">
       <div class="sec-title">Pediatric Antimicrobial Dosing</div>
       <div class="sec-sub">Weight-Based · Ages 2 Months – 18 Years · Normal Renal Function</div>
       <div class="guideline-badge revised">KCHC Pediatric Antimicrobial Dosing Guideline · June 2023 · P&amp;T Approved April 2023 · Authors: Dumont PharmD, Luka PharmD, Hammerschlag MD</div>
@@ -14113,35 +14571,35 @@ function amGenRec(){
               <input type="date" id="lai-last-date" onchange="calcLAIDue()">
               <button class="cal-today-btn" onclick="setToday(&#39;lai-last-date&#39;,&#39;lai-last-display&#39;,calcLAIDue)">Today</button>
             </div>
-            <div class="cal-display" id="lai-last-display">Thu, Oct 30, 2025 · 155 days ago</div>
+            <div class="cal-display" id="lai-last-display"></div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- TIMELINE -->
-    <div class="lai-timeline show" id="lai-timeline">
+    <div class="lai-timeline" id="lai-timeline">
       <div class="lai-tl-label">Injection Timeline</div>
       <div class="lai-tl-bar" id="lai-tl-bar">
-        <div class="lai-tl-fill" id="lai-tl-fill" style="width: 100%; background: rgb(153, 27, 27);"></div>
-        <div class="lai-tl-marker" id="lai-tl-today" style="background: rgb(153, 27, 27); left: 100%;"></div>
-        <div class="lai-tl-marker-label" id="lai-tl-today-lbl" style="left: 100%;">Today (day 155)</div>
+        <div class="lai-tl-fill" id="lai-tl-fill"></div>
+        <div class="lai-tl-marker" id="lai-tl-today" style="background:#0f4c75;"></div>
+        <div class="lai-tl-marker-label" id="lai-tl-today-lbl">Today</div>
       </div>
       <div class="lai-tl-dates">
-        <span id="lai-tl-start-date">Oct 30, 2025</span>
-        <span id="lai-tl-mid-date" style="color:var(--amber);font-weight:600;">Due: Nov 27, 2025</span>
-        <span id="lai-tl-end-date" style="color:var(--red);">Dec 5, 2025</span>
+        <span id="lai-tl-start-date"></span>
+        <span id="lai-tl-mid-date" style="color:var(--amber);font-weight:600;">Due</span>
+        <span id="lai-tl-end-date" style="color:var(--red);">Overdue</span>
       </div>
     </div>
 
-    <div class="banner red show" id="lai-due-banner"><div class="bn-label">LAI Overdue</div><div class="bn-text">Overdue by 126 days — missed dose protocol loaded below.</div></div>
-    <div class="res-card" id="lai-due-res" style="display: block;">
-      <div class="res-head" style="background:#6d28d9;"><span class="rh-title">LAI Schedule</span><span class="rh-stamp" id="lai-due-stamp">Apr 3, 2026 12:41 AM</span></div>
+    <div class="banner" id="lai-due-banner"></div>
+    <div class="res-card" id="lai-due-res" style="display:none;">
+      <div class="res-head" style="background:#6d28d9;"><span class="rh-title">LAI Schedule</span><span class="rh-stamp" id="lai-due-stamp"></span></div>
       <div class="res-body">
-        <div class="rb-row"><span class="rb-label">Agent</span><span class="rb-val" id="lai-r-agent">Aristada 441 mg — Q4 weeks</span></div>
-        <div class="rb-row"><span class="rb-label">Last Injection</span><span class="rb-val" id="lai-r-last">Oct 30, 2025 (155 days ago)</span></div>
-        <div class="rb-row"><span class="rb-label">Next Due Date</span><span class="rb-val" id="lai-r-next">Thursday, November 27, 2025</span></div>
-        <div class="rb-row"><span class="rb-label">Days Until Due</span><span class="rb-val" id="lai-r-days" style="color: var(--red);">OVERDUE by 126 days</span></div>
+        <div class="rb-row"><span class="rb-label">Agent</span><span class="rb-val" id="lai-r-agent">—</span></div>
+        <div class="rb-row"><span class="rb-label">Last Injection</span><span class="rb-val" id="lai-r-last">—</span></div>
+        <div class="rb-row"><span class="rb-label">Next Due Date</span><span class="rb-val" id="lai-r-next">—</span></div>
+        <div class="rb-row"><span class="rb-label">Days Until Due</span><span class="rb-val" id="lai-r-days">—</span></div>
         <div class="rb-row" id="lai-row-early" style="display:none;background:var(--red-bg);"><span class="rb-label" style="color:var(--red);">⚠ Early Dose Alert</span><span class="rb-val" style="color:var(--red);" id="lai-r-early">—</span></div>
       </div>
     </div>
@@ -14174,21 +14632,21 @@ function amGenRec(){
               <input type="date" id="md-last-date" onchange="calcMissedDose()">
               <button class="cal-today-btn" onclick="setToday(&#39;md-last-date&#39;,&#39;md-last-display&#39;,calcMissedDose)">Today</button>
             </div>
-            <div class="cal-display" id="md-last-display">Thu, Oct 30, 2025 · 155 days ago</div>
+            <div class="cal-display" id="md-last-display"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="missed-result show" id="md-result">
-      <div class="missed-action" id="md-action-title" style="color: var(--red);">🔴 Do NOT give Trinza — bridge with Sustenna</div>
-      <div class="missed-detail" id="md-action-detail">Day 155 since last injection (&gt;4 months to ≤9 months).<br><br>Per Invega Trinza PI Table 2 — DO NOT administer Trinza dose:<br>• Day 1: Give Invega SUSTENNA (DELTOID) at dose matching previous Trinza:<br>  — Trinza 273 mg → Sustenna 78 mg<br>  — Trinza 410 mg → Sustenna 117 mg<br>  — Trinza 546 mg → Sustenna 156 mg<br>  — Trinza 819 mg → Sustenna 156 mg<br>• Day 8: Repeat same Sustenna dose (DELTOID)<br>• 1 month after Day 8: Resume Invega Trinza at previously stabilized dose</div>
+    <div class="missed-result" id="md-result">
+      <div class="missed-action" id="md-action-title"></div>
+      <div class="missed-detail" id="md-action-detail"></div>
     </div>
 
-    <div id="md-restart-wrap" style="display: none; margin-top: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px;">
-      <div id="md-restart-heading" style="font-family:monospace;font-size:11px;letter-spacing:0.08em;color:var(--clinical);margin-bottom:8px;">NEXT DOSE CALCULATOR</div>
+    <div id="md-restart-wrap" style="display:none;margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
+      <div id="md-restart-heading" style="font-family:monospace;font-size:11px;letter-spacing:0.08em;color:var(--clinical);margin-bottom:8px;">RESTART DATE CALCULATOR</div>
       <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;">
         <div>
-          <label id="md-restart-label" style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Administration Date</label>
+          <label id="md-restart-label" style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Restart Injection Date</label>
           <input type="date" id="md-restart-date" oninput="calcRestartNext()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;">
         </div>
         <div id="md-restart-result" style="font-size:13px;color:var(--text);padding-bottom:4px;"></div>
@@ -15199,6 +15657,103 @@ function amGenRec(){
       <span id="dual-copy-msg" style="font-size:13px;color:#065f46;font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;display:none;">✓ Copied to clipboard</span>
     </div>
 
+    <!-- ══ DUAL LAI INTERACTIVE CHECKER ══ -->
+    <div id="dual-checker" style="background:var(--surface);border:2px solid var(--clinical);border-radius:10px;padding:18px;margin:16px 0 20px;">
+      <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;color:var(--clinical);margin-bottom:4px;">⚡ Interactive Criteria Checker</div>
+      <div style="font-size:12px;color:var(--sub);margin-bottom:14px;">Answer all questions to get an approval recommendation. Static reference tables remain below.</div>
+
+      <!-- Step 0: Type selector -->
+      <div id="dc-step0" style="margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:600;margin-bottom:8px;">Is this an initial or continuing dual LAI request?</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button onclick="dcSetType(&#39;initial&#39;)" id="dc-btn-initial" style="padding:8px 18px;border-radius:6px;border:2px solid var(--border);background:var(--surface);color:var(--text);font-size:13px;cursor:pointer;">Initial Dual LAI</button>
+          <button onclick="dcSetType(&#39;continuing&#39;)" id="dc-btn-continuing" style="padding:8px 18px;border-radius:6px;border:2px solid var(--border);background:var(--surface);color:var(--text);font-size:13px;cursor:pointer;">Continuing Dual LAI</button>
+        </div>
+      </div>
+
+      <!-- Section A -->
+      <div id="dc-secA" style="display:none;margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;">A. HBIPS Criteria -- at least ONE must be met</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-a1" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has failed at least <strong>3 antipsychotics</strong> at maximally tolerated doses and adequate duration -- each trial's dose, duration, and adherence documented</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-a2" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>The second antipsychotic is being <strong>tapered to prevent decompensation</strong> (transition/crossover taper)</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-a3" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>The second antipsychotic is being used as <strong>augmentation to clozapine</strong></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section B: Initial -->
+      <div id="dc-secB" style="display:none;margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;">B. Initial Dual LAI -- ALL must be met</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b1" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has failed at least <strong>3 antipsychotic trials</strong> at maximally tolerated doses -- dose, duration, and adherence clearly documented</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b2" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has been trialed on at least <strong>2 LAIs as monotherapy</strong> at maximally tolerated doses with documented clinical efficacy</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b3" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has failed clozapine at maximally tolerated dose, <strong>OR</strong> is a poor candidate due to high risk of non-adherence to monitoring or required blood work</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b4" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient is at high risk for <strong>re-hospitalization</strong>, OR has recent history (&lt;12 months) of multiple readmissions (&gt;4) due to non-adherence</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b5" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has previously received the <strong>same two antipsychotics concurrently</strong> with documented clinical efficacy and tolerability</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b6" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has been stabilized during current admission on the <strong>oral combination of the two planned LAIs</strong></span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-b6a" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Before conversion: patient has documented <strong>EKG, AIMS assessment, and pertinent CMP labs</strong> while receiving both antipsychotics during current admission</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section C: Continuing -->
+      <div id="dc-secC" style="display:none;margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;">C. Continuing Dual LAI -- ALL must be met</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-c1" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient was previously stabilized on a <strong>similar dual LAI regimen in a past admission</strong> -- current readmission primarily due to non-adherence</span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-c2" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Patient has been stabilized during current admission on the <strong>oral combination of the two planned LAIs</strong></span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+            <input type="checkbox" id="dc-c2a" onchange="dcEval()" style="margin-top:1px;accent-color:var(--clinical);flex-shrink:0;width:16px;height:16px;">
+            <span>Before conversion: patient has documented <strong>EKG, AIMS assessment, and pertinent CMP labs</strong> while receiving both antipsychotics during current admission</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div id="dc-result" style="display:none;margin-top:12px;padding:14px 16px;border-radius:8px;font-size:14px;font-weight:600;"></div>
+
+      <!-- Reset -->
+      <div id="dc-reset-wrap" style="display:none;margin-top:10px;">
+        <button onclick="dcReset()" style="font-size:12px;color:var(--sub);background:none;border:1px solid var(--border);border-radius:5px;padding:5px 12px;cursor:pointer;">Reset Checker</button>
+      </div>
+    </div>
+    <!-- ══ END INTERACTIVE CHECKER ══ -->
+
     <div class="sec-sub" style="margin:16px 0 6px;font-size:14px;font-weight:700;color:#1e293b;">A. Dual Antipsychotic Utilization — HBIPS Criteria (at least ONE must be met)</div>
     <div class="tbl-wrap"><table>
       <thead><tr><th>#</th><th>Criterion</th></tr></thead>
@@ -16120,6 +16675,42 @@ function amGenRec(){
     <div class="sec-sub">Common Antidotes and Reversals · Kings County Hospital · July 2022</div>
     <div class="guideline-badge revised">Rebecca Chu, PharmD, BCPS · KCHC Internal Medicine · Updated July 2022</div>
     <div class="disc"><span class="disc-icon">!</span><span class="disc-text">For poisoning emergencies call Poison Control: 1-800-222-1222 (24/7). Dosing in adults unless otherwise specified. Always verify with clinical pharmacist for pediatric cases.</span></div>
+
+    <!-- ══ ANTIDOTE DOSE CALCULATOR ══ -->
+    <div style="background:var(--surface);border:2px solid var(--clinical);border-radius:10px;padding:18px;margin:14px 0 20px;">
+      <div style="font-family:Impact,sans-serif;font-size:20px;letter-spacing:0.04em;color:var(--clinical);margin-bottom:4px;">⚡ Antidote Dose Calculator</div>
+      <div style="font-size:12px;color:var(--sub);margin-bottom:14px;">Select a toxin to generate weight-based doses. Reference tables remain below.</div>
+
+      <div style="margin-bottom:14px;">
+        <label style="font-size:12px;color:var(--sub);display:block;margin-bottom:6px;">Select Toxin / Overdose</label>
+        <select id="adc-select" onchange="adcRender()" style="width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);font-size:13px;">
+          <option value="">-- Select toxin --</option>
+          <optgroup label="Weight-Based Calculators">
+            <option value="apap">Acetaminophen -- NAC (N-Acetylcysteine)</option>
+            <option value="bb_ccb">Beta-Blocker / CCB -- High-Dose Insulin + CaCl2</option>
+            <option value="fomep">Ethylene Glycol / Methanol -- Fomepizole</option>
+            <option value="digifab">Digoxin -- DigiFAB (vial calculator)</option>
+            <option value="lcarnitine">Valproic Acid -- L-Carnitine</option>
+            <option value="bicarb">Salicylates -- Sodium Bicarbonate</option>
+            <option value="ufh_rev">Heparin (UFH) -- Protamine Sulfate</option>
+            <option value="lmwh_rev">LMWH (Enoxaparin) -- Protamine Sulfate</option>
+          </optgroup>
+          <optgroup label="Fixed-Dose Reference">
+            <option value="cyanide">Cyanide -- Hydroxocobalamin</option>
+            <option value="opioid">Opioids -- Naloxone</option>
+            <option value="benzo">Benzodiazepines -- Flumazenil</option>
+            <option value="serotonin">Serotonin Syndrome -- Cyproheptadine</option>
+            <option value="anticholinergic">Anticholinergics -- Physostigmine</option>
+            <option value="sulfonylurea">Sulfonylureas -- D50 + Octreotide</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div id="adc-inputs" style="display:none;"></div>
+      <div id="adc-result" style="display:none;margin-top:12px;"></div>
+      <div id="adc-fixed" style="display:none;margin-top:12px;"></div>
+    </div>
+    <!-- ══ END ANTIDOTE DOSE CALCULATOR ══ -->
 
     <!-- MASTER QUICK REFERENCE TABLE -->
     <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:0 0 6px;">Master Antidote Quick Reference</div>
@@ -19439,7 +20030,7 @@ function toggleCGHeightMode() {}
   <div class="main" style="scroll-margin-top: 193px;">
 
   <!-- OP0 — AGENT SELECTOR -->
-  <div class="onc-pane" id="op0">
+  <div class="onc-pane active" id="op0">
     <div class="sec-title">Oncology Agent Selector</div>
     <div class="sec-sub">Select Cancer Type → Regimen + Pharmacy Flags · OR select drug below for lookup</div>
 
@@ -19743,7 +20334,7 @@ function toggleCGHeightMode() {}
   </div>
 
   <!-- OP2 — CARBOPLATIN -->
-  <div class="onc-pane active" id="op2">
+  <div class="onc-pane" id="op2">
     <div class="sec-title">Carboplatin Dosing</div>
     <div class="sec-sub">Calvert Equation — AUC-Based Dosing</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
@@ -20271,12 +20862,12 @@ function toggleCGHeightMode() {}
 
     <!-- PILL NAV -->
     <div style="display:flex;gap:8px;margin:14px 0 10px;flex-wrap:wrap;">
-      <button class="onc-ls-btn active" id="onc-ls-btn-light" onclick="oncLSSwitch(&#39;light&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--sub); font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">💡 Light Sensitive</button>
-      <button class="onc-ls-btn" id="onc-ls-btn-filt" onclick="oncLSSwitch(&#39;filt&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--clinical); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--clinical); color: white; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">🖍 Filtered</button>
+      <button class="onc-ls-btn active" id="onc-ls-btn-light" onclick="oncLSSwitch(&#39;light&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--clinical);background:var(--clinical);color:white;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">💡 Light Sensitive</button>
+      <button class="onc-ls-btn" id="onc-ls-btn-filt" onclick="oncLSSwitch(&#39;filt&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--sub);font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">🖍 Filtered</button>
     </div>
 
     <!-- LIGHT SENSITIVE SECTION -->
-    <div id="onc-ls-light" style="display: none;">
+    <div id="onc-ls-light">
       <div class="disc"><div class="disc-icon">!</div><div class="disc-text">Protect from light during storage and administration. Use amber bags/tubing or foil wrapping. Do not expose to direct sunlight or fluorescent light for extended periods.</div></div>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;">
 
@@ -20385,7 +20976,7 @@ function toggleCGHeightMode() {}
     </div>
 
     <!-- FILTERED SECTION -->
-    <div id="onc-ls-filt" style="display: block;">
+    <div id="onc-ls-filt" style="display:none;">
       <div class="disc"><div class="disc-icon">!</div><div class="disc-text">These medications require an in-line filter during administration. Verify filter pore size against prescribing information for each agent.</div></div>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;">
 
@@ -20943,12 +21534,12 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION OB — OB/GYN
 ══════════════════════════════════════ -->
-<div class="section active" id="sec-ob" style="scroll-margin-top: 193px;">
+<div class="section" id="sec-ob" style="scroll-margin-top: 193px;">
   <div class="mod-nav" id="ob-modnav" style="display:none;"></div>
   <div class="main" style="scroll-margin-top: 193px;">
 
   <!-- OB0 — AGENT SELECTOR -->
-  <div class="ob-pane" id="ob0">
+  <div class="ob-pane active" id="ob0">
     <div class="sec-title">OB/GYN Agent Selector</div>
     <div class="sec-sub">Clinical Situation → Protocol Routing</div>
     <div class="guideline-badge revised">KCHC Hospital Manual · Induction of Labor · Date Effective: May 2017 · Reviewed: Dec 2020</div><div class="guideline-badge revised">KCHC Hospital Manual · Obstetric Hemorrhage · Date Effective: Sept 2019 · Reviewed: Dec 2020</div><div class="guideline-badge revised">KCHC OB/GYN &amp; Women's Health · IV Iron L&amp;D · Date Effective: July 2019 · Reviewed: Dec 2020</div>
@@ -20969,7 +21560,7 @@ function toggleCGHeightMode() {}
         </div>
       </div>
     </div>
-    <div id="ob-agent-res" style="display:none;margin-bottom:14px;"></div>
+    <div id="ob-agent-res" style="display: block; margin-bottom: 14px;"><div style="background:var(--clinical-pale);border:1px solid var(--clinical-border);border-radius:6px;padding:14px 16px;margin-bottom:10px;"><div style="font-family:monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--clinical);margin-bottom:8px;">IV Iron — Iron Deficiency Anemia in Pregnancy</div><div style="display:flex;flex-direction:column;gap:6px;"><div style="display:flex;gap:8px;font-size:13px;"><span style="color:var(--clinical);font-weight:700;">1.</span><span>Indications: severe anemia 2nd/3rd trimester, intolerant of oral iron, after 30 weeks</span></div><div style="display:flex;gap:8px;font-size:13px;"><span style="color:var(--clinical);font-weight:700;">2.</span><span>Choose agent: Venofer (iron sucrose) OR Injectafer (ferric carboxymaltose)</span></div><div style="display:flex;gap:8px;font-size:13px;"><span style="color:var(--clinical);font-weight:700;">3.</span><span>Contraindicated in 1st trimester</span></div><div style="display:flex;gap:8px;font-size:13px;"><span style="color:var(--clinical);font-weight:700;">4.</span><span>FHR check before infusion. Observe minimum 30 min after. NST after Injectafer.</span></div><div style="display:flex;gap:8px;font-size:13px;"><span style="color:var(--clinical);font-weight:700;">5.</span><span>No test dose required for either agent</span></div></div><div style="margin-top:10px;font-size:11px;color:var(--sub);">→ Tap <strong>IV Iron L&amp;D</strong> tab for full protocol</div></div></div>
 
     <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:20px 0 6px;">What is in This Tab</div>
     <div class="tbl-wrap"><table>
@@ -21161,6 +21752,49 @@ function toggleCGHeightMode() {}
     <div class="guideline-badge revised">KCHC Hospital Manual · Obstetric Hemorrhage · Date Effective: Sept 2019 · Reviewed: Dec 2020</div>
     <div class="disc" style="background:#fef2f2;border-color:#fecaca;"><span class="disc-icon" style="color:var(--red);">!</span><span class="disc-text" style="color:var(--red);"><strong>Hemorrhage defined as:</strong> Blood loss &gt;500 mL post vaginal birth OR &gt;1,000 mL post cesarean birth. Activate Acute Blood Loss Protocol immediately.</span></div>
 
+    <!-- ══ OB HEMORRHAGE INTERACTIVE CHECKLIST ══ -->
+    <div id="obh-checker" style="background:var(--surface);border:2px solid #9a3412;border-radius:10px;padding:18px;margin:14px 0 20px;">
+      <div style="font-family:Impact,sans-serif;font-size:20px;letter-spacing:0.04em;color:#9a3412;margin-bottom:4px;">🩸 Hemorrhage Response Checklist</div>
+      <div style="font-size:12px;color:var(--sub);margin-bottom:14px;">Select stage to load actions and stat labs. Check items off as completed. Reference tables remain below.</div>
+
+      <!-- Stage selector -->
+      <div style="margin-bottom:14px;">
+        <label style="font-size:12px;color:var(--sub);display:block;margin-bottom:6px;">Select Hemorrhage Stage</label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;" id="obh-stage-btns">
+          <button onclick="obhSetStage(&#39;s1&#39;)" id="obh-s1" style="padding: 8px 14px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--text); font-size: 13px; cursor: pointer;">⚠ Stage 1</button>
+          <button onclick="obhSetStage(&#39;s2&#39;)" id="obh-s2" style="padding: 8px 14px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--text); font-size: 13px; cursor: pointer;">🔴 Stage 2</button>
+          <button onclick="obhSetStage(&#39;s3&#39;)" id="obh-s3" style="padding: 8px 14px; border-radius: 6px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--text); font-size: 13px; cursor: pointer;">🚨 Stage 3</button>
+          <button onclick="obhSetStage(&#39;post&#39;)" id="obh-post" style="padding: 8px 14px; border-radius: 6px; border-color: rgb(22, 101, 52); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: rgb(22, 101, 52); color: white; font-size: 13px; cursor: pointer;">✅ Post-Hemorrhage</button>
+        </div>
+      </div>
+
+      <!-- Actions checklist -->
+      <div id="obh-actions" style="display: block; margin-bottom: 14px;">
+        <div style="font-size: 13px; font-weight: 700; color: rgb(22, 101, 52); margin-bottom: 8px;" id="obh-actions-title">✅ Post-Hemorrhage Management</div>
+        <div id="obh-actions-list" style="display:flex;flex-direction:column;gap:5px;"><label style="display: flex; align-items: flex-start; gap: 10px; font-size: 13px; cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-a-post-0" style="margin-top: 1px; flex-shrink: 0; width: 16px; height: 16px; accent-color: rgb(22, 101, 52);"><span>Transfer to monitored setting: PACU or ICU</span></label><label style="display: flex; align-items: flex-start; gap: 10px; font-size: 13px; cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-a-post-1" style="margin-top: 1px; flex-shrink: 0; width: 16px; height: 16px; accent-color: rgb(22, 101, 52);"><span>Debrief with entire team using H+H Standard Debriefing tool</span></label><label style="display: flex; align-items: flex-start; gap: 10px; font-size: 13px; cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-a-post-2" style="margin-top: 1px; flex-shrink: 0; width: 16px; height: 16px; accent-color: rgb(22, 101, 52);"><span>Attending-to-Attending SBAR (OB, Anesthesia, Critical Care) upon ICU transfer</span></label><label style="display: flex; align-items: flex-start; gap: 10px; font-size: 13px; cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-a-post-3" style="margin-top: 1px; flex-shrink: 0; width: 16px; height: 16px; accent-color: rgb(22, 101, 52);"><span>Complete all documentation</span></label><label style="display: flex; align-items: flex-start; gap: 10px; font-size: 13px; cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-a-post-4" style="margin-top: 1px; flex-shrink: 0; width: 16px; height: 16px; accent-color: rgb(22, 101, 52);"><span>Submit occurrence report</span></label></div>
+      </div>
+
+      <!-- Stat labs -->
+      <div id="obh-labs" style="display: block; margin-bottom: 14px;">
+        <div style="font-size:13px;font-weight:700;color:#1e293b;margin-bottom:8px;">📋 Stat Labs — Mark as Ordered / Resulted</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;" id="obh-labs-list"><label style="display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-l-post-0" style="width: 14px; height: 14px; accent-color: rgb(29, 78, 216);"><span>CBC</span></label><label style="display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-l-post-1" style="width: 14px; height: 14px; accent-color: rgb(29, 78, 216);"><span>Fibrinogen</span></label><label style="display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-l-post-2" style="width: 14px; height: 14px; accent-color: rgb(29, 78, 216);"><span>PT</span></label><label style="display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-l-post-3" style="width: 14px; height: 14px; accent-color: rgb(29, 78, 216);"><span>PTT</span></label><label style="display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-l-post-4" style="width: 14px; height: 14px; accent-color: rgb(29, 78, 216);"><span>CMP</span></label><label style="display: flex; align-items: center; gap: 6px; font-size: 12px; cursor: pointer; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);"><input type="checkbox" id="obh-l-post-5" style="width: 14px; height: 14px; accent-color: rgb(29, 78, 216);"><span>Blood gas</span></label></div>
+      </div>
+
+      <!-- Progress bar -->
+      <div id="obh-progress-wrap" style="display: block; margin-top: 10px;">
+        <div style="font-size:12px;color:var(--sub);margin-bottom:4px;" id="obh-progress-label">0 of 11 items completed (0%)</div>
+        <div style="background:var(--border);border-radius:4px;height:8px;overflow:hidden;">
+          <div id="obh-progress-bar" style="height: 8px; background: rgb(220, 38, 38); border-radius: 4px; transition: width 0.3s; width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Reset -->
+      <div id="obh-reset-wrap" style="display: block; margin-top: 10px;">
+        <button onclick="obhReset()" style="font-size:12px;color:var(--sub);background:none;border:1px solid var(--border);border-radius:5px;padding:5px 12px;cursor:pointer;">Reset Checklist</button>
+      </div>
+    </div>
+    <!-- ══ END OB HEMORRHAGE INTERACTIVE CHECKLIST ══ -->
+
     <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:10px 0 6px;">Hemorrhage Medications — Quick Reference</div>
     <div class="tbl-wrap"><table>
       <thead><tr><th>Drug</th><th>Dose / Route</th><th>Key Caution</th><th>Timing</th></tr></thead>
@@ -21251,7 +21885,7 @@ function toggleCGHeightMode() {}
   </div>
 
   <!-- OB4 — IV IRON L&D -->
-  <div class="ob-pane active" id="ob4">
+  <div class="ob-pane" id="ob4">
     <div class="sec-title">IV Iron — L&amp;D Protocol</div>
     <div class="sec-sub">Venofer · Injectafer · Iron Deficiency Anemia in Pregnancy</div>
     <div class="guideline-badge revised">KCHC OB/GYN &amp; Women's Health · IV Iron L&amp;D · Date Effective: July 2019 · Reviewed: Dec 2020</div>
@@ -21269,7 +21903,7 @@ function toggleCGHeightMode() {}
         </div>
       </div>
     </div>
-    <div id="iviron-res" style="display:none;margin-bottom:14px;"></div>
+    <div id="iviron-res" style="display: block; margin-bottom: 14px;"><div style="background:var(--clinical-pale);border:1px solid var(--clinical-border);border-radius:6px;padding:14px 16px;"><div style="font-family:monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--clinical);margin-bottom:10px;">Injectafer (Ferric Carboxymaltose) — Preparation &amp; Administration</div><div style="display:grid;gap:8px;"><div style="background:white;border:1px solid var(--border);border-radius:4px;padding:10px 12px;"><div style="font-size:11px;color:var(--sub);margin-bottom:2px;">Dose</div><div style="font-size:16px;font-weight:700;color:var(--clinical);">750 mg per dose</div></div><div style="background:white;border:1px solid var(--border);border-radius:4px;padding:10px 12px;"><div style="font-size:11px;color:var(--sub);margin-bottom:2px;">Preparation</div><div style="font-size:14px;font-weight:600;">750 mg in max 100 mL NS over ≥15 min</div></div><div style="background:white;border:1px solid var(--border);border-radius:4px;padding:10px 12px;"><div style="font-size:11px;color:var(--sub);margin-bottom:2px;">Schedule</div><div style="font-size:14px;font-weight:600;">2 doses, at least 7 days apart</div></div><div style="background:white;border:1px solid var(--border);border-radius:4px;padding:10px 12px;"><div style="font-size:11px;color:var(--sub);margin-bottom:2px;">Post-infusion</div><div style="font-size:14px;">Observe 30 min. Perform NST after administration.</div></div></div><div style="font-size:11px;color:var(--sub);margin-top:10px;border-top:1px solid var(--border);padding-top:6px;">No test dose required · No labs needed day of infusion · FHR check before · Monitor for anaphylaxis · Have Benadryl + CPR equipment available</div><div style="font-size:11px;color:var(--sub);margin-top:4px;">Source: KCHC OB/GYN - Womens Health · July 2019 · Reviewed Dec 2020</div></div></div>
 
     <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:14px 0 6px;">Comparison — Venofer vs Injectafer</div>
     <div class="tbl-wrap"><table>
