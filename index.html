@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0099)file:///Users/esdrasobas/Downloads/OrderMind%20%C2%B7%20KCHC%20Clinical%20Reference%204-2-2026.html -->
+<!-- saved from url=(0085)file:///Users/esdrasobas/Downloads/OrderMind_V1_-_KCHC_Clinical_Reference%20(18).html -->
 <html lang="en" style="--chrome-h: 189px; scroll-padding-top: 193px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -766,7 +766,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   </div>
   <button class="qa-btn crcl-pill" onclick="switchTop(&#39;am&#39;);goTo(12,3);">🧮 CrCl</button>
   <button class="qa-btn qa-pill" onclick="openQA()">⚡ Quick Access</button>
-  <div class="search-results" id="search-results"></div>
+  <div class="search-results" id="search-results" style="top: 252.5px;"></div>
 </div>
 
 <div class="qa-overlay" id="qa-overlay" onclick="closeQA()"></div>
@@ -781,7 +781,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 </div>
 
 <nav class="top-nav">
-  <button class="top-btn active" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
+  <button class="top-btn" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
   <button class="top-btn" id="top-btn-am" onclick="switchTop(&#39;am&#39;)">🧫 ID / Antimicrobials</button>
   <button class="top-btn" id="top-btn-iv" onclick="switchTop(&#39;iv&#39;)">🩺 IV / Nutrition</button>
   <button class="top-btn" id="top-btn-onc" onclick="switchTop(&#39;onc&#39;)">🧬 Oncology</button>
@@ -792,14 +792,14 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="top-btn top-btn-desktop-hide" id="top-btn-saf" onclick="switchTop(&#39;saf&#39;)">🛡️ Med Safety</button>
   <button class="top-btn top-btn-desktop-hide" id="top-btn-ped" onclick="switchTop(&#39;ped&#39;)">🧒 Pediatrics</button>
   <button class="top-btn top-btn-desktop-hide" id="top-btn-dm" onclick="switchTop(&#39;dm&#39;)">🩸 Diabetes</button>
-  <button class="top-btn top-btn-desktop-hide" id="top-btn-ob" onclick="switchTop(&#39;ob&#39;)">🤰 OB/GYN</button>
+  <button class="top-btn top-btn-desktop-hide active" id="top-btn-ob" onclick="switchTop(&#39;ob&#39;)">🤰 OB/GYN</button>
   <div style="position:relative;display:none;" id="more-menu-wrap">
     <button class="more-btn" id="more-menu-btn" onclick="toggleMoreMenu()">☰ More</button>
   </div>
 </nav>
 
-<nav class="section-nav" id="snav-ac" style="display: flex;">
-  <button class="snav-btn active" onclick="goTo(0)">⚡ Agent Selector</button>
+<nav class="section-nav" id="snav-ac" style="display: none;">
+  <button class="snav-btn" onclick="goTo(0)">⚡ Agent Selector</button>
   <button class="snav-btn" onclick="goTo(1)">Warfarin</button>
   <button class="snav-btn" onclick="goTo(2)">Heparin (UFH)</button>
   <button class="snav-btn" onclick="goTo(3)">Enoxaparin</button>
@@ -917,12 +917,12 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-dm-5" onclick="dmGoTo(5,this)">📊 T2DM Pharmacology</button>
   <button class="snav-btn" id="spb-dm-6" onclick="dmGoTo(6,this)">📋 Monitoring &amp; EPIC</button>
 </nav>
-<nav class="section-nav" id="snav-ob" style="display: none;">
+<nav class="section-nav" id="snav-ob" style="display: flex;">
   <button class="snav-btn" id="spb-ob-0" onclick="obGoTo(0,this)">⚡ Agent Selector</button>
   <button class="snav-btn" id="spb-ob-1" onclick="obGoTo(1,this)">📏 Bishop Score</button>
   <button class="snav-btn" id="spb-ob-2" onclick="obGoTo(2,this)">💊 Induction Protocol</button>
   <button class="snav-btn" id="spb-ob-3" onclick="obGoTo(3,this)">🩸 OB Hemorrhage</button>
-  <button class="snav-btn" id="spb-ob-4" onclick="obGoTo(4,this)">💉 IV Iron L&amp;D</button>
+  <button class="snav-btn active" id="spb-ob-4" onclick="obGoTo(4,this)">💉 IV Iron L&amp;D</button>
 </nav>
 </div><!-- /.sticky-chrome -->
 
@@ -934,14 +934,14 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="more-item" id="top-btn-iv-m" onclick="switchTop(&#39;iv&#39;);closeMoreMenu()">🩺 IV / Nutrition</button>
   <button class="more-item" id="top-btn-onc-m" onclick="switchTop(&#39;onc&#39;);closeMoreMenu()">🧬 Oncology</button>
   <button class="more-item" id="top-btn-pain-m" onclick="switchTop(&#39;pain&#39;);closeMoreMenu()">💊 Pain &amp; Opioid</button>
-  <button class="more-item active" id="top-btn-bh-m" onclick="switchTop(&#39;bh&#39;);closeMoreMenu()">🧠 Behavioral Health</button>
+  <button class="more-item" id="top-btn-bh-m" onclick="switchTop(&#39;bh&#39;);closeMoreMenu()">🧠 Behavioral Health</button>
   <div style="padding:8px 16px 4px;font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:0.05em;text-transform:uppercase;border-top:1px solid #f1f5f9;margin-top:4px;">More</div>
   <button class="more-item" id="top-btn-tox-m" onclick="switchTop(&#39;tox&#39;);closeMoreMenu()">☠️ Antidotes</button>
   <button class="more-item" id="top-btn-ger-m" onclick="switchTop(&#39;ger&#39;);closeMoreMenu()">👴 Geriatrics</button>
   <button class="more-item" id="top-btn-saf-m" onclick="switchTop(&#39;saf&#39;);closeMoreMenu()">🛡️ Med Safety</button>
   <button class="more-item" id="top-btn-ped-m" onclick="switchTop(&#39;ped&#39;);closeMoreMenu()">🧒 Pediatrics</button>
   <button class="more-item" id="top-btn-dm-m" onclick="switchTop(&#39;dm&#39;);closeMoreMenu()">🩸 Diabetes</button>
-  <button class="more-item" id="top-btn-ob-m" onclick="switchTop(&#39;ob&#39;);closeMoreMenu()">🤰 OB/GYN</button>
+  <button class="more-item active" id="top-btn-ob-m" onclick="switchTop(&#39;ob&#39;);closeMoreMenu()">🤰 OB/GYN</button>
   <div style="padding:10px 16px;border-top:1px solid #f1f5f9;text-align:right;">
     <button onclick="closeMoreMenu()" style="font-size:13px;color:#64748b;background:none;border:none;cursor:pointer;font-family:-apple-system,sans-serif;padding:4px 8px;">✕ Close</button>
   </div>
@@ -953,7 +953,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- ══════════════════════════════════════
   SECTION 0 — AGENT SELECTOR WIZARD
 ══════════════════════════════════════ -->
-<div class="section active" id="sec-0" style="scroll-margin-top: 193px;">
+<div class="section" id="sec-0" style="scroll-margin-top: 193px;">
   <div class="main" style="scroll-margin-top: 193px;">
   <div class="sec-title">Agent Selector</div>
   <div class="sec-sub">Anticoagulation Decision Wizard . KCHC Protocol</div>
@@ -989,10 +989,10 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     <div class="wiz-num">Step 2 of 6</div>
     <div class="wiz-q">What is the patient's renal function?</div>
     <div class="wiz-opts">
-      <button class="wiz-btn" onclick="pick(1,&#39;normal&#39;,this)">Normal - CrCl &gt;= 60 mL/min<span class="wiz-sub">No significant dose adjustment needed for most agents</span></button>
+      <button class="wiz-btn selected" onclick="pick(1,&#39;normal&#39;,this)">Normal - CrCl &gt;= 60 mL/min<span class="wiz-sub">No significant dose adjustment needed for most agents</span></button>
       <button class="wiz-btn" onclick="pick(1,&#39;moderate&#39;,this)">Moderate impairment - CrCl 30-59 mL/min<span class="wiz-sub">Dose reduction may be required</span></button>
       <button class="wiz-btn" onclick="pick(1,&#39;severe&#39;,this)">Severe impairment - CrCl 15-29 mL/min<span class="wiz-sub">Significant restrictions on DOAC and LMWH use</span></button>
-      <button class="wiz-btn selected" onclick="pick(1,&#39;esrd&#39;,this)">ESRD / Hemodialysis - CrCl less than 15 or IHD<span class="wiz-sub">Most DOACs contraindicated</span></button>
+      <button class="wiz-btn" onclick="pick(1,&#39;esrd&#39;,this)">ESRD / Hemodialysis - CrCl less than 15 or IHD<span class="wiz-sub">Most DOACs contraindicated</span></button>
     </div>
     <div class="wiz-nav"><button class="wiz-back" onclick="prv(0)">- Back</button><button class="wiz-next" id="wn1" onclick="nxt(2)">Next -&gt;</button></div>
   </div>
@@ -1065,11 +1065,11 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
         <div id="rec-reasoning" style="font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:12px;color:var(--sub);padding:8px 14px;line-height:1.6;">Source: KCHC Anticoagulation Policy - Revised May 2025</div>
       </div>
     </div>
-    <div class="rec-agent" id="rec-agent">Unfractionated Heparin (UFH) IV - preferred for CrCl below 30 or ESRD</div>
-    <div class="rec-dose" id="rec-dose">Full dose: 80 units/kg bolus (max 10,000 units), 18 units/kg/hr (max 2,000 units/hr)</div>
+    <div class="rec-agent" id="rec-agent">Enoxaparin 1 mg/kg Q12h SQ (preferred) or UFH IV</div>
+    <div class="rec-dose" id="rec-dose">Based on actual body weight (ABW). Round to nearest 5 mg. CrCl below 30: reduce to 1 mg/kg QD.</div>
     <div class="rec-monitor-title">Monitoring</div>
-    <div id="rec-mon">Anti-Xa q6h (goal 0.3-0.7 units/mL) or aPTT q6h (goal 60-90 sec). CBC daily.</div>
-    <div class="rec-warning" id="rec-warn" style="display: block;">Enoxaparin AVOID if CrCl below 30 for VTE treatment.</div>
+    <div id="rec-mon">Anti-Xa levels if obese, pregnant, CrCl below 30, or weight extremes. CBC and SCr.</div>
+    <div class="rec-warning" id="rec-warn" style="display:none;"></div>
     <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
       <button class="btn btn-clinical" style="flex:1;min-width:140px;margin-bottom:0;font-size:14px;padding:10px;" onclick="resetWiz()">Start Over</button>
       <button class="btn" style="flex:1;min-width:140px;margin-bottom:0;font-size:14px;padding:10px;background:#065f46;" id="rec-goto-btn">View Full Protocol -&gt;</button>
@@ -2641,7 +2641,8 @@ function genRec(){
   var gotoBtn = document.getElementById('rec-goto-btn');
   if(gotoBtn){
     if(s.ind === 'hit') { gotoBtn.textContent = 'View HIT Protocol ->'; gotoBtn.onclick = function(){ goTo(5); closeWizard && closeWizard(); }; }
-    else if(s.ind === 'afib' || s.ind === 'vte-tx' || s.ind === 'vte-px') { gotoBtn.textContent = 'View Full Protocol ->'; gotoBtn.onclick = function(){ goTo(1); }; }
+    else if(s.ind === 'afib') { gotoBtn.textContent = 'View Full Protocol ->'; gotoBtn.onclick = function(){ goTo(1); }; }
+    else if(s.ind === 'vte-tx' || s.ind === 'vte-px') { gotoBtn.textContent = 'View Full Protocol ->'; gotoBtn.onclick = function(){ goTo(3); }; }
   }
 
   document.getElementById('ws0').classList.add('hidden');
@@ -6483,30 +6484,29 @@ function calcMissedDose() {
 
   // ── MINIMUM INTERVAL TABLE (per package inserts) ──
   var minIntervals = {
-    maintena:     { min: 26, label: 'Abilify Maintena',    source: 'Abilify Maintena PI — "no sooner than 26 days after the previous injection"' },
-    sustenna:     { min: 21, label: 'Invega Sustenna',     source: 'Invega Sustenna PI — monthly ±7 days (earliest = 21 days)' },
-    trinza:       { min: 70, label: 'Invega Trinza',       source: 'Invega Trinza PI — Q3 months ±2 weeks (earliest = 70 days)' },
-    consta:       { min: 11, label: 'Risperdal Consta',    source: 'Risperdal Consta PI — Q2 weeks (earliest ~11 days)' },
-    haldol:       { min: 21, label: 'Haldol Decanoate',    source: 'KCHC LAI Memo — minimum 21 days (Q3–4 weeks)' },
-    aristada441:  { min: 21, label: 'Aristada 441 mg',     source: 'Aristada PI — Q4 weeks (earliest ~21 days)' },
-    aristada662:  { min: 35, label: 'Aristada 662 mg',     source: 'Aristada PI — Q6 weeks (earliest ~35 days)' },
-    aristada882:  { min: 35, label: 'Aristada 882 mg',     source: 'Aristada PI — Q6–8 weeks (earliest ~35 days)' },
-    aristada1064: { min: 49, label: 'Aristada 1064 mg',    source: 'Aristada PI — Q8 weeks (earliest ~49 days)' },
-    vivitrol:     { min: 25, label: 'Vivitrol',            source: 'Vivitrol PI — Q4 weeks (earliest ~25 days)' }
+    maintena:     { min: 26, label: 'Abilify Maintena',    freq: 28, source: 'Abilify Maintena PI — "no sooner than 26 days after the previous injection"' },
+    sustenna:     { min: 21, label: 'Invega Sustenna',     freq: 28, source: 'Invega Sustenna PI — monthly ±7 days (earliest = 21 days)' },
+    trinza:       { min: 70, label: 'Invega Trinza',       freq: 84, source: 'Invega Trinza PI — Q3 months ±2 weeks (earliest = 70 days)' },
+    consta:       { min: 11, label: 'Risperdal Consta',    freq: 14, source: 'Risperdal Consta PI — Q2 weeks (earliest ~11 days)' },
+    haldol:       { min: 21, label: 'Haldol Decanoate',    freq: 28, source: 'KCHC LAI Memo — minimum 21 days (Q3–4 weeks)' },
+    aristada441:  { min: 21, label: 'Aristada 441 mg',     freq: 28, source: 'Aristada PI — Q4 weeks (earliest ~21 days)' },
+    aristada662:  { min: 35, label: 'Aristada 662 mg',     freq: 42, source: 'Aristada PI — Q6 weeks (earliest ~35 days)' },
+    aristada882q4: { min: 21, label: 'Aristada 882 mg (Q4 weeks)', freq: 28, source: 'Aristada PI — monthly (earliest ~21 days)' },
+    aristada882q6: { min: 35, label: 'Aristada 882 mg (Q6 weeks)', freq: 42, source: 'Aristada PI — Q6 weeks (earliest ~35 days)' },
+    aristada1064: { min: 49, label: 'Aristada 1064 mg',    freq: 56, source: 'Aristada PI — Q8 weeks (earliest ~49 days)' },
+    vivitrol:     { min: 25, label: 'Vivitrol',            freq: 28, source: 'Vivitrol PI — Q4 weeks (earliest ~25 days)' }
   };
 
   // ── EARLY DOSE BLOCK — fires BEFORE missed dose logic ──
   if(minIntervals[agent] && daysSince < minIntervals[agent].min) {
     var m = minIntervals[agent];
     var daysRemaining = m.min - daysSince;
-    title = '\uD83D\uDD34 Too Early — Do NOT Administer';
+    title = '\uD83D\uDD34 Too Early -- Do NOT Give';
     color = 'var(--red)';
-    detail = 'Only '+daysSince+' day'+(daysSince===1?'':'s')+' since last '+m.label+' injection.\n'
-           + 'Minimum expected interval: '+m.min+' days.\n'
-           + 'Do NOT give dose today — '+daysRemaining+' more day'+(daysRemaining===1?'':'s')+' must pass.\n'
-           + 'Next earliest date: '+fmtDate(addDaysToDate(lastDateVal, m.min))+'\n'
-           + 'Source: '+m.source+'\n'
-           + 'Action: Contact prescriber. Do not dispense.';
+    detail = m.label+': last injection '+daysSince+' day'+(daysSince===1?'':'s')+' ago. Minimum interval: '+m.min+' days.\n'
+           + 'Next earliest date: '+fmtDate(addDaysToDate(lastDateVal, m.min))+' ('+daysRemaining+' day'+(daysRemaining===1?'':'s')+' from now)\n'
+           + 'Contact prescriber. Do not dispense.\n'
+           + 'Source: '+m.source+'.';
     var titleEl = document.getElementById('md-action-title');
     var detailEl = document.getElementById('md-action-detail');
     if(titleEl) { titleEl.textContent = title; titleEl.style.color = color; }
@@ -6519,36 +6519,55 @@ function calcMissedDose() {
   if(agent === 'maintena') {
     if(weeksSince <= 5) {
       title = '\u2713 Administer dose now'; color='var(--green)';
-      detail = 'Last injection: '+lastFormatted+' ('+daysSince+' days ago).\nWithin 5-week window — no oral supplementation needed.\nAdminister as soon as possible and resume monthly schedule.';
+      detail = 'Last injection: '+lastFormatted+' ('+daysSince+' days ago).\nWithin 5-week window — no oral supplementation needed.\nNext dose due 28 days after administration date. Enter date below to calculate.';
+      showNextDoseCalc(28);
     } else if(weeksSince <= 6) {
       title = '\u26A0 Administer dose — no oral supplement needed'; color='var(--amber)';
-      detail = 'Last injection: '+lastFormatted+' ('+daysSince+' days ago, ~'+weeksSince.toFixed(1)+' weeks).\n5–6 week window — administer as soon as possible, resume monthly schedule.';
+      detail = 'Last injection: '+lastFormatted+' ('+daysSince+' days ago, ~'+weeksSince.toFixed(1)+' weeks).\n5–6 week window — administer as soon as possible.\nNext dose due 28 days after administration date. Enter date below to calculate.';
+      showNextDoseCalc(28);
     } else {
       title = '\uD83D\uDD34 Restart with oral overlap'; color='var(--red)';
-      detail = 'Last injection: '+lastFormatted+' ('+daysSince+' days ago, ~'+weeksSince.toFixed(1)+' weeks).\n>6 weeks — restart oral aripiprazole 10–20 mg for 14 consecutive days, give Abilify Maintena concurrently with first oral dose, then resume monthly injections.';
+      detail = 'Last injection: '+lastFormatted+' ('+daysSince+' days ago, ~'+weeksSince.toFixed(1)+' weeks).\n>6 weeks — restart oral aripiprazole 10–20 mg for 14 consecutive days, give Abilify Maintena concurrently with first oral dose.\nNext monthly injection due 28 days after restart date.\nEnter restart date below to calculate exact next due date.';
+      showNextDoseCalc(28, true);
     }
 
   } else if(agent === 'aristada441') {
     if(daysSince <= 42) { title='\u2713 Administer dose now'; color='var(--green)';
-      detail='Day '+daysSince+' since last 441 mg injection (window ≤6 weeks). No supplementation needed. Resume Q4-week schedule.'; }
+      detail='Day '+daysSince+' since last Aristada 441 mg injection (window ≤6 weeks). No supplementation needed.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
     else if(daysSince <= 49) { title='\u26A0 Supplement with Aristada Initio'; color='var(--amber)';
-      detail='Day '+daysSince+' (>6 to ≤7 weeks). Give one dose of Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume Q4-week schedule.'; }
+      detail='Day '+daysSince+' (>6 to ≤7 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume Q4-week schedule.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
     else { title='\uD83D\uDD34 Reinitiate'; color='var(--red)';
-      detail='Day '+daysSince+' (>7 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate, then resume Q4-week schedule.'; }
+      detail='Day '+daysSince+' (>7 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate. Then resume Q4-week schedule.'; hideNextDoseCalc(); }
 
-  } else if(agent === 'aristada662' || agent === 'aristada882') {
+  } else if(agent === 'aristada662') {
     if(daysSince <= 56) { title='\u2713 Administer dose now'; color='var(--green)';
-      detail='Day '+daysSince+' since last injection (window ≤8 weeks). No supplementation needed.'; }
+      detail='Day '+daysSince+' since last Aristada 662 mg injection (window ≤8 weeks). No supplementation needed.\nNext dose due 42 days after administration date. Enter date below to calculate.'; showNextDoseCalc(42); }
     else if(daysSince <= 84) { title='\u26A0 Supplement with Aristada Initio'; color='var(--amber)';
-      detail='Day '+daysSince+' (>8 to ≤12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume schedule.'; }
+      detail='Day '+daysSince+' (>8 to ≤12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume Q6-week schedule.\nNext dose due 42 days after administration date. Enter date below to calculate.'; showNextDoseCalc(42); }
     else { title='\uD83D\uDD34 Reinitiate'; color='var(--red)';
-      detail='Day '+daysSince+' (>12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate.'; }
+      detail='Day '+daysSince+' (>12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate. Then resume Q6-week schedule.'; hideNextDoseCalc(); }
+
+  } else if(agent === 'aristada882q4') {
+    if(daysSince <= 35) { title='\u2713 Administer dose now'; color='var(--green)';
+      detail='Day '+daysSince+' since last Aristada 882 mg (monthly) injection (window ≤5 weeks). No supplementation needed.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
+    else if(daysSince <= 84) { title='\u26A0 Supplement with Aristada Initio'; color='var(--amber)';
+      detail='Day '+daysSince+' (>5 weeks to ≤12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume monthly schedule.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
+    else { title='\uD83D\uDD34 Reinitiate'; color='var(--red)';
+      detail='Day '+daysSince+' (>12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate. Then resume monthly schedule.'; hideNextDoseCalc(); }
+
+  } else if(agent === 'aristada882q6') {
+    if(daysSince <= 56) { title='\u2713 Administer dose now'; color='var(--green)';
+      detail='Day '+daysSince+' since last Aristada 882 mg (Q6 weeks) injection (window ≤8 weeks). No supplementation needed.\nNext dose due 42 days after administration date. Enter date below to calculate.'; showNextDoseCalc(42); }
+    else if(daysSince <= 84) { title='\u26A0 Supplement with Aristada Initio'; color='var(--amber)';
+      detail='Day '+daysSince+' (>8 to ≤12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume Q6-week schedule.\nNext dose due 42 days after administration date. Enter date below to calculate.'; showNextDoseCalc(42); }
+    else { title='\uD83D\uDD34 Reinitiate'; color='var(--red)';
+      detail='Day '+daysSince+' (>12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate. Then resume Q6-week schedule.'; hideNextDoseCalc(); }
 
   } else if(agent === 'aristada1064') {
     if(daysSince <= 70) { title='\u2713 Administer dose now'; color='var(--green)';
-      detail='Day '+daysSince+' since last 1064 mg injection (window ≤10 weeks). No supplementation needed.'; }
+      detail='Day '+daysSince+' since last Aristada 1064 mg injection (window ≤10 weeks). No supplementation needed.\nNext dose due 56 days after administration date. Enter date below to calculate.'; showNextDoseCalc(56); }
     else if(daysSince <= 84) { title='\u26A0 Supplement with Aristada Initio'; color='var(--amber)';
-      detail='Day '+daysSince+' (>10 to ≤12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume Q8-week schedule.'; }
+      detail='Day '+daysSince+' (>10 to ≤12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole, then resume Q8-week schedule.\nNext dose due 56 days after administration date. Enter date below to calculate.'; showNextDoseCalc(56); }
     else { title='\uD83D\uDD34 Reinitiate'; color='var(--red)';
       detail='Day '+daysSince+' (>12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate.'; }
 
@@ -6556,7 +6575,7 @@ function calcMissedDose() {
     // Per Invega Sustenna PI Section 2.3 Table 3 (7/2022)
     if(daysSince <= 42) {
       title='\u2713 Administer dose now'; color='var(--green)';
-      detail='Day '+daysSince+' since last Sustenna injection (≤6 weeks).\nAdminister ASAP in deltoid or gluteal muscle.\nResume monthly schedule.';
+      detail='Day '+daysSince+' since last Invega Sustenna injection (≤6 weeks).\nAdminister ASAP in deltoid or gluteal muscle.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28);
     } else if(daysSince <= 180) {
       title='\u26A0 3-step re-initiation required'; color='var(--amber)';
       detail='Day '+daysSince+' since last injection (>6 weeks to ≤6 months).\n\nPer Invega Sustenna PI Table 3:\n'
@@ -6565,46 +6584,46 @@ function calcMissedDose() {
            + '  — All other doses: use previously stabilized dose\n'
            + '\u2022 Step 2: Repeat same dose in DELTOID 1 week later\n'
            + '\u2022 Step 3: Resume monthly maintenance (deltoid or gluteal) 1 month after Step 2\n\n'
-           + 'Do NOT resume gluteal until after the 2-deltoid re-initiation is complete.';
+           + 'Do NOT resume gluteal until after the 2-deltoid re-initiation is complete.'; hideNextDoseCalc();
     } else {
       title='\uD83D\uDD34 Full re-initiation required'; color='var(--red)';
       detail='Day '+daysSince+' since last injection (>6 months).\n\nPer Invega Sustenna PI Table 3:\n'
            + '\u2022 Day 1: 234 mg DELTOID injection\n'
            + '\u2022 Day 8 (±4 days): 156 mg DELTOID injection\n'
            + '\u2022 Thereafter: resume previously stabilized monthly dose (deltoid or gluteal)\n\n'
-           + 'Check CrCl — dose-adjust if CrCl 50–79 mL/min.\nContraindicated if CrCl <50 mL/min.';
+           + 'Check CrCl — dose-adjust if CrCl 50–79 mL/min.\nContraindicated if CrCl <50 mL/min.'; hideNextDoseCalc();
     }
 
   } else if(agent === 'consta') {
     if(daysSince <= 21) { title='\u2713 Administer dose now'; color='var(--green)';
-      detail='Day '+daysSince+' since last Risperdal Consta injection (within Q2-week window). Administer next dose. No supplementation needed.'; }
+      detail='Day '+daysSince+' since last Risperdal Consta injection (within Q2-week window). Administer next dose. No supplementation needed.\nNext dose due 14 days after administration date. Enter date below to calculate.'; showNextDoseCalc(14); }
     else if(daysSince <= 28) { title='\u26A0 Administer now — verify clinical status'; color='var(--amber)';
-      detail='Day '+daysSince+' since last injection (3–4 weeks). Administer ASAP. No oral supplementation needed if patient was previously stabilized on this dose.'; }
+      detail='Day '+daysSince+' since last Risperdal Consta injection (3–4 weeks). Administer ASAP. No oral supplementation needed if previously stabilized.\nNext dose due 14 days after administration date. Enter date below to calculate.'; showNextDoseCalc(14); }
     else { title='\uD83D\uDD34 Resume oral + restart'; color='var(--red)';
-      detail='Day '+daysSince+' since last injection (>4 weeks).\n1) Resume oral risperidone (or other antipsychotic) immediately.\n2) Restart Risperdal Consta with oral overlap × 3 weeks.\n3) Resume Q2-week injections thereafter.'; }
+      detail='Day '+daysSince+' since last Risperdal Consta injection (>4 weeks).\n1) Resume oral risperidone (or other antipsychotic) immediately.\n2) Restart Risperdal Consta with oral overlap x 3 weeks.\n3) Resume Q2-week injections thereafter.'; hideNextDoseCalc(); }
 
   } else if(agent === 'haldol') {
     if(daysSince < 21) { title='\uD83D\uDD34 Too Early — EPS Risk'; color='var(--red)';
       detail='Only '+daysSince+' days since last haloperidol decanoate injection. Expected minimum: 21 days.\nPer KCHC LAI Memo: contact provider, suggest EKG, advise higher risk of EPS.'; }
     else if(daysSince <= 28) { title='\u2713 Within Q3–4 week window'; color='var(--green)';
-      detail='Day '+daysSince+' since last injection. Within expected 21–28 day window. Safe to administer.'; }
+      detail='Day '+daysSince+' since last Haldol Decanoate injection. Within expected 21–28 day window. Safe to administer.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
     else { title='\u26A0 Overdue — administer now'; color='var(--amber)';
-      detail='Day '+daysSince+' since last injection (>4 weeks). Administer as soon as possible. Verify with provider if significant delay.'; }
+      detail='Day '+daysSince+' since last Haldol Decanoate injection (>4 weeks). Administer ASAP. Verify with provider if significant delay.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
 
   } else if(agent === 'vivitrol') {
     if(daysSince <= 35) { title='\u2713 Within Q4-week window'; color='var(--green)';
-      detail='Day '+daysSince+' since last Vivitrol injection. Administer on schedule. Confirm patient is still opioid-free.'; }
+      detail='Day '+daysSince+' since last Vivitrol injection. Administer on schedule. Confirm patient is still opioid-free.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
     else { title='\u26A0 Overdue — verify opioid-free status'; color='var(--amber)';
-      detail='Day '+daysSince+' since last Vivitrol injection (>5 weeks). Before administering: confirm patient is STILL opioid-free (min 7–10 days). Opioid challenge or urine screen recommended.'; }
+      detail='Day '+daysSince+' since last Vivitrol injection (>5 weeks). Confirm patient is STILL opioid-free (min 7–10 days). Opioid challenge or urine screen recommended.\nNext dose due 28 days after administration date. Enter date below to calculate.'; showNextDoseCalc(28); }
 
   } else if(agent === 'trinza') {
     // Per Invega Trinza PI Section 2.3 — 4-tier logic
     if(daysSince <= 98) {
       title='\u2713 Within Q12-week window'; color='var(--green)';
-      detail='Day '+daysSince+' since last Invega Trinza injection (≤14 weeks / ≤98 days).\nAdminister as scheduled. Resume Q3-month schedule.';
+      detail='Day '+daysSince+' since last Invega Trinza injection (≤14 weeks / ≤98 days).\nAdminister as scheduled.\nNext dose due 84 days after administration date. Enter date below to calculate.'; showNextDoseCalc(84);
     } else if(daysSince <= 120) {
       title='\u26A0 Slightly overdue — administer now'; color='var(--amber)';
-      detail='Day '+daysSince+' since last injection (>3.5 months to ≤4 months).\nPer Invega Trinza PI: administer the previously administered dose as soon as possible.\nContinue with Q3-month schedule from this new injection date.';
+      detail='Day '+daysSince+' since last Invega Trinza injection (>3.5 to ≤4 months).\nPer PI: administer previously administered dose ASAP.\nNext dose due 84 days after administration date. Enter date below to calculate.'; showNextDoseCalc(84);
     } else if(daysSince <= 273) {
       title='\uD83D\uDD34 Do NOT give Trinza — bridge with Sustenna'; color='var(--red)';
       detail='Day '+daysSince+' since last injection (>4 months to ≤9 months).\n\nPer Invega Trinza PI Table 2 — DO NOT administer Trinza dose:\n'
@@ -6614,10 +6633,10 @@ function calcMissedDose() {
            + '  — Trinza 546 mg → Sustenna 156 mg\n'
            + '  — Trinza 819 mg → Sustenna 156 mg\n'
            + '\u2022 Day 8: Repeat same Sustenna dose (DELTOID)\n'
-           + '\u2022 1 month after Day 8: Resume Invega Trinza at previously stabilized dose';
+           + '\u2022 1 month after Day 8: Resume Invega Trinza at previously stabilized dose'; hideNextDoseCalc();
     } else {
       title='\uD83D\uDD34 Full restart required — Sustenna first'; color='var(--red)';
-      detail='Day '+daysSince+' since last injection (>9 months).\n\nPer Invega Trinza PI: restart with Invega Sustenna per full initiation protocol, then transition back to Trinza after ≥4 months of adequate Sustenna treatment.\n\nSustenna initiation:\n\u2022 Day 1: 234 mg DELTOID\n\u2022 Day 8: 156 mg DELTOID\n\u2022 Thereafter: resume monthly Sustenna dosing\n\nTransition back to Trinza only after patient is adequately treated with Sustenna for ≥4 months.';
+      detail='Day '+daysSince+' since last injection (>9 months).\n\nPer Invega Trinza PI: restart with Invega Sustenna per full initiation protocol, then transition back to Trinza after ≥4 months of adequate Sustenna treatment.\n\nSustenna initiation:\n\u2022 Day 1: 234 mg DELTOID\n\u2022 Day 8: 156 mg DELTOID\n\u2022 Thereafter: resume monthly Sustenna dosing\n\nTransition back to Trinza only after patient is adequately treated with Sustenna for ≥4 months.'; hideNextDoseCalc();
     }
   }
 
@@ -6628,6 +6647,51 @@ function calcMissedDose() {
   titleEl.style.color = color;
   detailEl.innerHTML = detail.replace(/\n/g, '<br>');
   result.classList.add('show');
+}
+
+var _mdNextDoseFreq = 28;
+
+function showNextDoseCalc(freq, isRestart) {
+  _mdNextDoseFreq = freq || 28;
+  var wrap = document.getElementById('md-restart-wrap');
+  var heading = document.getElementById('md-restart-heading');
+  var label = document.getElementById('md-restart-label');
+  var dateEl = document.getElementById('md-restart-date');
+  var outEl = document.getElementById('md-restart-result');
+  if (!wrap) return;
+  wrap.style.display = 'block';
+  if (isRestart) {
+    heading.textContent = 'RESTART DATE CALCULATOR';
+    label.textContent = 'Restart Injection Date';
+  } else {
+    heading.textContent = 'NEXT DOSE CALCULATOR';
+    label.textContent = 'Administration Date';
+  }
+  if (dateEl) dateEl.value = '';
+  if (outEl) outEl.innerHTML = '';
+}
+
+function hideNextDoseCalc() {
+  var wrap = document.getElementById('md-restart-wrap');
+  if (wrap) wrap.style.display = 'none';
+  var outEl = document.getElementById('md-restart-result');
+  if (outEl) outEl.innerHTML = '';
+}
+
+function calcRestartNext() {
+  var val = document.getElementById('md-restart-date').value;
+  var out = document.getElementById('md-restart-result');
+  if (!val) { out.innerHTML = ''; return; }
+  var base = new Date(val + 'T00:00:00');
+  var next = new Date(base);
+  next.setDate(next.getDate() + _mdNextDoseFreq);
+  var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var label = days[next.getDay()] + ', ' + months[next.getMonth()] + ' ' + next.getDate() + ', ' + next.getFullYear();
+  var heading = document.getElementById('md-restart-heading');
+  var isRestart = heading && heading.textContent === 'RESTART DATE CALCULATOR';
+  var prefix = isRestart ? 'Next monthly injection due: ' : 'Next dose due: ';
+  out.innerHTML = '<span style="color:var(--green);font-weight:600;">' + prefix + label + '</span>';
 }
 
 // ══════════════════════════════════════
@@ -11302,17 +11366,17 @@ function amGenRec(){
 
 <div class="section" id="sec-11" style="scroll-margin-top: 193px;">
   <div class="mod-nav">
-    <button class="mnav-btn active" data-section="11" data-pane="0" onclick="goTo(11,0)">Pediatric CAP</button>
+    <button class="mnav-btn" data-section="11" data-pane="0" onclick="goTo(11,0)">Pediatric CAP</button>
     <button class="mnav-btn" data-section="11" data-pane="1" onclick="goTo(11,1)">Pediatric SSTI</button>
     <button class="mnav-btn" data-section="11" data-pane="2" onclick="goTo(11,2)">Pediatric UTI</button>
     <button class="mnav-btn" data-section="11" data-pane="3" onclick="goTo(11,3)">HIV PEP</button>
     <button class="mnav-btn" data-section="11" data-pane="4" onclick="goTo(11,4)">EPT / STI</button>
-    <button class="mnav-btn" data-section="11" data-pane="5" onclick="goTo(11,5)">💊 Antimicrobial Dosing</button>
+    <button class="mnav-btn active" data-section="11" data-pane="5" onclick="goTo(11,5)">💊 Antimicrobial Dosing</button>
     <button class="mnav-btn" data-section="11" data-pane="6" onclick="goTo(11,6)">⚡ Status Epilepticus</button>
     <button class="mnav-btn" data-section="11" data-pane="7" onclick="goTo(11,7)">💨 Levalbuterol</button>
   </div>
   <div class="main" style="scroll-margin-top: 193px;">
-    <div class="pane active" id="s11p0">
+    <div class="pane" id="s11p0">
       <div class="sec-title">Pediatric CAP</div>
       <div class="sec-sub">Community-Acquired Pneumonia · Ages 3 Months – 18 Years</div>
       <div class="guideline-badge revised">KCHC Pediatric Antimicrobial Dosing Guideline · June 2023 · P&amp;T Approved April 2023</div>
@@ -11390,7 +11454,7 @@ function amGenRec(){
     </div>
 
     <!-- PANE 5: ANTIMICROBIAL DOSING 2023 -->
-    <div class="pane" id="s11p5">
+    <div class="pane active" id="s11p5">
       <div class="sec-title">Pediatric Antimicrobial Dosing</div>
       <div class="sec-sub">Weight-Based · Ages 2 Months – 18 Years · Normal Renal Function</div>
       <div class="guideline-badge revised">KCHC Pediatric Antimicrobial Dosing Guideline · June 2023 · P&amp;T Approved April 2023 · Authors: Dumont PharmD, Luka PharmD, Hammerschlag MD</div>
@@ -13842,7 +13906,7 @@ function amGenRec(){
   <div class="main" style="scroll-margin-top: 193px;">
 
   <!-- ══ BH PANE 0 — AGENT SELECTOR ══ -->
-  <div class="bh-pane" id="bp0" style="scroll-margin-top: 193px;">
+  <div class="bh-pane active" id="bp0" style="scroll-margin-top: 193px;">
     <div class="sec-title">BH Agent Selector</div>
     <div class="sec-sub">Antipsychotic Decision Wizard · KCHC Behavioral Health · Jan 2022 · Jun 2017</div>
     <!-- CrCl Quick Calc (compact) -->
@@ -13929,17 +13993,17 @@ function amGenRec(){
       </div>
     </div>
 
-    <div class="banner red show" id="bh-sel-banner"><div class="bn-label">BH Agent Recommendation</div><div class="bn-text">Oral antipsychotic (standard): Atypical antipsychotic: risperidone, olanzapine, quetiapine, aripiprazole, palip...</div></div>
-    <div class="res-card" id="bh-sel-res" style="display: block;">
-      <div class="res-head" style="background:#6d28d9;"><span class="rh-title">BH Agent Recommendation</span><span class="rh-stamp" id="bh-sel-stamp">Apr 2, 2026 06:15 PM</span></div>
+    <div class="banner" id="bh-sel-banner"></div>
+    <div class="res-card" id="bh-sel-res" style="display:none;">
+      <div class="res-head" style="background:#6d28d9;"><span class="rh-title">BH Agent Recommendation</span><span class="rh-stamp" id="bh-sel-stamp"></span></div>
       <div class="res-body">
-        <div class="rb-row"><span class="rb-label">Indication</span><span class="rb-val" id="bhr-dx">SCHIZOPHRENIA</span></div>
-        <div class="rb-row"><span class="rb-label">Formulation</span><span class="rb-val" id="bhr-form">Oral antipsychotic (standard)</span></div>
-        <div class="rb-row" id="bhr-renal-row" style="background: var(--red-bg);"><span class="rb-label" style="color: var(--red);">⚠ Renal Alert</span><span class="rb-val" id="bhr-renal-note" style="white-space: pre-line; color: var(--red);">⛔ SEVERE RENAL IMPAIRMENT (CrCl &lt;10): Invega Sustenna CONTRAINDICATED. Paliperidone/risperidone accumulate — avoid. Aripiprazole-based agents (Maintena, Aristada) do not require renal dose adjustment and are preferred. Lithium not dialyzable — avoid or use extreme caution.</span></div>
-        <div class="rb-row"><span class="rb-label">Recommended Agent(s)</span><span class="rb-val" id="bhr-agent" style="white-space:pre-line;">Atypical antipsychotic: risperidone, olanzapine, quetiapine, aripiprazole, paliperidone (based on side effect profile and patient preference)</span></div>
-        <div class="rb-row"><span class="rb-label">Key Considerations</span><span class="rb-val" id="bhr-notes">Lowest effective dose. Educate on metabolic syndrome risk, TD, EPS. Monitor AIMS within first month.</span></div>
-        <div class="rb-row"><span class="rb-label">Baseline Workup Required</span><span class="rb-val" id="bhr-workup">AIMS · CBC · Renal/hepatic function · Fasting lipids · Fasting glucose/HgbA1c · BMI · Waist circumference · EKG if QTc-prolonging agent · Beta-hCG if female of childbearing age</span></div>
-        <div class="rb-row"><span class="rb-label">QTc Alert</span><span class="rb-val" id="bhr-qtc">QTc normal — standard precautions apply. Obtain baseline EKG if using QTc-prolonging agent.</span></div>
+        <div class="rb-row"><span class="rb-label">Indication</span><span class="rb-val" id="bhr-dx">—</span></div>
+        <div class="rb-row"><span class="rb-label">Formulation</span><span class="rb-val" id="bhr-form">—</span></div>
+        <div class="rb-row" id="bhr-renal-row" style="display:none;"><span class="rb-label">⚠ Renal Alert</span><span class="rb-val" id="bhr-renal-note" style="white-space:pre-line;">—</span></div>
+        <div class="rb-row"><span class="rb-label">Recommended Agent(s)</span><span class="rb-val" id="bhr-agent" style="white-space:pre-line;">—</span></div>
+        <div class="rb-row"><span class="rb-label">Key Considerations</span><span class="rb-val" id="bhr-notes">—</span></div>
+        <div class="rb-row"><span class="rb-label">Baseline Workup Required</span><span class="rb-val" id="bhr-workup">—</span></div>
+        <div class="rb-row"><span class="rb-label">QTc Alert</span><span class="rb-val" id="bhr-qtc">—</span></div>
       </div>
     </div>
 
@@ -13958,7 +14022,7 @@ function amGenRec(){
 
   <!-- ══ BH PANE 1 — LAI COMPARISON ══ -->
   <!-- ══ BH PANE 1 — LAI COMPARISON ══ -->
-  <div class="bh-pane active" id="bp1" style="scroll-margin-top: 193px;">
+  <div class="bh-pane" id="bp1" style="scroll-margin-top: 193px;">
     <div class="sec-title">LAI Calculators &amp; Converters</div>
     <div class="sec-sub">KCHC Formulary · Long Acting Injectable Antipsychotics &amp; Naltrexone · January 2022</div>
     <div class="guideline-badge revised">Kings County BH Pharmacy Department · Updated: January 2022</div>
@@ -14000,14 +14064,14 @@ function amGenRec(){
 
     <!-- ── BP1 SUB-TAB NAV ── -->
     <div style="display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:16px;overflow-x:auto;flex-wrap:nowrap;">
-      <button class="bp1-stab" data-pane="bp1s0" onclick="bp1SubTab(this,&#39;bp1s0&#39;)" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0px; text-transform: none; padding: 9px 16px; background: rgb(241, 245, 249); border-color: rgb(203, 213, 225); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-bottom-width: ; border-bottom-style: ; color: rgb(71, 85, 105); cursor: pointer; white-space: nowrap; margin-bottom: -2px; flex-shrink: 0; border-radius: 6px 6px 0px 0px;">📅 Due Dates &amp; Missed Doses</button>
-      <button class="bp1-stab" data-pane="bp1s1" onclick="bp1SubTab(this,&#39;bp1s1&#39;)" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0px; text-transform: none; padding: 9px 16px; background: rgb(241, 245, 249); border-width: 1.5px 1.5px 3px; border-style: solid; border-color: rgb(203, 213, 225); border-image: initial; color: rgb(71, 85, 105); cursor: pointer; white-space: nowrap; margin-bottom: -2px; flex-shrink: 0; border-radius: 6px 6px 0px 0px;">💉 Sustenna Initiation</button>
-      <button class="bp1-stab active" data-pane="bp1s2" onclick="bp1SubTab(this,&#39;bp1s2&#39;)" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0px; text-transform: none; padding: 9px 16px; background: white; border-width: 1.5px 1.5px 3px; border-style: solid; border-top-color: ; border-right-color: ; border-left-color: ; border-image: initial; border-bottom-color: var(--teal); color: var(--teal); cursor: pointer; white-space: nowrap; margin-bottom: -2px; flex-shrink: 0; border-radius: 6px 6px 0px 0px;">💊 Maintena Selector</button>
-      <button class="bp1-stab" data-pane="bp1s3" onclick="bp1SubTab(this,&#39;bp1s3&#39;)" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0px; text-transform: none; padding: 9px 16px; background: rgb(241, 245, 249); border-width: 1.5px 1.5px 3px; border-style: solid; border-color: rgb(203, 213, 225); border-image: initial; color: rgb(71, 85, 105); cursor: pointer; white-space: nowrap; margin-bottom: -2px; flex-shrink: 0; border-radius: 6px 6px 0px 0px;">🔄 Oral to LAI</button>
+      <button class="bp1-stab active" data-pane="bp1s0" onclick="bp1SubTab(this,&#39;bp1s0&#39;)" style="font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;padding:9px 16px;background:white;border:1.5px solid var(--teal);border-bottom:3px solid var(--teal);color:var(--teal);cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;border-radius:6px 6px 0 0;">📅 Due Dates &amp; Missed Doses</button>
+      <button class="bp1-stab" data-pane="bp1s1" onclick="bp1SubTab(this,&#39;bp1s1&#39;)" style="font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;padding:9px 16px;background:#f1f5f9;border:1.5px solid #cbd5e1;border-bottom:3px solid transparent;color:#475569;cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;border-radius:6px 6px 0 0;">💉 Sustenna Initiation</button>
+      <button class="bp1-stab" data-pane="bp1s2" onclick="bp1SubTab(this,&#39;bp1s2&#39;)" style="font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;padding:9px 16px;background:#f1f5f9;border:1.5px solid #cbd5e1;border-bottom:3px solid transparent;color:#475569;cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;border-radius:6px 6px 0 0;">💊 Maintena Selector</button>
+      <button class="bp1-stab" data-pane="bp1s3" onclick="bp1SubTab(this,&#39;bp1s3&#39;)" style="font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;padding:9px 16px;background:#f1f5f9;border:1.5px solid #cbd5e1;border-bottom:3px solid transparent;color:#475569;cursor:pointer;white-space:nowrap;margin-bottom:-2px;flex-shrink:0;border-radius:6px 6px 0 0;">🔄 Oral to LAI</button>
     </div>
 
     <!-- ── SUB-PANE 0: DUE DATES & MISSED DOSES ── -->
-    <div class="bp1-spane" id="bp1s0" style="display: none;">
+    <div class="bp1-spane" id="bp1s0" style="display:block;">
     <!-- ── CALCULATOR 1: DUE DATE + TIMELINE ── -->
     <div class="fc">
       <div class="fc-head"><span class="fc-title">📅 LAI Due Date Calculator</span><span class="fc-note">Auto-calculates next dose + early dose alert</span></div>
@@ -14016,29 +14080,30 @@ function amGenRec(){
           <select id="lai-agent" onchange="calcLAIDue()">
             <option value="">Select LAI</option>
             <optgroup label="First-Generation">
-              <option value="haldol" data-freq="21" data-freqmax="28" data-min="21">Haloperidol Decanoate (Haldol) — Q3–4 weeks</option>
               <option value="prolixin" data-freq="14" data-freqmax="21">Fluphenazine Decanoate (Prolixin) — Q2–3 weeks</option>
+              <option value="haldol" data-freq="21" data-freqmax="28" data-min="21">Haloperidol Decanoate (Haldol) — Q3–4 weeks</option>
             </optgroup>
             <optgroup label="Second-Generation Antipsychotics">
-              <option value="consta" data-freq="14" data-freqmax="14" data-min="11">Risperdal Consta — Q2 weeks</option>
-              <option value="sustenna" data-freq="28" data-freqmax="28" data-min="25">Invega Sustenna — Q4 weeks</option>
-              <option value="trinza" data-freq="84" data-freqmax="84" data-min="70">Invega Trinza — Q12 weeks</option>
+              <option value="asimtufii" data-freq="56" data-freqmax="56" data-min="50">Abilify Asimtufii (Aripiprazole SC) — Q2 months</option>
               <option value="maintena" data-freq="28" data-freqmax="28" data-min="26">Abilify Maintena — Q4 weeks</option>
               <option value="aristada441" data-freq="28" data-freqmax="28" data-min="21">Aristada 441 mg — Q4 weeks</option>
               <option value="aristada662" data-freq="42" data-freqmax="42" data-min="35">Aristada 662 mg — Q6 weeks</option>
-              <option value="aristada882" data-freq="42" data-freqmax="56" data-min="35">Aristada 882 mg — Q6–8 weeks</option>
+              <option value="aristada882q4" data-freq="28" data-freqmax="28" data-min="21">Aristada 882 mg -- Monthly (Q4 weeks)</option>
+              <option value="aristada882q6" data-freq="42" data-freqmax="42" data-min="35">Aristada 882 mg -- Q6 weeks</option>
               <option value="aristada1064" data-freq="56" data-freqmax="56" data-min="49">Aristada 1064 mg — Q8 weeks</option>
+              <option value="hafyera" data-freq="180" data-freqmax="180" data-min="168">Invega Hafyera (Paliperidone SC) — Q6 months</option>
+              <option value="sustenna" data-freq="28" data-freqmax="28" data-min="25">Invega Sustenna — Q4 weeks</option>
+              <option value="trinza" data-freq="84" data-freqmax="84" data-min="70">Invega Trinza — Q12 weeks</option>
+              <option value="consta" data-freq="14" data-freqmax="14" data-min="11">Risperdal Consta — Q2 weeks</option>
+              <option value="rykindo" data-freq="14" data-freqmax="14" data-min="12">Rykindo (Risperidone IM) — Q2 weeks</option>
               <option value="uzedy-monthly" data-freq="28" data-freqmax="28" data-min="25">Uzedy (Risperidone SC) — Q monthly</option>
               <option value="uzedy-bimonthly" data-freq="56" data-freqmax="56" data-min="50">Uzedy (Risperidone SC) — Q2 months</option>
-              <option value="asimtufii" data-freq="56" data-freqmax="56" data-min="50">Abilify Asimtufii (Aripiprazole SC) — Q2 months</option>
-              <option value="hafyera" data-freq="180" data-freqmax="180" data-min="168">Invega Hafyera (Paliperidone SC) — Q6 months</option>
-              <option value="rykindo" data-freq="14" data-freqmax="14" data-min="12">Rykindo (Risperidone IM) — Q2 weeks</option>
             </optgroup>
             <optgroup label="Opioid Use Disorder">
-              <option value="vivitrol" data-freq="28" data-freqmax="28" data-min="25">Vivitrol (Naltrexone) — Q4 weeks</option>
-              <option value="sublocade" data-freq="28" data-freqmax="30" data-min="26">Sublocade (Buprenorphine SC) — Q monthly (≥26 days)</option>
-              <option value="brixadi-weekly" data-freq="7" data-freqmax="9" data-min="5">Brixadi Weekly (Buprenorphine SC) — Q7 days</option>
               <option value="brixadi-monthly" data-freq="28" data-freqmax="35" data-min="21">Brixadi Monthly (Buprenorphine SC) — Q monthly</option>
+              <option value="brixadi-weekly" data-freq="7" data-freqmax="9" data-min="5">Brixadi Weekly (Buprenorphine SC) — Q7 days</option>
+              <option value="sublocade" data-freq="28" data-freqmax="30" data-min="26">Sublocade (Buprenorphine SC) — Q monthly (≥26 days)</option>
+              <option value="vivitrol" data-freq="28" data-freqmax="28" data-min="25">Vivitrol (Naltrexone) — Q4 weeks</option>
             </optgroup>
           </select>
         </div>
@@ -14048,7 +14113,7 @@ function amGenRec(){
               <input type="date" id="lai-last-date" onchange="calcLAIDue()">
               <button class="cal-today-btn" onclick="setToday(&#39;lai-last-date&#39;,&#39;lai-last-display&#39;,calcLAIDue)">Today</button>
             </div>
-            <div class="cal-display" id="lai-last-display">Wed, Dec 31, 2025 · 91 days ago</div>
+            <div class="cal-display" id="lai-last-display">Thu, Oct 30, 2025 · 155 days ago</div>
           </div>
         </div>
       </div>
@@ -14060,23 +14125,23 @@ function amGenRec(){
       <div class="lai-tl-bar" id="lai-tl-bar">
         <div class="lai-tl-fill" id="lai-tl-fill" style="width: 100%; background: rgb(153, 27, 27);"></div>
         <div class="lai-tl-marker" id="lai-tl-today" style="background: rgb(153, 27, 27); left: 100%;"></div>
-        <div class="lai-tl-marker-label" id="lai-tl-today-lbl" style="left: 100%;">Today (day 91)</div>
+        <div class="lai-tl-marker-label" id="lai-tl-today-lbl" style="left: 100%;">Today (day 155)</div>
       </div>
       <div class="lai-tl-dates">
-        <span id="lai-tl-start-date">Dec 31, 2025</span>
-        <span id="lai-tl-mid-date" style="color:var(--amber);font-weight:600;">Due: Feb 11, 2026</span>
-        <span id="lai-tl-end-date" style="color:var(--red);">Feb 24, 2026</span>
+        <span id="lai-tl-start-date">Oct 30, 2025</span>
+        <span id="lai-tl-mid-date" style="color:var(--amber);font-weight:600;">Due: Nov 27, 2025</span>
+        <span id="lai-tl-end-date" style="color:var(--red);">Dec 5, 2025</span>
       </div>
     </div>
 
-    <div class="banner red show" id="lai-due-banner"><div class="bn-label">LAI Overdue</div><div class="bn-text">Overdue by 49 days — missed dose protocol loaded below.</div></div>
+    <div class="banner red show" id="lai-due-banner"><div class="bn-label">LAI Overdue</div><div class="bn-text">Overdue by 126 days — missed dose protocol loaded below.</div></div>
     <div class="res-card" id="lai-due-res" style="display: block;">
-      <div class="res-head" style="background:#6d28d9;"><span class="rh-title">LAI Schedule</span><span class="rh-stamp" id="lai-due-stamp">Apr 2, 2026 06:05 PM</span></div>
+      <div class="res-head" style="background:#6d28d9;"><span class="rh-title">LAI Schedule</span><span class="rh-stamp" id="lai-due-stamp">Apr 3, 2026 12:41 AM</span></div>
       <div class="res-body">
-        <div class="rb-row"><span class="rb-label">Agent</span><span class="rb-val" id="lai-r-agent">Aristada 662 mg — Q6 weeks</span></div>
-        <div class="rb-row"><span class="rb-label">Last Injection</span><span class="rb-val" id="lai-r-last">Dec 31, 2025 (91 days ago)</span></div>
-        <div class="rb-row"><span class="rb-label">Next Due Date</span><span class="rb-val" id="lai-r-next">Wednesday, February 11, 2026</span></div>
-        <div class="rb-row"><span class="rb-label">Days Until Due</span><span class="rb-val" id="lai-r-days" style="color: var(--red);">OVERDUE by 49 days</span></div>
+        <div class="rb-row"><span class="rb-label">Agent</span><span class="rb-val" id="lai-r-agent">Aristada 441 mg — Q4 weeks</span></div>
+        <div class="rb-row"><span class="rb-label">Last Injection</span><span class="rb-val" id="lai-r-last">Oct 30, 2025 (155 days ago)</span></div>
+        <div class="rb-row"><span class="rb-label">Next Due Date</span><span class="rb-val" id="lai-r-next">Thursday, November 27, 2025</span></div>
+        <div class="rb-row"><span class="rb-label">Days Until Due</span><span class="rb-val" id="lai-r-days" style="color: var(--red);">OVERDUE by 126 days</span></div>
         <div class="rb-row" id="lai-row-early" style="display:none;background:var(--red-bg);"><span class="rb-label" style="color:var(--red);">⚠ Early Dose Alert</span><span class="rb-val" style="color:var(--red);" id="lai-r-early">—</span></div>
       </div>
     </div>
@@ -14093,7 +14158,8 @@ function amGenRec(){
             <option value="maintena" data-min="26">Abilify Maintena</option>
             <option value="aristada441">Aristada 441 mg</option>
             <option value="aristada662">Aristada 662 mg</option>
-            <option value="aristada882">Aristada 882 mg</option>
+            <option value="aristada882q4">Aristada 882 mg -- Monthly (Q4 weeks)</option>
+            <option value="aristada882q6">Aristada 882 mg -- Q6 weeks</option>
             <option value="aristada1064">Aristada 1064 mg</option>
             <option value="haldol">Haloperidol Decanoate</option>
             <option value="sustenna" data-min="21">Invega Sustenna (established patient)</option>
@@ -14108,20 +14174,31 @@ function amGenRec(){
               <input type="date" id="md-last-date" onchange="calcMissedDose()">
               <button class="cal-today-btn" onclick="setToday(&#39;md-last-date&#39;,&#39;md-last-display&#39;,calcMissedDose)">Today</button>
             </div>
-            <div class="cal-display" id="md-last-display">Wed, Dec 31, 2025 · 91 days ago</div>
+            <div class="cal-display" id="md-last-display">Thu, Oct 30, 2025 · 155 days ago</div>
           </div>
         </div>
       </div>
     </div>
     <div class="missed-result show" id="md-result">
-      <div class="missed-action" id="md-action-title" style="color: var(--red);">🔴 Reinitiate</div>
-      <div class="missed-detail" id="md-action-detail">Day 91 (&gt;12 weeks). Give Aristada Initio 675 mg + 30 mg oral aripiprazole to reinitiate.</div>
+      <div class="missed-action" id="md-action-title" style="color: var(--red);">🔴 Do NOT give Trinza — bridge with Sustenna</div>
+      <div class="missed-detail" id="md-action-detail">Day 155 since last injection (&gt;4 months to ≤9 months).<br><br>Per Invega Trinza PI Table 2 — DO NOT administer Trinza dose:<br>• Day 1: Give Invega SUSTENNA (DELTOID) at dose matching previous Trinza:<br>  — Trinza 273 mg → Sustenna 78 mg<br>  — Trinza 410 mg → Sustenna 117 mg<br>  — Trinza 546 mg → Sustenna 156 mg<br>  — Trinza 819 mg → Sustenna 156 mg<br>• Day 8: Repeat same Sustenna dose (DELTOID)<br>• 1 month after Day 8: Resume Invega Trinza at previously stabilized dose</div>
+    </div>
+
+    <div id="md-restart-wrap" style="display: none; margin-top: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px;">
+      <div id="md-restart-heading" style="font-family:monospace;font-size:11px;letter-spacing:0.08em;color:var(--clinical);margin-bottom:8px;">NEXT DOSE CALCULATOR</div>
+      <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;">
+        <div>
+          <label id="md-restart-label" style="font-size:12px;color:var(--sub);display:block;margin-bottom:4px;">Administration Date</label>
+          <input type="date" id="md-restart-date" oninput="calcRestartNext()" style="padding:7px 10px;border:1px solid var(--border);border-radius:5px;background:var(--surface);color:var(--text);font-size:13px;">
+        </div>
+        <div id="md-restart-result" style="font-size:13px;color:var(--text);padding-bottom:4px;"></div>
+      </div>
     </div>
 
     </div>
 
     <!-- ── SUB-PANE 1: SUSTENNA INITIATION ── -->
-    <div class="bp1-spane" id="bp1s1" style="display: none;">
+    <div class="bp1-spane" id="bp1s1" style="display:none;">
     <!-- ── CALCULATOR 4: INVEGA SUSTENNA INITIATION ── -->
     <div style="font-family:Impact,sans-serif;font-size:18px;letter-spacing:0.04em;margin:20px 0 6px;">💉 Invega Sustenna Initiation Calculator</div>
     <div class="guideline-badge revised">Invega Sustenna Package Insert · KCHC LAI Dispensing Memo March 2025</div>
@@ -14269,7 +14346,7 @@ function amGenRec(){
     </div>
 
     <!-- ── SUB-PANE 2: MAINTENA DOSE SELECTOR ── -->
-    <div class="bp1-spane" id="bp1s2" style="display: block;">
+    <div class="bp1-spane" id="bp1s2" style="display:none;">
     <!-- ── MAINTENA DOSE SELECTOR WIZARD ── -->
     <div class="info-card" style="margin-bottom:14px;border-color:rgba(99,102,241,0.4);">
       <div class="ic-head" style="background:rgba(99,102,241,0.12);color:#6366f1;">💊 Abilify Maintena — Dose Selector (400 mg vs 300 mg vs Avoid)</div>
@@ -14327,9 +14404,9 @@ function amGenRec(){
         </div>
 
         <!-- RESULT -->
-        <div id="maint-result" style="display: block; margin-top: 12px; padding: 14px 16px; border-radius: 8px; border: 2px solid rgba(153, 27, 27, 0.5); background: rgba(153, 27, 27, 0.06);">
-          <div id="maint-result-title" style="font-size: 15px; font-weight: 700; margin-bottom: 6px; color: rgb(153, 27, 27);">⛔ AVOID Abilify Maintena</div>
-          <div id="maint-result-body" style="font-size:12px;line-height:1.8;color:var(--text);">Patient is on a CYP3A4 inducer (e.g. carbamazepine, rifampin, phenytoin, St. John's Wort) for &gt;14 days. Blood levels of aripiprazole will drop below effective levels. Abilify Maintena should NOT be used while on CYP3A4 inducers.<br><br><strong>Action:</strong> Consider alternative LAI or discontinue the inducer before initiating Maintena.</div>
+        <div id="maint-result" style="display:none;margin-top:12px;padding:14px 16px;border-radius:8px;border:2px solid #065f46;background:rgba(6,95,70,0.08);">
+          <div id="maint-result-title" style="font-size:15px;font-weight:700;margin-bottom:6px;"></div>
+          <div id="maint-result-body" style="font-size:12px;line-height:1.8;color:var(--text);"></div>
           <div style="margin-top:8px;font-size:10px;color:var(--sub);">Source: Abilify Maintena FDA Prescribing Information · Otsuka America Pharmaceutical</div>
         </div>
 
@@ -19362,7 +19439,7 @@ function toggleCGHeightMode() {}
   <div class="main" style="scroll-margin-top: 193px;">
 
   <!-- OP0 — AGENT SELECTOR -->
-  <div class="onc-pane active" id="op0">
+  <div class="onc-pane" id="op0">
     <div class="sec-title">Oncology Agent Selector</div>
     <div class="sec-sub">Select Cancer Type → Regimen + Pharmacy Flags · OR select drug below for lookup</div>
 
@@ -19666,7 +19743,7 @@ function toggleCGHeightMode() {}
   </div>
 
   <!-- OP2 — CARBOPLATIN -->
-  <div class="onc-pane" id="op2">
+  <div class="onc-pane active" id="op2">
     <div class="sec-title">Carboplatin Dosing</div>
     <div class="sec-sub">Calvert Equation — AUC-Based Dosing</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
@@ -20194,12 +20271,12 @@ function toggleCGHeightMode() {}
 
     <!-- PILL NAV -->
     <div style="display:flex;gap:8px;margin:14px 0 10px;flex-wrap:wrap;">
-      <button class="onc-ls-btn active" id="onc-ls-btn-light" onclick="oncLSSwitch(&#39;light&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--clinical);background:var(--clinical);color:white;font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">💡 Light Sensitive</button>
-      <button class="onc-ls-btn" id="onc-ls-btn-filt" onclick="oncLSSwitch(&#39;filt&#39;,this)" style="padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--sub);font-family:monospace,Consolas,Monaco,&#39;Courier New&#39;,monospace;font-size:11px;letter-spacing:0.08em;cursor:pointer;">🖍 Filtered</button>
+      <button class="onc-ls-btn active" id="onc-ls-btn-light" onclick="oncLSSwitch(&#39;light&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--border); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--surface); color: var(--sub); font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">💡 Light Sensitive</button>
+      <button class="onc-ls-btn" id="onc-ls-btn-filt" onclick="oncLSSwitch(&#39;filt&#39;,this)" style="padding: 7px 16px; border-radius: 20px; border-color: var(--clinical); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--clinical); color: white; font-family: monospace, Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 11px; letter-spacing: 0.08em; cursor: pointer;">🖍 Filtered</button>
     </div>
 
     <!-- LIGHT SENSITIVE SECTION -->
-    <div id="onc-ls-light">
+    <div id="onc-ls-light" style="display: none;">
       <div class="disc"><div class="disc-icon">!</div><div class="disc-text">Protect from light during storage and administration. Use amber bags/tubing or foil wrapping. Do not expose to direct sunlight or fluorescent light for extended periods.</div></div>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;">
 
@@ -20308,7 +20385,7 @@ function toggleCGHeightMode() {}
     </div>
 
     <!-- FILTERED SECTION -->
-    <div id="onc-ls-filt" style="display:none;">
+    <div id="onc-ls-filt" style="display: block;">
       <div class="disc"><div class="disc-icon">!</div><div class="disc-text">These medications require an in-line filter during administration. Verify filter pore size against prescribing information for each agent.</div></div>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;">
 
@@ -20866,7 +20943,7 @@ function toggleCGHeightMode() {}
 <!-- ══════════════════════════════════════
   SECTION OB — OB/GYN
 ══════════════════════════════════════ -->
-<div class="section" id="sec-ob" style="scroll-margin-top: 193px;">
+<div class="section active" id="sec-ob" style="scroll-margin-top: 193px;">
   <div class="mod-nav" id="ob-modnav" style="display:none;"></div>
   <div class="main" style="scroll-margin-top: 193px;">
 
