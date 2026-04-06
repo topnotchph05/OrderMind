@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0085)file:///Users/esdrasobas/Downloads/OrderMind_V1_-_KCHC_Clinical_Reference%20(23).html -->
+<!-- saved from url=(0085)file:///Users/esdrasobas/Downloads/OrderMind_V1_-_KCHC_Clinical_Reference%20(29).html -->
 <html lang="en" style="--chrome-h: 190px; scroll-padding-top: 194px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -832,9 +832,9 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 </div>
 
 <nav class="top-nav">
-  <button class="top-btn" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
+  <button class="top-btn active" id="top-btn-ac" onclick="switchTop(&#39;ac&#39;)">💉 Anticoagulation</button>
   <button class="top-btn" id="top-btn-am" onclick="switchTop(&#39;am&#39;)">🧫 ID / Antimicrobials</button>
-  <button class="top-btn active" id="top-btn-iv" onclick="switchTop(&#39;iv&#39;)">🩺 IV / Nutrition</button>
+  <button class="top-btn" id="top-btn-iv" onclick="switchTop(&#39;iv&#39;)">🩺 IV / Nutrition</button>
   <button class="top-btn" id="top-btn-onc" onclick="switchTop(&#39;onc&#39;)">🧬 Oncology</button>
   <button class="top-btn" id="top-btn-pain" onclick="switchTop(&#39;pain&#39;)">💊 Pain &amp; Opioid</button>
   <button class="top-btn" id="top-btn-bh" onclick="switchTop(&#39;bh&#39;)">🧠 Behavioral Health</button>
@@ -849,9 +849,9 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   </div>
 </nav>
 
-<nav class="section-nav" id="snav-ac" style="display: none;">
+<nav class="section-nav" id="snav-ac" style="display: flex;">
   <button class="snav-btn" onclick="goTo(0)">⚡ Agent Selector</button>
-  <button class="snav-btn" onclick="goTo(1)">Warfarin</button>
+  <button class="snav-btn active" onclick="goTo(1)">Warfarin</button>
   <button class="snav-btn" onclick="goTo(2)">Heparin (UFH)</button>
   <button class="snav-btn" onclick="goTo(3)">Enoxaparin</button>
   <button class="snav-btn" onclick="goTo(4)">DOACs</button>
@@ -900,8 +900,8 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   <button class="snav-btn" id="spb-bh-8" onclick="bhGoTo(8,this)">📋 Dual LAI Form</button>
 </nav>
 
-<nav class="section-nav" id="snav-iv" style="display: flex;">
-  <button class="snav-btn active" id="spb-iv-0" onclick="ivGoTo(0,this)">💧 IV Fluids</button>
+<nav class="section-nav" id="snav-iv" style="display: none;">
+  <button class="snav-btn" id="spb-iv-0" onclick="ivGoTo(0,this)">💧 IV Fluids</button>
   <button class="snav-btn" id="spb-iv-1" onclick="ivGoTo(1,this)">💉 IV Push</button>
   <button class="snav-btn" id="spb-iv-2" onclick="ivGoTo(2,this)">🔄 IV → PO</button>
   <button class="snav-btn" id="spb-iv-3" onclick="ivGoTo(3,this)">🥤 Enteral</button>
@@ -980,9 +980,9 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
 <!-- More menu dropdown — fixed at body level to escape sticky-chrome overflow clipping -->
 <div id="more-dropdown" style="display:none;position:fixed;top:0;left:8px;right:8px;z-index:9999;background:#ffffff;border:1px solid #94a3b8;border-radius:0 0 10px 10px;box-shadow:0 8px 32px rgba(0,0,0,0.25);max-height:80vh;overflow-y:auto;">
   <div style="padding:10px 16px 4px;font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:0.05em;text-transform:uppercase;">All Tabs</div>
-  <button class="more-item" id="top-btn-ac-m" onclick="switchTop(&#39;ac&#39;);closeMoreMenu()">💉 Anticoagulation</button>
+  <button class="more-item active" id="top-btn-ac-m" onclick="switchTop(&#39;ac&#39;);closeMoreMenu()">💉 Anticoagulation</button>
   <button class="more-item" id="top-btn-am-m" onclick="switchTop(&#39;am&#39;);closeMoreMenu()">🧫 ID / Antimicrobials</button>
-  <button class="more-item active" id="top-btn-iv-m" onclick="switchTop(&#39;iv&#39;);closeMoreMenu()">🩺 IV / Nutrition</button>
+  <button class="more-item" id="top-btn-iv-m" onclick="switchTop(&#39;iv&#39;);closeMoreMenu()">🩺 IV / Nutrition</button>
   <button class="more-item" id="top-btn-onc-m" onclick="switchTop(&#39;onc&#39;);closeMoreMenu()">🧬 Oncology</button>
   <button class="more-item" id="top-btn-pain-m" onclick="switchTop(&#39;pain&#39;);closeMoreMenu()">💊 Pain &amp; Opioid</button>
   <button class="more-item" id="top-btn-bh-m" onclick="switchTop(&#39;bh&#39;);closeMoreMenu()">🧠 Behavioral Health</button>
@@ -1130,20 +1130,20 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   </div>
 </div>
 
-<div class="section" id="sec-1" style="scroll-margin-top: 194px;">
+<div class="section active" id="sec-1" style="scroll-margin-top: 194px;">
   <div class="main" style="scroll-margin-top: 194px;">
   <div class="sec-title">Warfarin</div>
   <div class="sec-sub">Vitamin K Antagonist · KCHC Protocol</div>
 
   <!-- Mode tabs -->
   <div class="mode-tabs">
-    <button class="mtab" id="wf-tab-new" onclick="wfMode(&#39;new&#39;)">New Start Dosing<span class="mtab-sub">Day 1–6 INR-guided initiation</span></button>
+    <button class="mtab active" id="wf-tab-new" onclick="wfMode(&#39;new&#39;)">New Start Dosing<span class="mtab-sub">Day 1–6 INR-guided initiation</span></button>
     <button class="mtab" id="wf-tab-maint" onclick="wfMode(&#39;maint&#39;)">Maintenance Dosing<span class="mtab-sub">Ongoing INR-based dose adjustment</span></button>
-    <button class="mtab active" id="wf-tab-ref" onclick="wfMode(&#39;ref&#39;)">Reference Tables<span class="mtab-sub">Goals, ordering policy, INR management</span></button>
+    <button class="mtab" id="wf-tab-ref" onclick="wfMode(&#39;ref&#39;)">Reference Tables<span class="mtab-sub">Goals, ordering policy, INR management</span></button>
   </div>
 
   <!-- REFERENCE PANE -->
-  <div class="pane active" id="wf-pane-ref">
+  <div class="pane" id="wf-pane-ref">
     <div class="tbl-wrap"><table>
       <thead><tr><th>Indication</th><th>INR Target</th></tr></thead>
       <tbody>
@@ -1250,7 +1250,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
   </div>
 
   <!-- NEW START PANE -->
-  <div class="pane" id="wf-pane-new">
+  <div class="pane active" id="wf-pane-new">
     <div class="sens-note"><strong>Sensitive Patient Factors (KCHC Policy — Justin Wilson PharmD, May 2025)</strong><br>If any factor present, consider starting at <strong>1–2.5 mg</strong> instead of 5 mg:<br>
     Age &gt;75 · Asian race · CHF · Hyperthyroidism · Elevated baseline INR · ESRD · Fever · Malignancy · Diarrhea · Following heart valve replacement · Known CYP2C9 variant · Hepatic disease · Hypoalbuminemia · Decreased oral intake · Malnutrition · CYP-inhibition drug interactions</div>
 
@@ -1272,21 +1272,21 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
       <button class="dstep" onclick="setDay(1,this)">Day 1</button>
       <button class="dstep" onclick="setDay(2,this)">Day 2</button>
       <button class="dstep" onclick="setDay(3,this)">Day 3</button>
-      <button class="dstep" onclick="setDay(4,this)">Day 4</button>
-      <button class="dstep active" onclick="setDay(5,this)">Day 5</button>
+      <button class="dstep active" onclick="setDay(4,this)">Day 4</button>
+      <button class="dstep" onclick="setDay(5,this)">Day 5</button>
       <button class="dstep" onclick="setDay(6,this)">Day 6</button>
     </div>
 
     <div class="fc">
-      <div class="fc-head"><span class="fc-title" id="ns-day-label">Day 5  -  INR-Guided Dose</span></div>
+      <div class="fc-head"><span class="fc-title" id="ns-day-label">Day 4  -  INR-Guided Dose</span></div>
       <div class="fg" id="ns-fields"><div class="field"><label>Today's INR</label><input type="number" id="ns-inr" min="0.5" max="15" step="0.1" placeholder="e.g. 1.8"><div class="field-hint">KCHC Policy: INR must be resulted in EPIC within 24h before this order</div></div></div>
     </div>
 
-    <button class="btn btn-clinical" onclick="calcNewStart()">Calculate Day <span id="ns-day-btn">5</span> Dose →</button>
-    <div class="banner red show" id="ns-banner"><div class="bn-label">Day 5 — KCHC Nomogram</div><div class="bn-text" style="color:var(--ink);">INR <span style="color:#991b1b;font-weight:700;font-size:15px;">4.0</span>: INR elevated — <span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;">hold</span></span></span> dose per KCHC nomogram. Dose: <span style="color:#991b1b;font-weight:700;font-size:15px;">⛔ <span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;">Hold</span></span></span>.</span></div></div>
+    <button class="btn btn-clinical" onclick="calcNewStart()">Calculate Day <span id="ns-day-btn">4</span> Dose →</button>
+    <div class="banner red show" id="ns-banner"><div class="bn-label">Day 4 — KCHC Nomogram</div><div class="bn-text" style="color:var(--ink);">INR <span style="color:#991b1b;font-weight:700;font-size:15px;">5.0</span>: INR elevated — <span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;">hold</span></span></span> dose per KCHC nomogram. Dose: <span style="color:#991b1b;font-weight:700;font-size:15px;">⛔ <span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;">Hold</span></span></span>.</span></div></div>
     <div class="res-card show" id="ns-result">
-      <div class="res-head" id="ns-res-head" style="background: rgb(153, 27, 27);"><span class="rh-title" id="ns-r-title">Day 5 Recommendation</span><span class="rh-stamp" id="ns-stamp">Apr 4, 2026 11:02 PM</span></div>
-      <div class="res-body" id="ns-res-body"><div class="rb-row"><span class="rb-label">Day</span><span class="rb-val">Day 5</span></div><div class="rb-row"><span class="rb-label">Goal INR</span><span class="rb-val">2-3</span></div><div class="rb-row"><span class="rb-label">Current INR</span><span class="rb-val">4.0</span></div><div class="rb-row" style="background:rgba(153,27,27,0.08);border-left:4px solid #991b1b;padding:13px 18px;"><span class="rb-label" style="color:#991b1b;font-size:13px;font-weight:700;letter-spacing:0.06em;">Recommended Dose</span><span class="rb-val" style="color:#991b1b;font-weight:700;font-size:20px;letter-spacing:0.04em;">⛔ HOLD</span></div><div class="rb-row" style="background:rgba(153,27,27,0.08);border-left:4px solid #991b1b;padding:13px 18px;"><span class="rb-label" style="color:#991b1b;font-size:13px;font-weight:700;letter-spacing:0.06em;">Action</span><span class="rb-val" style="color:#991b1b;font-weight:700;font-size:20px;letter-spacing:0.04em;">INR elevated — hold dose per KCHC nomogram</span></div><div class="rb-row"><span class="rb-label">Next INR Check</span><span class="rb-val">Day 6 — draw INR before next dose</span></div><div class="rb-row"><span class="rb-label">Sensitive Patients</span><span class="rb-val">Note: For sensitive patients (age &gt;75, Asian race, CHF, hyperthyroidism, elevated baseline INR, ESRD, fever, malignancy, diarrhea, heart valve replacement, CYP2C9 variant, hepatic disease, hypoalbuminemia, decreased oral intake, malnutrition, CYP-inhibition drug interactions), clinical judgment may warrant a lower dose than the nomogram recommendation. Document rationale in EPIC.</span></div></div>
+      <div class="res-head" id="ns-res-head" style="background: rgb(153, 27, 27);"><span class="rh-title" id="ns-r-title">Day 4 Recommendation</span><span class="rh-stamp" id="ns-stamp">Apr 5, 2026 09:44 PM</span></div>
+      <div class="res-body" id="ns-res-body"><div class="rb-row"><span class="rb-label">Day</span><span class="rb-val">Day 4</span></div><div class="rb-row"><span class="rb-label">Goal INR</span><span class="rb-val">2-3</span></div><div class="rb-row"><span class="rb-label">Current INR</span><span class="rb-val">5.0</span></div><div class="rb-row" style="background:rgba(153,27,27,0.08);border-left:4px solid #991b1b;padding:13px 18px;"><span class="rb-label" style="color:#991b1b;font-size:13px;font-weight:700;letter-spacing:0.06em;">Recommended Dose</span><span class="rb-val" style="color:#991b1b;font-weight:700;font-size:20px;letter-spacing:0.04em;">⛔ HOLD</span></div><div class="rb-row" style="background:rgba(153,27,27,0.08);border-left:4px solid #991b1b;padding:13px 18px;"><span class="rb-label" style="color:#991b1b;font-size:13px;font-weight:700;letter-spacing:0.06em;">Action</span><span class="rb-val" style="color:#991b1b;font-weight:700;font-size:20px;letter-spacing:0.04em;">INR elevated — hold dose per KCHC nomogram</span></div><div class="rb-row"><span class="rb-label">Next INR Check</span><span class="rb-val">Day 5 — draw INR before next dose</span></div><div class="rb-row"><span class="rb-label">Sensitive Patients</span><span class="rb-val">Note: For sensitive patients (age &gt;75, Asian race, CHF, hyperthyroidism, elevated baseline INR, ESRD, fever, malignancy, diarrhea, heart valve replacement, CYP2C9 variant, hepatic disease, hypoalbuminemia, decreased oral intake, malnutrition, CYP-inhibition drug interactions), clinical judgment may warrant a lower dose than the nomogram recommendation. Document rationale in EPIC.</span></div></div>
     </div>
 
     <button class="ref-toggle-btn" onclick="toggleRef(&#39;ns-ref&#39;)">▾ Show Full KCHC Warfarin Initiation Nomogram</button>
@@ -1351,10 +1351,10 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     </div>
 
     <button class="btn btn-clinical" onclick="calcMaint()">Calculate Maintenance Adjustment →</button>
-    <div class="banner red show" id="m-banner"><div class="bn-label">Maintenance Adjustment</div><div class="bn-text" style="color:var(--ink);">INR <span style="color:#991b1b;font-weight:700;font-size:15px;">11.0</span> (goal 2-3)  -  Critical  -  INR &gt;10. <span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;"><span style="color:#991b1b;font-weight:700;font-size:15px;">Hold</span></span></span> warfarin . Vit K 2.5-5 mg PO . Monitor INR daily . Resume at lower dose when therapeutic.</div></div>
-    <div class="res-card show" id="m-result">
-      <div class="res-head" id="m-res-head" style="background: rgb(153, 27, 27);"><span class="rh-title">Maintenance Adjustment</span><span class="rh-stamp" id="m-stamp">Apr 4, 2026 10:49 PM</span></div>
-      <div class="res-body" id="m-res-body"><div class="rb-row"><span class="rb-label">Goal INR</span><span class="rb-val">2-3</span></div><div class="rb-row"><span class="rb-label">Current INR</span><span class="rb-val">11.0</span></div><div class="rb-row"><span class="rb-label">INR Status</span><span class="rb-val">Critical  -  INR &gt;10</span></div><div class="rb-row"><span class="rb-label">Current Weekly Dose</span><span class="rb-val">49.0 mg/week (7.00 mg/day avg)</span></div><div class="rb-row"><span class="rb-label">Recommended Change</span><span class="rb-val">— Hold —</span></div><div class="rb-row"><span class="rb-label">New Weekly Dose</span><span class="rb-val">— Hold warfarin —</span></div><div class="rb-row"><span class="rb-label">New Daily Dose</span><span class="rb-val">Do not dose. Resume at lower dose when INR is therapeutic.</span></div><div class="rb-row" style="background:rgba(153,27,27,0.08);border-left:4px solid #991b1b;padding:13px 18px;"><span class="rb-label" style="color:#991b1b;font-size:13px;font-weight:700;letter-spacing:0.06em;">Recommended Dose</span><span class="rb-val" style="color:#991b1b;font-weight:700;font-size:20px;letter-spacing:0.04em;">Do not dose. Resume at lower dose when INR is therapeutic.</span></div><div class="rb-row" style="background:rgba(153,27,27,0.08);border-left:4px solid #991b1b;padding:13px 18px;"><span class="rb-label" style="color:#991b1b;font-size:13px;font-weight:700;letter-spacing:0.06em;">Action Required</span><span class="rb-val" style="color:#991b1b;font-weight:700;font-size:20px;letter-spacing:0.04em;">Hold warfarin . Vit K 2.5-5 mg PO . Monitor INR daily . Resume at lower dose when therapeutic</span></div><div class="rb-row"><span class="rb-label">Next INR Check</span><span class="rb-val">Recheck in 12-24 hours</span></div></div>
+    <div class="banner" id="m-banner"></div>
+    <div class="res-card" id="m-result">
+      <div class="res-head" id="m-res-head" style="background:#1e3a5f;"><span class="rh-title">Maintenance Adjustment</span><span class="rh-stamp" id="m-stamp"></span></div>
+      <div class="res-body" id="m-res-body"></div>
     </div>
 
     <button class="ref-toggle-btn" onclick="toggleRef(&#39;m-ref&#39;)">▾ Show Maintenance Reference Table</button>
@@ -1962,7 +1962,7 @@ td.gl{background:rgba(6,95,70,0.08);color:var(--green);font-weight:600;}
     </div>
   </div>
   <button class="btn btn-teal" onclick="calcDOAC()">Verify DOAC Dose →</button>
-  <div class="banner green show" id="doac-banner"><div class="bn-label">DOAC Dose Check</div><div class="bn-text" style="color:var(--ink);">Apixaban 5 mg BID. No renal adjustment required. Standard dose appropriate.</div></div>
+  <div class="banner" id="doac-banner"></div>
 
   <div class="info-card"><div class="ic-head">Perioperative Management</div>
       <div class="guideline-badge revised">KCHC Anticoagulation Policy · Updated: May 2025</div>
@@ -2628,12 +2628,12 @@ function genRec(){
   else if(s.ind === 'acs'){
     if(obese || extremeObese){
       agent = 'UFH IV (preferred for ACS in obese) or Enoxaparin with AdjBW dosing';
-      dose = 'UFH: AdjBW - 60 units/kg bolus (max 4,000 units for ACS reduced dose), 12 units/kg/hr (max 1,000 units/hr). Enoxaparin NSTEMI: 1 mg/kg Q12h ABW.';
+      dose = 'UFH: AdjBW - 60 units/kg bolus (max 5,000 units for ACS reduced dose), 12 units/kg/hr (max 1,000 units/hr). Enoxaparin NSTEMI: 1 mg/kg Q12h ABW.';
       monitor = 'Anti-Xa q6h for UFH (goal 0.3-0.7). CBC daily. SCr.';
-      warning = 'Obese patients: use AdjBW for UFH (IBW + 0.4 x [ABW - IBW]). Max bolus 10,000 units full dose / 4,000 units reduced dose.';
+      warning = 'Obese patients: use AdjBW for UFH (IBW + 0.4 x [ABW - IBW]). Max bolus 10,000 units full dose / 5,000 units reduced dose.';
     } else {
       agent = 'UFH IV (reduced dose for ACS) or Enoxaparin 1 mg/kg Q12h (NSTEMI)';
-      dose = 'UFH reduced: 60 units/kg bolus (max 4,000 units), 12 units/kg/hr (max 1,000 units/hr). Enoxaparin: 1 mg/kg Q12h ABW.';
+      dose = 'UFH reduced: 60 units/kg bolus (max 5,000 units), 12 units/kg/hr (max 1,000 units/hr). Enoxaparin: 1 mg/kg Q12h ABW.';
       monitor = 'Anti-Xa or aPTT q6h for UFH. Anti-Xa for enoxaparin if indicated.';
     }
     rec = 'Source: ' + source;
@@ -5337,7 +5337,39 @@ function calcLD(){const abw=v('ld-abw');const type=sel('ld-type');const sev=sel(
 
 function calcIHD(){const abw=v('ihd-abw');const level=v('ihd-level');const current=v('ihd-current')||0;if(isNaN(abw)||isNaN(level))return;const lo=capDose(roundTo(abw*7.5,250));const hi=capDose(roundTo(abw*10,250));let adj,cls,label,text;if(level<15){adj=current>0?capDose(roundTo(current+375,250)):capDose(roundTo(abw*8.75,250));cls='green';label='Subtherapeutic  -  Increase';text=`Level ${fmt(level)} mcg/mL &lt;15. Increase by 250-500 mg. Suggested: <strong>${adj} mg</strong> after HD.`;}else if(level<=25){adj=current>0?current:capDose(roundTo(abw*8.75,250));cls='blue';label='Therapeutic  -  No Change';text=`Level ${fmt(level)} mcg/mL within 15-25. Give <strong>${adj} mg</strong> after HD.`;}else if(level<=29){adj=Math.max(250,capDose(roundTo((current||capDose(roundTo(abw*8.75,250)))-375,250)));cls='amber';label='Elevated  -  Decrease Dose';text=`Level ${fmt(level)} mcg/mL is 26-29. Decrease by 250-500 mg. Suggested: <strong>${adj} mg</strong> after HD.`;}else{adj=0;cls='red';label='HOLD  -  Level >=30 mcg/mL';text=`Level ${fmt(level)} mcg/mL >=30. HOLD vancomycin. Recheck next session.`;}set('ihd-r-level',level,1);set('ihd-r-base',`${lo}-${hi}`,0);document.getElementById('ihd-r-adj').textContent=adj>0?adj+' mg':'HOLD';document.getElementById('ihd-stamp').textContent=stamp();show('ihd-res');setBanner('ihd-banner',cls,label,text);}
 
-function calcNonHD(){const abw=v('nhd-abw');const scr=v('nhd-scr');const age=v('nhd-age');const gender=v('nhd-gender');const inches=v('nhd-inches');const aki=sel('nhd-aki');const sev=sel('nhd-sev');if([abw,scr,age,gender,inches].some(isNaN))return;const ibw=gender===1?50+2.3*inches:45.5+2.3*inches;const wt=abw<ibw?abw:ibw;const crcl=(140-age)*wt/(72*scr)*gender;const mg=sev==='severe'?20:15;const dose=capDose(roundTo(abw*mg,250));let intv,cls,text;if(aki==='yes'||crcl<20){intv='One dose only';cls='red';text=`CrCl ${fmt(crcl)} mL/min or AKI. ONE dose <strong>${dose} mg</strong> IV STAT. Check random level 12-24h. Re-dose when &lt;20 mcg/mL.`;}else if(crcl>=80){intv='Q8-12h';cls='green';text=`CrCl ${fmt(crcl)} mL/min. Dose <strong>${dose} mg Q8-12h</strong>. Target ${sev==='severe'?'15-20':'10-15'} mcg/mL.`;}else if(crcl>=55){intv='Q12h';cls='blue';text=`CrCl ${fmt(crcl)} mL/min. Dose <strong>${dose} mg Q12h</strong>. Target ${sev==='severe'?'15-20':'10-15'} mcg/mL.`;}else{intv='Q12-24h';cls='amber';text=`CrCl ${fmt(crcl)} mL/min. Dose <strong>${dose} mg Q12-24h</strong>. Monitor closely.`;}set('nhd-r-crcl',crcl,1);set('nhd-r-dose',dose+' mg',0);document.getElementById('nhd-r-int').textContent=intv;document.getElementById('nhd-stamp').textContent=stamp();show('nhd-res');setBanner('nhd-banner',cls,'Dosing Recommendation',text);}
+function calcNonHD(){const abw=v('nhd-abw');const scr=v('nhd-scr');const age=v('nhd-age');const gender=v('nhd-gender');const inches=v('nhd-inches');const aki=sel('nhd-aki');const sev=sel('nhd-sev');if([abw,scr,age,gender,inches].some(isNaN))return;const ibw=gender===1?50+2.3*inches:45.5+2.3*inches;const adjbw=ibw+0.4*(abw-ibw);const wtForCrcl=abw<ibw?abw:(abw>1.3*ibw?adjbw:ibw);const crcl=(140-age)*wtForCrcl/(72*scr)*gender;const mg=sev==='severe'?20:15;const dose=capDose(roundTo(abw*mg,250));const wtLabel=abw<ibw?'ABW (underweight)':(abw>1.3*ibw?`AdjBW (ABW >${Math.round(1.3*ibw)} kg, >130% IBW)`:'IBW');// PK projection using Matzke equation
+  const ke=0.00083*crcl+0.00496;const thalf=0.693/ke;const inf=1;// assume 1hr infusion
+  let intv,intvHr,cls,text;if(aki==='yes'||crcl<20){intv='One dose only';intvHr=24;cls='red';text=`CrCl ${fmt(crcl)} mL/min or AKI. ONE dose <strong>${dose} mg</strong> IV STAT. Check random level 12-24h. Re-dose when &lt;20 mcg/mL.`;}else if(crcl>=80){intv='Q8-12h';intvHr=12;cls='green';text=`CrCl ${fmt(crcl)} mL/min (${wtLabel}). Dose <strong>${dose} mg Q8-12h</strong>. Target ${sev==='severe'?'15-20':'10-15'} mcg/mL.`;}else if(crcl>=55){intv='Q12h';intvHr=12;cls='blue';text=`CrCl ${fmt(crcl)} mL/min (${wtLabel}). Dose <strong>${dose} mg Q12h</strong>. Target ${sev==='severe'?'15-20':'10-15'} mcg/mL.`;}else{intv='Q12-24h';intvHr=24;cls='amber';text=`CrCl ${fmt(crcl)} mL/min (${wtLabel}). Dose <strong>${dose} mg Q12-24h</strong>. Monitor closely.`;}// Project steady-state Cmax and Cmin
+  const vd=0.7*abw;const cmax=(dose/inf)*(1-Math.exp(-ke*inf))/(ke*vd*(1-Math.exp(-ke*intvHr)));const cmin=cmax*Math.exp(-ke*(intvHr-inf));const tLo=sev==='severe'?15:10;const tHi=sev==='severe'?20:15;let troughCls='green',troughLabel='Projected Therapeutic';if(cmin>25){troughCls='red';troughLabel='Projected Supratherapeutic — HOLD';}else if(cmin>tHi){troughCls='amber';troughLabel='Projected Supratherapeutic';}else if(cmin<tLo){troughCls='blue';troughLabel='Projected Subtherapeutic';}set('nhd-r-crcl',crcl,1);set('nhd-r-dose',dose+' mg',0);document.getElementById('nhd-r-int').textContent=intv;document.getElementById('nhd-r-ke').textContent=ke.toFixed(4);document.getElementById('nhd-r-thalf').textContent=thalf.toFixed(1)+' hr';document.getElementById('nhd-r-cmax').textContent=fmt(cmax,1)+' mcg/mL';document.getElementById('nhd-r-cmin').textContent=fmt(cmin,1)+' mcg/mL';document.getElementById('nhd-r-cmin').style.color=troughCls==='green'?'#065f46':troughCls==='blue'?'#1e3a5f':troughCls==='amber'?'#92400e':'#991b1b';document.getElementById('nhd-r-wt').textContent=wtLabel;document.getElementById('nhd-stamp').textContent=stamp();show('nhd-res');setBanner('nhd-banner',cls,'Dosing Recommendation',text+` ${troughLabel}: projected trough <strong>${fmt(cmin,1)} mcg/mL</strong> (target ${tLo}-${tHi})`);// Store PK params for simulator
+  _nhdKe=ke;_nhdVd=vd;_nhdSev=sev;document.getElementById('nhd-sim-wrap').style.display='block';}
+
+// Store PK params for Non-HD simulator
+let _nhdKe=null,_nhdVd=null,_nhdSev=null;
+
+function simNonHD(){
+  if(_nhdKe===null||_nhdVd===null){setBanner('nhd-sim-banner','amber','Calculate First','Run the main calculator first to generate PK parameters.');return;}
+  const nd=v('nhd-nd');const ni=v('nhd-ni');const nf=v('nhd-nf');
+  if(isNaN(nd)||nd<=0){setBanner('nhd-sim-banner','amber','Missing Dose','Enter a proposed dose.');return;}
+  const ke=_nhdKe;const vd=_nhdVd;const sev=_nhdSev;
+  const cmax=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));
+  const cmin=cmax*Math.exp(-ke*(ni-nf));
+  const tLo=sev==='severe'?15:10;const tHi=sev==='severe'?20:15;
+  let cls='green',label='Projected Therapeutic';
+  if(cmin>25){cls='red';label='Projected Supratherapeutic — HOLD';}
+  else if(cmin>tHi){cls='amber';label='Projected Supratherapeutic';}
+  else if(cmin<tLo){cls='blue';label='Projected Subtherapeutic';}
+  const colorMap={green:'#065f46',blue:'#1e3a5f',amber:'#92400e',red:'#991b1b'};
+  const col=colorMap[cls];
+  document.getElementById('nhd-sim-dose').textContent=nd+' mg';
+  document.getElementById('nhd-sim-int').textContent='Q'+ni+'h';
+  document.getElementById('nhd-sim-cmax').textContent=fmt(cmax,1)+' mcg/mL';
+  document.getElementById('nhd-sim-cmin').textContent=fmt(cmin,1)+' mcg/mL';
+  document.getElementById('nhd-sim-cmin').style.color=col;
+  document.getElementById('nhd-sim-head').style.background=col;
+  document.getElementById('nhd-sim-stamp').textContent=stamp();
+  document.getElementById('nhd-sim-res').style.display='block';
+  setBanner('nhd-sim-banner',cls,label,`Proposed ${nd} mg Q${ni}h: Projected Cmax <strong>${fmt(cmax,1)}</strong> · Projected trough <strong>${fmt(cmin,1)} mcg/mL</strong> (target ${tLo}-${tHi} mcg/mL).`);
+}
 
 function calcCRRTVanco(){const abw=v('crrt-abw');const trough=v('crrt-trough');const sev=sel('crrt-sev');if(isNaN(abw))return;const lo=capDose(roundTo(abw*7.5,250));const hi=capDose(roundTo(abw*10,250));const sug=capDose(roundTo(abw*8.75,250));const target=sev==='severe'?'15-20':'10-15';const tLo=sev==='severe'?15:10;const tHi=sev==='severe'?20:15;set('crrt-r-range',`${lo}-${hi}`,0);set('crrt-r-dose',sug,0);set('crrt-r-target',target);document.getElementById('crrt-stamp').textContent=stamp();show('crrt-r');if(!trough||trough===0)setBanner('crrt-banner','blue','Initiating CRRT Vancomycin',`Starting dose <strong>${sug} mg IV Q12h</strong>. Range ${lo}-${hi} mg. Target ${target} mcg/mL.`);else if(trough>25)setBanner('crrt-banner','red','HOLD  -  Trough >25',`Trough ${fmt(trough)} mcg/mL. HOLD. Re-dose when &lt;20 mcg/mL.`);else if(trough>tHi)setBanner('crrt-banner','amber','Supratherapeutic',`Trough ${fmt(trough)} above ${target}. Reduce or extend to Q24h.`);else if(trough>=tLo)setBanner('crrt-banner','green','Therapeutic  -  Continue Q12h',`Trough ${fmt(trough)} within ${target}. Continue <strong>${sug} mg Q12h</strong>. Recheck q48-72h.`);else setBanner('crrt-banner','amber','Subtherapeutic',`Trough ${fmt(trough)} below ${target}. Increase to ${hi} mg Q12h.`);}
 const CRRT_DATA={cefepime:{cls:'blue',name:'Cefepime',std:'2g IV Q8-12h over 3h (extended infusion)',notes:'Extended infusion preferred. Incompatible Y-site with vancomycin.',mon:'Monitor for neurotoxicity in renally impaired.'},meropenem:{cls:'blue',name:'Meropenem',std:'1g IV Q8h (most) . 2g Q8h (CNS/resistant)',notes:'Extended infusion for resistant GNR.',mon:'Monitor seizures.'},pip_tazo:{cls:'blue',name:'Piperacillin/Tazobactam',std:'LD 4.5g, then 3.375-4.5g Q8h over 4h',notes:'INCOMPATIBLE Y-site with vancomycin.',mon:'Hypokalemia risk. Separate IV line from vancomycin.'},ceftazidime:{cls:'blue',name:'Ceftazidime',std:'2g IV Q8-12h',notes:'Q8h for Pseudomonas.',mon:'Neurotoxicity rare.'},ampicillin:{cls:'blue',name:'Ampicillin',std:'2g IV Q6-8h',notes:'Covers streptococci, enterococci, Listeria.',mon:'Monitor seizures at high doses.'},amp_sulbactam:{cls:'blue',name:'Ampicillin/Sulbactam',std:'3g IV Q8-12h',notes:'PD: 1.5g Q12h.',mon:'Monitor renal function.'},aztreonam:{cls:'teal',name:'Aztreonam',std:'CVVH: 2g Q12h . CVVHD: 2g load then 1g Q8h',notes:'Mode-specific  -  confirm CRRT modality.',mon:'Confirm CRRT mode at each order.'},ceftriaxone:{cls:'green',name:'Ceftriaxone',std:'1-2g Q24h  -  NO ADJUSTMENT',notes:'No dose adjustment for renal failure, HD, or CRRT.',mon:'None required.'},cefazolin:{cls:'blue',name:'Cefazolin',std:'2g load, then 1g Q8h',notes:'IHD: 1g Q24h. PD: 500mg Q12h.',mon:'Monitor seizures at high doses.'},ceftaroline:{cls:'purple',name:'Ceftaroline',std:'400-600mg IV Q12h',notes:'MRSA-active cephalosporin. IHD: 200mg Q12h.',mon:'Monitor CBC.'},ceftol_tazo:{cls:'purple',name:'Ceftolozane/Tazobactam',std:'1.5g IV Q8h',notes:'Reserved for MDR Pseudomonas. Consult ID.',mon:'Limited CRRT data.'},daptomycin:{cls:'purple',name:'Daptomycin',std:'4-6 mg/kg IV Q24h',notes:'DO NOT use for pneumonia (inactivated by surfactant).',mon:'CPK weekly.'},gentamicin:{cls:'amber',name:'Gentamicin',std:'2-3 mg/kg load, then 1.5-2.5 mg/kg Q24-48h',notes:'Re-dose when level &lt;2 mg/L.',mon:'Peak (5-10) and trough (&lt;2). Ototoxicity monitoring.'},amikacin:{cls:'amber',name:'Amikacin',std:'10 mg/kg load, then 7.5 mg/kg Q24-48h',notes:'Re-dose when level &lt;10 mg/L.',mon:'Peak (20-35) and trough (&lt;8). Ototoxicity monitoring.'},levofloxacin:{cls:'teal',name:'Levofloxacin',std:'750mg x1, then 500mg Q24h OR 750mg Q48h',notes:'IHD: 750mg x1 then 500mg Q48h.',mon:'QTc monitoring.'},fluconazole:{cls:'teal',name:'Fluconazole',std:'400-1200mg IV Q24h',notes:'IHD: full dose after HD only.',mon:'Liver function tests. Drug interactions.'},acyclovir:{cls:'purple',name:'Acyclovir (CNS)',std:'10 mg/kg Q12-24h',notes:'IHD: 5 mg/kg Q24h.',mon:'Nephrotoxicity  -  ensure adequate hydration.'},tmp_smx:{cls:'teal',name:'TMP/SMX',std:'No adjustment on CRRT',notes:'IHD: 5 mg/kg Q24h.',mon:'Monitor potassium, CBC.'}};
@@ -5352,9 +5384,39 @@ function getAGTargets(){const drug=document.getElementById('ag-drug')?sel('ag-dr
 
 function agBanner(id,cmax,cmin){const t=getAGTargets();if(cmin>=t.troughHi)setBanner(id,'red',`${t.label}  -  Trough Too High`,`Projected Cmin ${fmt(cmin,1)} >= ${t.troughHi} mcg/mL. Extend interval or reduce dose.`);else if(cmax>t.peakHi)setBanner(id,'amber',`${t.label}  -  Peak Supratherapeutic`,`Projected Cmax ${fmt(cmax,1)} above ${t.peakLo}-${t.peakHi} mcg/mL. Reduce dose.`);else if(cmax<t.peakLo)setBanner(id,'amber',`${t.label}  -  Peak Subtherapeutic`,`Projected Cmax ${fmt(cmax,1)} below ${t.peakLo}-${t.peakHi} mcg/mL. Increase dose.`);else setBanner(id,'green',`${t.label}  -  Therapeutic Range`,`Projected Cmax ${fmt(cmax,1)} within ${t.peakLo}-${t.peakHi}. Trough ${fmt(cmin,1)} &lt; ${t.troughHi} mcg/mL. Continue.`);}
 
-function calcTrough(){const scr=v('t-scr'),age=v('t-age'),gender=v('t-gender'),inches=v('t-inches'),trough=v('t-trough'),tc=v('t-tc')||0,dose=v('t-dose'),intv=v('t-int'),inf=v('t-inf'),nd=v('t-nd'),ni=v('t-ni'),nf=v('t-nf'),sev=sel('t-sev');if([scr,age,gender,inches,trough,dose,intv,inf].some(isNaN))return;const ibw=gender===1?50+2.3*inches:45.5+2.3*inches;const crcl=(140-age)*ibw/(72*scr)*gender;const ke=0.00083*crcl+0.00496;const thalf=0.693/ke;const trueTrough=trough*Math.exp(-ke*tc);const cmax=trueTrough/Math.exp(-ke*(intv-inf));const vd=(dose/inf)*(1-Math.exp(-ke*inf))/(ke*(cmax-trueTrough*Math.exp(-ke*inf)));set('t-r-crcl',crcl,1);set('t-r-ke',ke,4);set('t-r-thalf',thalf,1);set('t-r-vd',vd,1);set('t-r-cmax',cmax,1);set('t-r-cmin',trueTrough,1);set('t-r-ibw',ibw,1);document.getElementById('t-stamp').textContent=stamp();show('t-res');vancoBanner('t-ban',trueTrough,cmax,sev);if(![nd,ni,nf].some(isNaN)){const cmaxN=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));const cminN=cmaxN*Math.exp(-ke*(ni-nf));set('t-r-ncmax',cmaxN,1);set('t-r-ncmin',cminN,1);show('t-nres');vancoBanner('t-nban',cminN,cmaxN,sev);}}
+function calcTrough(){const scr=v('t-scr'),age=v('t-age'),gender=v('t-gender'),inches=v('t-inches'),trough=v('t-trough'),abwRaw=v('t-abw'),tc=v('t-tc')||0,dose=v('t-dose'),intv=v('t-int'),inf=v('t-inf'),nd=v('t-nd'),ni=v('t-ni'),nf=v('t-nf'),sev=sel('t-sev');if([scr,age,gender,inches,trough,dose,intv,inf].some(isNaN))return;if(isNaN(abwRaw)){setBanner('t-ban','amber','Missing Weight','Actual Body Weight is required for accurate CrCl and AdjBW calculation.');return;}const ibw=gender===1?50+2.3*inches:45.5+2.3*inches;const abw=abwRaw;const adjbw=ibw+0.4*(abw-ibw);const wtForCrcl=abw<ibw?abw:(abw>1.3*ibw?adjbw:ibw);const crcl=(140-age)*wtForCrcl/(72*scr)*gender;const ke=0.00083*crcl+0.00496;const thalf=0.693/ke;const trueTrough=trough*Math.exp(-ke*tc);const cmax=trueTrough/Math.exp(-ke*(intv-inf));const vd=(dose/inf)*(1-Math.exp(-ke*inf))/(ke*(cmax-trueTrough*Math.exp(-ke*inf)));set('t-r-crcl',crcl,1);set('t-r-ke',ke,4);set('t-r-thalf',thalf,1);set('t-r-vd',vd,1);set('t-r-cmax',cmax,1);set('t-r-cmin',trueTrough,1);set('t-r-ibw',ibw,1);document.getElementById('t-stamp').textContent=stamp();show('t-res');vancoBanner('t-ban',trueTrough,cmax,sev);if(![nd,ni,nf].some(isNaN)){const cmaxN=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));const cminN=cmaxN*Math.exp(-ke*(ni-nf));set('t-r-ncmax',cmaxN,1);set('t-r-ncmin',cminN,1);show('t-nres');vancoBanner('t-nban',cminN,cmaxN,sev);}}
 
-function calcPK(){const peak=v('pk-peak'),trough=v('pk-trough'),t1=v('pk-t1'),t2=v('pk-t2'),dose=v('pk-dose'),intv=v('pk-int'),inf=v('pk-inf'),cmaxd=v('pk-cmaxd'),sev=sel('pk-sev');if([peak,trough,t1,t2,dose,intv,inf].some(isNaN))return;const ke=Math.log(peak/trough)/(t2-t1);const thalf=0.693/ke;const cmax=peak*Math.exp(ke*t1);const cmin=cmax*Math.exp(-ke*(intv-inf));const vd=(dose/inf)*(1-Math.exp(-ke*inf))/(ke*(cmax-cmin*Math.exp(-ke*inf)));const ndCalc=cmaxd*ke*vd*(1-Math.exp(-ke*intv))/(1-Math.exp(-ke*inf));set('pk-r-ke',ke,4);set('pk-r-thalf',thalf,1);set('pk-r-vd',vd,1);set('pk-r-cmax',cmax,1);set('pk-r-cmin',cmin,1);set('pk-r-ndose',ndCalc,0);document.getElementById('pk-stamp').textContent=stamp();show('pk-res');document.getElementById('pk-div').style.display='';document.getElementById('pk-nform').style.display='';document.getElementById('pk-sbtn').style.display='';document.getElementById('pk-ni').value=Math.round((2*thalf)/4)*4;document.getElementById('pk-nd').value=roundTo(ndCalc,250);const ni=v('pk-ni'),nd=v('pk-nd'),nf=v('pk-nf');if(![ni,nd,nf].some(isNaN)){const cmaxN=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));const cminN=cmaxN*Math.exp(-ke*(ni-nf));set('pk-r-ncmax',cmaxN,1);set('pk-r-ncmin',cminN,1);set('pk-r-nint',ni,0);show('pk-nres');vancoBanner('pk-ban',cminN,cmaxN,sev);}}
+function calcPK(){const peak=v('pk-peak'),trough=v('pk-trough'),t1=v('pk-t1'),t2=v('pk-t2'),dose=v('pk-dose'),intv=v('pk-int'),inf=v('pk-inf'),cmaxd=v('pk-cmaxd'),sev=sel('pk-sev');if([peak,trough,t1,t2,dose,intv,inf].some(isNaN))return;const ke=Math.log(peak/trough)/(t2-t1);const thalf=0.693/ke;const cmax=peak*Math.exp(ke*t1);const cmin=cmax*Math.exp(-ke*(intv-inf));const vd=(dose/inf)*(1-Math.exp(-ke*inf))/(ke*(cmax-cmin*Math.exp(-ke*inf)));const ndCalc=cmaxd*ke*vd*(1-Math.exp(-ke*intv))/(1-Math.exp(-ke*inf));set('pk-r-ke',ke,4);set('pk-r-thalf',thalf,1);set('pk-r-vd',vd,1);set('pk-r-cmax',cmax,1);set('pk-r-cmin',cmin,1);set('pk-r-ndose',ndCalc,0);document.getElementById('pk-stamp').textContent=stamp();show('pk-res');document.getElementById('pk-div').style.display='';document.getElementById('pk-nform').style.display='';_pkKe=ke;_pkVd=vd;_pkSev=sev;// Set suggested interval to nearest valid option
+  const validIntvs=[6,8,12,18,24];
+  const suggestedIntv=2*thalf;
+  const closestIntv=validIntvs.reduce((a,b)=>Math.abs(b-suggestedIntv)<Math.abs(a-suggestedIntv)?b:a);
+  // Recalculate recommended dose using the suggested interval, not the old one
+  const ndCalcNew=cmaxd*ke*vd*(1-Math.exp(-ke*closestIntv))/(1-Math.exp(-ke*inf));
+  document.getElementById('pk-ni').value=closestIntv;
+  document.getElementById('pk-nd').value=roundTo(ndCalcNew,250);
+  const ni=v('pk-ni'),nd=v('pk-nd'),nf=v('pk-nf');
+  if(![ni,nd,nf].some(isNaN)){
+    const cmaxN=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));
+    const cminN=cmaxN*Math.exp(-ke*(ni-nf));
+    set('pk-r-ncmax',cmaxN,1);set('pk-r-ncmin',cminN,1);set('pk-r-nint',ni,0);
+    show('pk-nres');vancoBanner('pk-ban',cminN,cmaxN,sev);
+  }
+}
+
+// Store PK params for re-simulation
+let _pkKe=null,_pkVd=null,_pkSev=null;
+
+function reSimPK(){
+  if(_pkKe===null||_pkVd===null){setBanner('pk-ban','amber','Calculate First','Run the main PK calculation first.');return;}
+  const nd=v('pk-nd'),ni=v('pk-ni'),nf=v('pk-nf'),sev=_pkSev;
+  if(isNaN(nd)||nd<=0){setBanner('pk-ban','amber','Missing Dose','Enter a proposed dose.');return;}
+  const ke=_pkKe,vd=_pkVd;
+  const cmaxN=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));
+  const cminN=cmaxN*Math.exp(-ke*(ni-nf));
+  set('pk-r-ncmax',cmaxN,1);set('pk-r-ncmin',cminN,1);set('pk-r-nint',ni,0);
+  show('pk-nres');
+  vancoBanner('pk-ban',cminN,cmaxN,sev);
+}
 
 function calcAG(){const peak=v('ag-peak'),trough=v('ag-trough'),t1=v('ag-t1'),t2=v('ag-t2'),dose=v('ag-dose'),intv=v('ag-int'),inf=v('ag-inf'),cmaxd=v('ag-cmaxd');if([peak,trough,t1,t2,dose,intv,inf].some(isNaN))return;const ke=Math.log(peak/trough)/(t2-t1);const thalf=0.693/ke;const cmax=peak*Math.exp(ke*t1);const cmin=cmax*Math.exp(-ke*(intv-inf));const vd=(dose/inf)*(1-Math.exp(-ke*inf))/(ke*(cmax-cmin*Math.exp(-ke*inf)));const ndCalc=cmaxd*ke*vd*(1-Math.exp(-ke*intv))/(1-Math.exp(-ke*inf));set('ag-r-ke',ke,4);set('ag-r-thalf',thalf,1);set('ag-r-vd',vd,1);set('ag-r-cmax',cmax,1);set('ag-r-cmin',cmin,1);set('ag-r-ndose',ndCalc,0);document.getElementById('ag-stamp').textContent=stamp();show('ag-res');document.getElementById('ag-div').style.display='';document.getElementById('ag-nform').style.display='';document.getElementById('ag-sbtn').style.display='';document.getElementById('ag-ni').value=Math.round((2.5*thalf)/4)*4;document.getElementById('ag-nd').value=roundTo(ndCalc,10);const ni=v('ag-ni'),nd=v('ag-nd'),nf=v('ag-nf');if(![ni,nd,nf].some(isNaN)){const cmaxN=(nd/nf)*(1-Math.exp(-ke*nf))/(ke*vd*(1-Math.exp(-ke*ni)));const cminN=cmaxN*Math.exp(-ke*(ni-nf));set('ag-r-ncmax',cmaxN,1);set('ag-r-ncmin',cminN,1);set('ag-r-nint',ni,0);show('ag-nres');agBanner('ag-ban',cmaxN,cminN);}}
 
@@ -5372,7 +5434,9 @@ function minsToHrs(mins){return Math.round(mins/60*10)/10;}
 
 function calcTimeCorrection(prefix){const trueEl=document.getElementById(`${prefix}-tc-true`);const drawnEl=document.getElementById(`${prefix}-tc-drawn`);const nextEl=document.getElementById(`${prefix}-tc-nextday`);const resEl=document.getElementById(`${prefix}-tc-result`);if(!trueEl||!drawnEl)return;const trueMins=timeToMins(trueEl.value);const drawnMins=timeToMins(drawnEl.value);if(trueMins===null||drawnMins===null)return;const nextDayMins=parseInt(nextEl?nextEl.value:0)*1440;const diffMins=trueMins-(drawnMins+nextDayMins);const diffHrs=minsToHrs(diffMins);const hiddenEl=document.getElementById(`${prefix}-tc`);if(hiddenEl)hiddenEl.value=diffHrs;if(resEl){resEl.style.display='block';let direction,note;if(diffHrs>0){direction=`Level drawn ${Math.abs(diffHrs)}h BEFORE true trough`;note=`Correction: +${diffHrs} -> true trough is LOWER than drawn level`;}else if(diffHrs<0){direction=`Level drawn ${Math.abs(diffHrs)}h AFTER true trough`;note=`Correction: ${diffHrs} -> true trough was HIGHER than drawn level`;}else{direction=`Level drawn exactly at true trough time`;note=`Correction: 0  -  no adjustment needed`;}resEl.innerHTML=`<strong>${direction}</strong><br>${note}`;}}
 
-function calcTimeDiff(endId,drawnId,nextId,resultId,hiddenId){const endEl=document.getElementById(endId);const drawnEl=document.getElementById(drawnId);const nextEl=document.getElementById(nextId);const resEl=document.getElementById(resultId);if(!endEl||!drawnEl)return;const endMins=timeToMins(endEl.value);const drawnMins=timeToMins(drawnEl.value);if(endMins===null||drawnMins===null)return;const nextDayMins=parseInt(nextEl?nextEl.value:0)*1440;const diffMins=(drawnMins+nextDayMins)-endMins;const diffHrs=minsToHrs(Math.max(0,diffMins));const hiddenEl=document.getElementById(hiddenId);if(hiddenEl)hiddenEl.value=diffHrs;if(resEl){resEl.style.display='block';resEl.innerHTML=`<strong>Time elapsed: ${diffHrs} hours</strong> between infusion end and level draw.`;}}
+function calcTimeDiff(endId,drawnId,nextId,resultId,hiddenId){const endEl=document.getElementById(endId);const drawnEl=document.getElementById(drawnId);const nextEl=document.getElementById(nextId);const resEl=document.getElementById(resultId);if(!endEl||!drawnEl)return;const endMins=timeToMins(endEl.value);const drawnMins=timeToMins(drawnEl.value);if(endMins===null||drawnMins===null)return;const nextDayVal=nextEl?Number(nextEl.value)||0:0;const nextDayMins=nextDayVal*1440;let diffMins=(drawnMins+nextDayMins)-endMins;// If result is negative and no next-day selected, likely crosses midnight — auto-add 1 day
+  if(diffMins<0&&nextDayVal===0){diffMins+=1440;}const diffHrs=minsToHrs(Math.max(0,diffMins));const hiddenEl=document.getElementById(hiddenId);if(hiddenEl){hiddenEl.value=diffHrs;// Force a DOM event so calcPK sees the updated value
+    hiddenEl.dispatchEvent(new Event('change'));}if(resEl){resEl.style.display='block';const warn=diffHrs<0.5?'<span style="color:#991b1b;"> ⚠ Very short interval — check times</span>':'';resEl.innerHTML=`<strong>Time elapsed: ${diffHrs} hours</strong> between infusion end and level draw.${warn}`;}};
 
 function calcPKTimes(){calcTimeDiff('pk-t1-end','pk-t1-drawn','pk-t1-next','pk-t1-result','pk-t1');calcTimeDiff('pk-t2-end','pk-t2-drawn','pk-t2-next','pk-t2-result','pk-t2');}
 const USAGE_KEY='kchc_qa_usage_v1';
@@ -11499,11 +11563,11 @@ function amGenRec(){
 
 <div class="section" id="sec-9" style="scroll-margin-top: 194px;">
   <div class="mod-nav">
-    <button class="mnav-btn active" data-section="9" data-pane="0" onclick="goTo(9,0)">PK — Trough Only</button>
-    <button class="mnav-btn" data-section="9" data-pane="1" onclick="goTo(9,1)">PK — Peak+Trough</button>
     <button class="mnav-btn" data-section="9" data-pane="3" onclick="goTo(9,3)">Loading Dose</button>
-    <button class="mnav-btn" data-section="9" data-pane="4" onclick="goTo(9,4)">IHD Maintenance</button>
     <button class="mnav-btn" data-section="9" data-pane="5" onclick="goTo(9,5)">Non-HD Dosing</button>
+    <button class="mnav-btn" data-section="9" data-pane="0" onclick="goTo(9,0)">Trough Only</button>
+    <button class="mnav-btn active" data-section="9" data-pane="1" onclick="goTo(9,1)">Peak + Trough</button>
+    <button class="mnav-btn" data-section="9" data-pane="4" onclick="goTo(9,4)">IHD Maintenance</button>
     <button class="mnav-btn" data-section="9" data-pane="6" onclick="goTo(9,6)">CRRT Dosing</button>
     <button class="mnav-btn" data-section="9" data-pane="7" onclick="goTo(9,7)">Antibiotic Lock</button>
     <button class="mnav-btn" data-section="9" data-pane="8" onclick="goTo(9,8)">C. diff Treatment</button>
@@ -11511,7 +11575,7 @@ function amGenRec(){
   </div>
   <div class="main" style="scroll-margin-top: 194px;">
 
-  <div class="pane active" id="s9p0">
+  <div class="pane" id="s9p0">
     <div class="sec-title">PK — Trough Only</div>
     <div class="sec-sub">One-Compartment · Cockcroft-Gault · Matzke Ke · New Dose Simulator</div>
     <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Oct 2020</div>
@@ -11572,6 +11636,7 @@ function amGenRec(){
         <div class="field"><label>Gender</label><select id="t-gender"><option value="1">Male</option><option value="0.85">Female</option></select></div>
         <div class="field"><label>Inches over 5 feet</label><input type="number" id="t-inches" value="5" step="1" min="0"></div>
         <div class="field"><label>Drawn Trough (mcg/mL)</label><input type="number" id="t-trough" value="24.3" step="0.1" min="0"></div>
+        <div class="field"><label>Actual Body Weight (kg)</label><input type="number" id="t-abw" step="0.1" min="1" placeholder="e.g. 80"><div class="field-hint">Required for CrCl · AdjBW applied if ABW &gt;130% IBW per KCHC threshold</div></div>
         <div class="field full" style="border-right:none;">
           <label>Time Correction — Enter Clock Times</label>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:4px;">
@@ -11605,7 +11670,7 @@ function amGenRec(){
     <button class="print-btn" onclick="window.print()">⎙ Print</button>
   </div>
 
-  <div class="pane" id="s9p1">
+  <div class="pane active" id="s9p1">
     <div class="sec-title">PK — Peak + Trough</div>
     <div class="sec-sub">Two-Level Method · Patient-Specific Ke · Individualized Dosing</div>
     <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Oct 2020</div>
@@ -11624,8 +11689,8 @@ function amGenRec(){
             <div><div style="font-family:monospace,monospace;font-size:9px;color:var(--muted);margin-bottom:4px;">Peak Drawn</div><input type="time" id="pk-t1-drawn" style="width:100%;padding:7px 10px;border:1px solid var(--border-d);border-radius:4px;font-family:monospace,monospace;font-size:14px;" oninput="calcPKTimes()"></div>
             <div><div style="font-family:monospace,monospace;font-size:9px;color:var(--muted);margin-bottom:4px;">Next Day?</div><select id="pk-t1-next" onchange="calcPKTimes()" style="width:100%;padding:7px 10px;border:1px solid var(--border-d);border-radius:4px;font-family:monospace,monospace;font-size:14px;"><option value="0">Same day</option><option value="1">+1 day</option></select></div>
           </div>
-          <div id="pk-t1-result" style="margin-top:6px;font-family:monospace,monospace;font-size:12px;color:var(--clinical);background:var(--clinical-pale);border-radius:4px;padding:7px 10px;display:none;"></div>
-          <input type="hidden" id="pk-t1" value="7">
+          <div id="pk-t1-result" style="margin-top: 6px; font-family: monospace, monospace; font-size: 12px; color: var(--clinical); background: var(--clinical-pale); border-radius: 4px; padding: 7px 10px; display: block;"><strong>Time elapsed: 1 hours</strong> between infusion end and level draw.</div>
+          <input type="hidden" id="pk-t1" value="1">
         </div>
         <div class="field full" style="border-right:none;">
           <label>t2 — End Previous Infusion → Trough Draw</label>
@@ -11634,8 +11699,8 @@ function amGenRec(){
             <div><div style="font-family:monospace,monospace;font-size:9px;color:var(--muted);margin-bottom:4px;">Trough Drawn</div><input type="time" id="pk-t2-drawn" style="width:100%;padding:7px 10px;border:1px solid var(--border-d);border-radius:4px;font-family:monospace,monospace;font-size:14px;" oninput="calcPKTimes()"></div>
             <div><div style="font-family:monospace,monospace;font-size:9px;color:var(--muted);margin-bottom:4px;">Next Day?</div><select id="pk-t2-next" onchange="calcPKTimes()" style="width:100%;padding:7px 10px;border:1px solid var(--border-d);border-radius:4px;font-family:monospace,monospace;font-size:14px;"><option value="0">Same day</option><option value="1">+1 day</option></select></div>
           </div>
-          <div id="pk-t2-result" style="margin-top:6px;font-family:monospace,monospace;font-size:12px;color:var(--clinical);background:var(--clinical-pale);border-radius:4px;padding:7px 10px;display:none;"></div>
-          <input type="hidden" id="pk-t2" value="17">
+          <div id="pk-t2-result" style="margin-top: 6px; font-family: monospace, monospace; font-size: 12px; color: var(--clinical); background: var(--clinical-pale); border-radius: 4px; padding: 7px 10px; display: block;"><strong>Time elapsed: 8.8 hours</strong> between infusion end and level draw.</div>
+          <input type="hidden" id="pk-t2" value="8.8">
         </div>
         <div class="field"><label>Current Dose (mg)</label><input type="number" id="pk-dose" value="1250" step="250" min="250"></div>
         <div class="field"><label>Dosing Interval</label><select id="pk-int"><option value="6">Q6h</option><option value="8" selected="">Q8h</option><option value="12">Q12h</option><option value="18">Q18h</option><option value="24">Q24h</option></select></div>
@@ -11644,18 +11709,18 @@ function amGenRec(){
       </div>
     </div>
     <button class="btn btn-clinical" onclick="calcPK()">CALCULATE PATIENT-SPECIFIC PK</button>
-    <div class="res-card" id="pk-res"><div class="res-head" style="background:#1e3a5f"><div class="rh-title">Patient-Specific PK</div><div class="rh-stamp" id="pk-stamp"></div></div><div class="res-grid"><div class="ri"><div class="ri-label">Ke</div><div class="ri-value" id="pk-r-ke" style="color:#1e3a5f">—</div><div class="ri-unit">hr⁻¹</div></div><div class="ri"><div class="ri-label">t½</div><div class="ri-value" id="pk-r-thalf" style="color:#1e3a5f">—</div><div class="ri-unit">hours</div></div><div class="ri"><div class="ri-label">Vd</div><div class="ri-value" id="pk-r-vd" style="color:#1e3a5f">—</div><div class="ri-unit">liters</div></div><div class="ri"><div class="ri-label">Cmax (true)</div><div class="ri-value" id="pk-r-cmax" style="color:#1e3a5f">—</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">Cmin (true)</div><div class="ri-value" id="pk-r-cmin" style="color:#1e3a5f">—</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">Calc New Dose</div><div class="ri-value" id="pk-r-ndose" style="color:#1e3a5f;font-size:18px;padding-top:4px">—</div><div class="ri-unit">mg → round 250</div></div></div></div>
-    <div class="divider" id="pk-div" style="display:none"><div class="div-line"></div><div class="div-label">New Regimen</div><div class="div-line"></div></div>
-    <div class="fc" id="pk-nform" style="display:none"><div class="fc-head"><div class="fc-title">Proposed New Regimen</div></div>
+    <div class="res-card show" id="pk-res"><div class="res-head" style="background:#1e3a5f"><div class="rh-title">Patient-Specific PK</div><div class="rh-stamp" id="pk-stamp">Apr 5, 2026 09:39 PM</div></div><div class="res-grid"><div class="ri"><div class="ri-label">Ke</div><div class="ri-value" id="pk-r-ke" style="color:#1e3a5f">0.0452</div><div class="ri-unit">hr⁻¹</div></div><div class="ri"><div class="ri-label">t½</div><div class="ri-value" id="pk-r-thalf" style="color:#1e3a5f">15.3</div><div class="ri-unit">hours</div></div><div class="ri"><div class="ri-label">Vd</div><div class="ri-value" id="pk-r-vd" style="color:#1e3a5f">102.8</div><div class="ri-unit">liters</div></div><div class="ri"><div class="ri-label">Cmax (true)</div><div class="ri-value" id="pk-r-cmax" style="color:#1e3a5f">38.7</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">Cmin (true)</div><div class="ri-value" id="pk-r-cmin" style="color:#1e3a5f">28.9</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">Calc New Dose</div><div class="ri-value" id="pk-r-ndose" style="color:#1e3a5f;font-size:18px;padding-top:4px">753</div><div class="ri-unit">mg → round 250</div></div></div></div>
+    <div class="divider" id="pk-div" style=""><div class="div-line"></div><div class="div-label">New Regimen</div><div class="div-line"></div></div>
+    <div class="fc" id="pk-nform" style=""><div class="fc-head"><div class="fc-title">Proposed New Regimen</div></div>
       <div class="fg">
         <div class="field"><label>New Interval</label><select id="pk-ni"><option value="6">Q6h</option><option value="8">Q8h</option><option value="12" selected="">Q12h</option><option value="18">Q18h</option><option value="24">Q24h</option></select></div>
         <div class="field"><label>New Dose (mg)</label><input type="number" id="pk-nd" value="1250" step="250" min="250"></div>
         <div class="field full" style="border-right:none;"><label>New Infusion Length</label><select id="pk-nf"><option value="1">1 hour</option><option value="1.5" selected="">1.5 hours</option><option value="2">2 hours</option></select></div>
       </div>
     </div>
-    <button class="btn btn-green" id="pk-sbtn" onclick="calcPK()" style="display:none">SIMULATE</button>
-    <div class="res-card" id="pk-nres"><div class="res-head" style="background:#065f46"><div class="rh-title">Projected Steady-State</div><div class="rh-stamp"></div></div><div class="res-grid"><div class="ri"><div class="ri-label">Cmax ss</div><div class="ri-value" id="pk-r-ncmax" style="color:#065f46">—</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">Cmin ss</div><div class="ri-value" id="pk-r-ncmin" style="color:#065f46">—</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">New Interval</div><div class="ri-value" id="pk-r-nint" style="color:#065f46">—</div><div class="ri-unit">hours</div></div></div></div>
-    <div class="banner" id="pk-ban" style="margin-top:12px"></div>
+    <button class="btn btn-green" onclick="reSimPK()" style="margin-top:8px;">Re-Simulate Regimen →</button>
+    <div class="res-card show" id="pk-nres"><div class="res-head" style="background:#065f46"><div class="rh-title">Projected Steady-State</div><div class="rh-stamp"></div></div><div class="res-grid"><div class="ri"><div class="ri-label">Cmax ss</div><div class="ri-value" id="pk-r-ncmax" style="color:#065f46">22.4</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">Cmin ss</div><div class="ri-value" id="pk-r-ncmin" style="color:#065f46">14.0</div><div class="ri-unit">mcg/mL</div></div><div class="ri"><div class="ri-label">New Interval</div><div class="ri-value" id="pk-r-nint" style="color:#065f46">12</div><div class="ri-unit">hours</div></div></div></div>
+    <div class="banner amber show" id="pk-ban" style="margin-top:12px"><div class="bn-label">Subtherapeutic</div><div class="bn-text" style="color:var(--ink);">Projected Cmin 14.0 mcg/mL below target 15-20 mcg/mL. Increase dose or <span style="color:#92400e;font-weight:700;font-size:15px;"><span style="color:#92400e;font-weight:700;font-size:15px;">reduce</span></span> interval.</div></div>
     <button class="print-btn" onclick="window.print()">⎙ Print</button>
   </div>
 
@@ -11714,8 +11779,27 @@ function amGenRec(){
       </div>
     </div>
     <button class="btn btn-green" onclick="calcNonHD()">CALCULATE DOSE + INTERVAL</button>
-    <div class="res-card" id="nhd-res"><div class="res-head" style="background:#065f46"><div class="rh-title">Non-HD Dosing</div><div class="rh-stamp" id="nhd-stamp"></div></div><div class="res-grid"><div class="ri"><div class="ri-label">CrCl</div><div class="ri-value" id="nhd-r-crcl" style="color:#065f46">—</div><div class="ri-unit">mL/min</div></div><div class="ri"><div class="ri-label">Dose</div><div class="ri-value" id="nhd-r-dose" style="color:#065f46;font-size:18px;padding-top:4px">—</div><div class="ri-unit">mg</div></div><div class="ri"><div class="ri-label">Interval</div><div class="ri-value" id="nhd-r-int" style="color:#065f46;font-size:18px;padding-top:4px">—</div><div class="ri-unit">hours</div></div></div></div>
+    <div class="res-card" id="nhd-res"><div class="res-head" style="background:#065f46"><div class="rh-title">Non-HD Dosing + PK Projection</div><div class="rh-stamp" id="nhd-stamp"></div></div><div class="res-grid"><div class="ri"><div class="ri-label">CrCl</div><div class="ri-value" id="nhd-r-crcl" style="color:#065f46">—</div><div class="ri-unit">mL/min</div></div><div class="ri"><div class="ri-label">Weight Used</div><div class="ri-value" id="nhd-r-wt" style="color:#065f46;font-size:13px;padding-top:4px">—</div><div class="ri-unit"></div></div><div class="ri"><div class="ri-label">Dose</div><div class="ri-value" id="nhd-r-dose" style="color:#065f46;font-size:18px;padding-top:4px">—</div><div class="ri-unit">mg</div></div><div class="ri"><div class="ri-label">Interval</div><div class="ri-value" id="nhd-r-int" style="color:#065f46;font-size:18px;padding-top:4px">—</div><div class="ri-unit">hours</div></div><div class="ri"><div class="ri-label">Ke</div><div class="ri-value" id="nhd-r-ke" style="color:#065f46">—</div><div class="ri-unit">hr⁻¹</div></div><div class="ri"><div class="ri-label">t½</div><div class="ri-value" id="nhd-r-thalf" style="color:#065f46">—</div><div class="ri-unit"></div></div><div class="ri"><div class="ri-label">Projected Cmax</div><div class="ri-value" id="nhd-r-cmax" style="color:#065f46">—</div><div class="ri-unit"></div></div><div class="ri"><div class="ri-label">Projected Trough</div><div class="ri-value" id="nhd-r-cmin" style="color:#065f46;font-size:18px;font-weight:700;padding-top:4px">—</div><div class="ri-unit">mcg/mL</div></div></div></div>
     <div class="banner" id="nhd-banner"></div>
+    <div class="fc" id="nhd-sim-wrap" style="display:none;margin-top:16px;">
+      <div class="fc-head"><div class="fc-title">Simulate My Regimen</div><div class="fc-note">Enter any dose and interval — projects Cmax and trough using calculated PK</div></div>
+      <div class="fg">
+        <div class="field"><label>Proposed Dose (mg)</label><input type="number" id="nhd-nd" step="250" min="250" placeholder="e.g. 1500"><div class="field-hint">Enter the dose you want to trial</div></div>
+        <div class="field"><label>Proposed Interval</label><select id="nhd-ni"><option value="6">Q6h</option><option value="8">Q8h</option><option value="12" selected="">Q12h</option><option value="18">Q18h</option><option value="24">Q24h</option></select></div>
+        <div class="field"><label>Infusion Length</label><select id="nhd-nf"><option value="1" selected="">1 hour</option><option value="1.5">1.5 hours</option><option value="2">2 hours</option></select></div>
+      </div>
+      <button class="btn btn-green" onclick="simNonHD()" style="margin-top:8px;">Simulate Regimen →</button>
+      <div class="res-card show" id="nhd-sim-res" style="display:none;margin-top:12px;">
+        <div class="res-head" id="nhd-sim-head" style="background:#065f46"><div class="rh-title">Simulated Regimen</div><div class="rh-stamp" id="nhd-sim-stamp"></div></div>
+        <div class="res-grid">
+          <div class="ri"><div class="ri-label">Proposed Dose</div><div class="ri-value" id="nhd-sim-dose" style="color:#065f46;font-size:18px;">—</div><div class="ri-unit">mg</div></div>
+          <div class="ri"><div class="ri-label">Interval</div><div class="ri-value" id="nhd-sim-int" style="color:#065f46;font-size:18px;">—</div><div class="ri-unit"></div></div>
+          <div class="ri"><div class="ri-label">Projected Cmax</div><div class="ri-value" id="nhd-sim-cmax" style="color:#065f46;">—</div><div class="ri-unit">mcg/mL</div></div>
+          <div class="ri"><div class="ri-label">Projected Trough</div><div class="ri-value" id="nhd-sim-cmin" style="color:#065f46;font-size:18px;font-weight:700;">—</div><div class="ri-unit">mcg/mL</div></div>
+        </div>
+      </div>
+      <div class="banner" id="nhd-sim-banner"></div>
+    </div>
     <table class="tbl" style="margin-top:20px"><thead><tr><th>CrCl</th><th>Interval</th><th>Notes</th></tr></thead><tbody><tr><td>&gt;80 mL/min</td><td class="dose">Q8–12h</td><td>Standard</td></tr><tr><td>55–79 mL/min</td><td class="dose">Q12h</td><td>Standard</td></tr><tr><td>20–54 mL/min</td><td class="dose">Q12–24h</td><td>Monitor closely</td></tr><tr class="hold"><td>&lt;20 or AKI</td><td class="dose">One dose only</td><td>Random level 12–24h. Re-dose when &lt;20 mcg/mL</td></tr></tbody></table>
     <button class="print-btn" onclick="window.print()">⎙ Print</button>
   </div>
@@ -12339,13 +12423,13 @@ function amGenRec(){
 
 <div class="section" id="sec-12" style="scroll-margin-top: 194px;">
   <div class="mod-nav">
-    <button class="mnav-btn" data-section="12" data-pane="0" onclick="goTo(12,0)">Master Renal Table</button>
+    <button class="mnav-btn active" data-section="12" data-pane="0" onclick="goTo(12,0)">Master Renal Table</button>
     <button class="mnav-btn" data-section="12" data-pane="1" onclick="goTo(12,1)">No Adjustment Needed</button>
     <button class="mnav-btn" data-section="12" data-pane="2" onclick="goTo(12,2)">PD Dosing</button>
-    <button class="mnav-btn active" data-section="12" data-pane="3" onclick="goTo(12,3)">CrCl Calculator</button>
+    <button class="mnav-btn" data-section="12" data-pane="3" onclick="goTo(12,3)">CrCl Calculator</button>
   </div>
   <div class="main" style="scroll-margin-top: 194px;">
-    <div class="pane" id="s12p0">
+    <div class="pane active" id="s12p0">
       <div class="sec-title">Master Renal Dosing Table</div>
       <div class="sec-sub">Adult · IV Doses · ABW Unless Specified · IHD + CRRT</div>
       <div class="guideline-badge">KCHC Antimicrobial Stewardship · P&amp;T Approved: Apr 2021</div>
@@ -12643,7 +12727,7 @@ function amGenRec(){
       <button class="print-btn" onclick="window.print()">⎙ Print</button>
     </div>
 
-    <div class="pane active" id="s12p3">
+    <div class="pane" id="s12p3">
       <div class="sec-title">CrCl + Body Weight Calculator</div>
       <div class="sec-sub">Cockcroft-Gault · IBW · AdjBW · ABW · Auto-calculates on input</div>
       <div class="guideline-badge revised">KCHC Clinical Protocol · Cockcroft-Gault 1976</div>
@@ -16017,7 +16101,7 @@ function amGenRec(){
 <!-- ══════════════════════════════════════
   IV / NUTRITION TAB
 ══════════════════════════════════════ -->
-<div class="section active" id="sec-iv" style="scroll-margin-top: 194px;">
+<div class="section" id="sec-iv" style="scroll-margin-top: 194px;">
   <div class="mod-nav" id="iv-modnav" style="display:none;">
     <button class="mnav-btn" data-iv="0" onclick="ivGoTo(0,this)">💧 IV Fluid Conservation</button>
     <button class="mnav-btn" data-iv="1" onclick="ivGoTo(1,this)">💉 IVPB → IVP Conversion</button>
@@ -20235,7 +20319,7 @@ function toggleCGHeightMode() {}
   <div class="main" style="scroll-margin-top: 194px;">
 
   <!-- OP0 — AGENT SELECTOR -->
-  <div class="onc-pane" id="op0">
+  <div class="onc-pane active" id="op0">
     <div class="sec-title">Oncology Agent Selector</div>
     <div class="sec-sub">Select Cancer Type → Regimen + Pharmacy Flags · OR select drug below for lookup</div>
 
@@ -20616,7 +20700,7 @@ function toggleCGHeightMode() {}
   </div>
 
   <!-- OP3 — DOSE LIMITS -->
-  <div class="onc-pane active" id="op3">
+  <div class="onc-pane" id="op3">
     <div class="sec-title">Critical Dose Limits</div>
     <div class="sec-sub">Caps · Pump Rates · Special Protocols</div>
     <div class="guideline-badge revised">Sarah Kamal, PharmD · KCHC Life Infusions · Internal Clinical Notes · Verified: ASCO 2020 · NCCN 2024–2025 · FDA PI · No KCHC P&amp;T date — verify with oncology pharmacist</div>
